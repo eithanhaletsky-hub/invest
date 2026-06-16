@@ -304,6 +304,23 @@ body.js .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transfor
   .debt-row{flex-direction:column}.phase-row{flex-direction:column}
   .stock-grid{grid-template-columns:repeat(2,1fr)}
 }
+
+/* WHAT-IF CALCULATOR */
+.whatif-results{margin-top:20px}
+.whatif-year-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border-radius:14px;overflow:hidden;border:1px solid var(--border);margin-top:16px;font-size:.88rem}
+.whatif-year-table th{background:var(--box-bg);padding:10px 12px;font-weight:700;text-align:right;border-bottom:1px solid var(--border);font-size:.82rem;color:var(--muted)}
+.whatif-year-table td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:right}
+.whatif-year-table tr:last-child td{border-bottom:none}
+.whatif-year-table tr:hover td{background:var(--box-bg)}
+.whatif-year-table .yr-up{color:var(--mint);font-weight:700}.whatif-year-table .yr-dn{color:var(--burn);font-weight:700}
+.whatif-scenario{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.whatif-card{background:var(--box-bg);border-radius:14px;padding:16px;border:1px solid var(--border);text-align:center}
+.whatif-card .wc-label{font-size:.82rem;color:var(--muted);margin-bottom:4px}
+.whatif-card .wc-value{font-family:'Secular One';font-size:1.5rem}
+.whatif-card .wc-sub{font-size:.82rem;margin-top:4px}
+.whatif-canvas-wrap{margin-top:18px;height:200px;border-radius:12px;background:var(--box-bg);padding:8px}
+.whatif-canvas-wrap canvas{width:100%;height:100%}
+@media(max-width:600px){.whatif-scenario{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -482,6 +499,23 @@ body.js .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transfor
   </div>
 
   <div class="stock-grid" id="stockGrid"></div>
+
+  <!-- WHAT IF CALCULATOR -->
+  <div class="calc reveal" style="margin-top:30px;border-color:var(--mint)">
+    <div class="calc-title" style="color:var(--mint)">🔮 מה אם השקעתי ב...?</div>
+    <p class="calc-desc">בחרו מניה, הכניסו סכום ותקופה, ותראו מה היה קורה לכסף שלכם — בתרחיש טוב, ממוצע וגרוע. כי בדיעבד כולנו גאונים.</p>
+    <div class="calc-grid">
+      <div class="field"><label for="wi-stock">באיזה נכס?</label><select id="wi-stock"></select></div>
+      <div class="field"><label for="wi-amount">סכום השקעה חד פעמי</label><input id="wi-amount" type="number" value="50000" min="0"></div>
+      <div class="field"><label for="wi-monthly">+ הפקדה חודשית</label><input id="wi-monthly" type="number" value="1000" min="0"></div>
+      <div class="field"><label for="wi-years">לתקופה של (שנים)</label><input id="wi-years" type="number" value="10" min="1" max="40"></div>
+    </div>
+    <div class="whatif-scenario" id="wiScenarios"></div>
+    <div class="whatif-canvas-wrap"><canvas id="wiChart"></canvas></div>
+    <div id="wiTableWrap"></div>
+    <div class="verdict" id="wiVerdict" style="margin-top:16px"></div>
+    <p class="calc-note">מבוסס על תשואות היסטוריות ממוצעות. העבר לא מנבא את העתיד, אבל הוא רמז לא רע.</p>
+  </div>
 </section></div>
 
 <!-- STOCK SIMULATOR -->
@@ -1059,6 +1093,87 @@ function calcGoal(){
 }
 [$("g-current"),$("g-monthly"),$("g-rate"),$("g-target")].forEach(el=>el.addEventListener("input",calcGoal));
 
+// ===== WHAT-IF CALCULATOR =====
+const stockHistoricals={
+  apple:{avgReturn:0.28,bestYear:0.89,worstYear:-0.38,good:0.35,bad:-0.05,label:"Apple עלתה ~28% בשנה בממוצע מ-2014. הבעיה? אף אחד לא ידע ב-2014 שזה יקרה."},
+  msft:{avgReturn:0.25,bestYear:0.58,worstYear:-0.37,good:0.30,bad:-0.02,label:"Microsoft חזרה מ'חברה משעממת' לענקית ענן. מי שהחזיק — הרוויח."},
+  google:{avgReturn:0.22,bestYear:0.65,worstYear:-0.34,good:0.28,bad:-0.04,label:"Alphabet (גוגל) — כל פעם שחיפשתם משהו בגוגל, הייתם יכולים להרוויח מזה."},
+  amazon:{avgReturn:0.27,bestYear:0.76,worstYear:-0.49,good:0.33,bad:-0.08,label:"Amazon — מאינטרנט חנות ספרים לשליטה על העולם. ג'ף בזוס מודה לכם."},
+  tesla:{avgReturn:0.45,bestYear:7.43,worstYear:-0.65,good:0.55,bad:-0.25,label:"Tesla — רכבת הרים בלי חגורת בטיחות. תשואות מטורפות, תנודתיות מטורפת. רק למי שישן טוב בלילה."},
+  nvidia:{avgReturn:0.55,bestYear:2.39,worstYear:-0.50,good:0.65,bad:-0.15,label:"NVIDIA — מכרטיסי מסך לגיימרים למלכת ה-AI. מי שקנה ב-2019 צוחק עד הבנק."},
+  meta:{avgReturn:0.18,bestYear:1.94,worstYear:-0.64,good:0.25,bad:-0.12,label:"Meta — ירדה 64% ב-2022, עלתה 194% ב-2023. שוק ההון בקיצור."},
+  sp500:{avgReturn:0.10,bestYear:0.31,worstYear:-0.37,good:0.14,bad:0.01,label:"S&P 500 — 500 החברות הגדולות בארה\"ב. ~10% בשנה לאורך 100 שנה. משעמם? כן. עובד? גם כן."},
+  tase:{avgReturn:0.08,bestYear:0.25,worstYear:-0.42,good:0.12,bad:-0.01,label:'ת"א 125 — המדד של ישראל. לא הכי סקסי, אבל לפחות בשקלים ובלי סיכון מט"ח.'},
+  nasdaq:{avgReturn:0.14,bestYear:0.55,worstYear:-0.41,good:0.20,bad:-0.02,label:"NASDAQ — מדד הטכנולוגיה. עולה יותר, יורד יותר, גורם ליותר כאב ראש."},
+  gold:{avgReturn:0.08,bestYear:0.30,worstYear:-0.28,good:0.12,bad:0.01,label:"זהב — מקלט בטוח בעיתות פחד. לא מייצר כלום אבל נוצץ יפה."},
+  btc:{avgReturn:0.70,bestYear:13.0,worstYear:-0.73,good:1.0,bad:-0.30,label:"ביטקוין — עלה 1,300% ב-2017, ירד 73% ב-2022. מי שאוהב אדרנלין."},
+  bond:{avgReturn:0.035,bestYear:0.12,worstYear:-0.08,good:0.05,bad:0.01,label:'אג"ח ממשלתי — שקט, סולידי, ומשעמם בצורה מרגיעה. הרדיפון של העולם הפיננסי.'},
+  oil:{avgReturn:0.05,bestYear:0.55,worstYear:-0.52,good:0.15,bad:-0.10,label:"נפט — עולה כשיש מלחמה, יורד כשיש שלום. משקיעים בנפט = מהמרים על ג'יאופוליטיקה."},
+  eur:{avgReturn:0.01,bestYear:0.10,worstYear:-0.12,good:0.04,bad:-0.03,label:"EUR/ILS — בעיקר רלוונטי למי שמתכנן חופשה באירופה."},
+  usd:{avgReturn:0.005,bestYear:0.12,worstYear:-0.10,good:0.03,bad:-0.02,label:"USD/ILS — כל ישראלי עוקב אחריו. רוב הישראלים לא באמת יודעים למה."}
+};
+(function(){const sel=$("wi-stock");allStocks.forEach(s=>{const o=document.createElement("option");o.value=s.id;o.textContent=s.name+" ("+s.ticker+")";sel.appendChild(o);});})();
+function calcWhatIf(){
+  bumpCalc();
+  const sid=$("wi-stock").value,amount=num($("wi-amount"),0),monthly=num($("wi-monthly"),0),years=Math.min(Math.max(Math.round(num($("wi-years"),1)),1),40);
+  const h=stockHistoricals[sid]||stockHistoricals.sp500;
+  const scenarios=[
+    {name:"תרחיש פסימי 😰",rate:h.bad,color:"var(--burn)"},
+    {name:"תרחיש ממוצע 📊",rate:h.avgReturn,color:"var(--gold)"},
+    {name:"תרחיש אופטימי 🚀",rate:h.good,color:"var(--mint)"}
+  ];
+  const series=scenarios.map(sc=>{
+    const arr=[amount];let bal=amount;
+    for(let y=0;y<years;y++){for(let m=0;m<12;m++){bal=bal*(1+sc.rate/12)+monthly;}arr.push(bal);}
+    return arr;
+  });
+  const totalContrib=amount+monthly*12*years;
+  $("wiScenarios").innerHTML=scenarios.map((sc,i)=>{
+    const final=series[i][series[i].length-1],gain=final-totalContrib,pct=totalContrib>0?((final/totalContrib-1)*100):0;
+    return `<div class="whatif-card"><div class="wc-label">${sc.name}</div><div class="wc-value" style="color:${sc.color}">${fmt(final)}</div><div class="wc-sub" style="color:${gain>=0?'var(--mint)':'var(--burn)'}">רווח: ${fmt(gain)} (${gain>=0?'+':''}${pct.toFixed(0)}%)</div><div class="wc-sub">תשואה שנתית: ${(sc.rate*100).toFixed(1)}%</div></div>`;
+  }).join("");
+  // Chart
+  const canvas=$("wiChart"),ctx=canvas.getContext("2d"),dpr=window.devicePixelRatio||1;
+  canvas.width=canvas.parentElement.offsetWidth*dpr;canvas.height=canvas.parentElement.offsetHeight*dpr;ctx.scale(dpr,dpr);
+  const W=canvas.parentElement.offsetWidth,H=canvas.parentElement.offsetHeight;ctx.clearRect(0,0,W,H);
+  const allVals=series.flat(),min=Math.min(...allVals)*0.95,max=Math.max(...allVals)*1.05,range=max-min||1;
+  const colors=["rgba(255,91,91,0.8)","rgba(244,196,48,0.9)","rgba(78,204,163,0.8)"];
+  // Contribution line
+  ctx.setLineDash([5,5]);ctx.strokeStyle="rgba(255,255,255,0.2)";ctx.lineWidth=1;ctx.beginPath();
+  for(let i=0;i<=years;i++){const x=i/years*W,v=amount+monthly*12*i,y=H-(v-min)/range*H;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
+  ctx.stroke();ctx.setLineDash([]);
+  // Scenario lines
+  series.forEach((arr,si)=>{
+    ctx.beginPath();ctx.strokeStyle=colors[si];ctx.lineWidth=2.5;
+    arr.forEach((v,i)=>{const x=i/years*W,y=H-(v-min)/range*H;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});ctx.stroke();
+  });
+  // Labels
+  ctx.fillStyle=getComputedStyle(document.body).getPropertyValue("--muted");ctx.font="11px Heebo";
+  ctx.fillText("היום",4,H-6);ctx.fillText("שנה "+years,W-50,H-6);
+  ctx.fillStyle=colors[2];ctx.fillText(fmt(series[2][years]),W-90,12);
+  ctx.fillStyle=colors[1];ctx.fillText(fmt(series[1][years]),W-90,28);
+  ctx.fillStyle=colors[0];ctx.fillText(fmt(series[0][years]),W-90,44);
+  // Table
+  const step=years<=10?1:years<=20?2:5;
+  let thtml='<table class="whatif-year-table"><thead><tr><th>שנה</th><th>הפקדות</th><th>פסימי</th><th>ממוצע</th><th>אופטימי</th></tr></thead><tbody>';
+  for(let y=step;y<=years;y+=step){
+    const dep=amount+monthly*12*y;
+    thtml+=`<tr><td>${y}</td><td>${fmt(dep)}</td>`;
+    scenarios.forEach((sc,i)=>{const v=series[i][y],gain=v-dep,cls=gain>=0?"yr-up":"yr-dn";thtml+=`<td class="${cls}">${fmt(v)} (${gain>=0?'+':''}${((v/dep-1)*100).toFixed(0)}%)</td>`;});
+    thtml+='</tr>';
+  }
+  if(years%step!==0){
+    const dep=totalContrib;thtml+=`<tr><td><b>${years}</b></td><td><b>${fmt(dep)}</b></td>`;
+    scenarios.forEach((sc,i)=>{const v=series[i][years],gain=v-dep,cls=gain>=0?"yr-up":"yr-dn";thtml+=`<td class="${cls}"><b>${fmt(v)}</b> (${gain>=0?'+':''}${((v/dep-1)*100).toFixed(0)}%)</td>`;});
+    thtml+='</tr>';
+  }
+  thtml+='</tbody></table>';$("wiTableWrap").innerHTML=thtml;
+  // Verdict
+  const avgFinal=series[1][years],s=allStocks.find(x=>x.id===sid);
+  $("wiVerdict").textContent=`${h.label} הפקדתם ${fmt(totalContrib)}, ובתרחיש ממוצע קיבלתם ${fmt(avgFinal)}. הריבית עשתה ${fmt(avgFinal-totalContrib)} מהעבודה בשבילכם.`;
+}
+[$("wi-stock"),$("wi-amount"),$("wi-monthly"),$("wi-years")].forEach(el=>el.addEventListener("input",calcWhatIf));
+
 // ===== INVEST TABS =====
 $("tabGood").addEventListener("click",()=>{$("tabGood").classList.add("active");$("tabBad").classList.remove("active");$("panelGood").classList.add("show");$("panelBad").classList.remove("show");});
 $("tabBad").addEventListener("click",()=>{$("tabBad").classList.add("active");$("tabGood").classList.remove("active");$("panelBad").classList.add("show");$("panelGood").classList.remove("show");});
@@ -1267,7 +1382,7 @@ let lastTip=-1;
 $("tipBtn").addEventListener("click",()=>{let i;do{i=Math.floor(Math.random()*tips.length);}while(i===lastTip&&tips.length>1);lastTip=i;$("tipText").textContent=tips[i];});
 
 // ===== CURRENCY =====
-function updateAll(){renderGame();calcCompound();calcSpend();calcBudget();calcMortgage();calcInflation();calcFire();calcHourly();calcTax();calcRentVsBuy();calcGoal();calcNetWorth();calcDebt();renderChallenge();}
+function updateAll(){renderGame();calcCompound();calcSpend();calcBudget();calcMortgage();calcInflation();calcFire();calcHourly();calcTax();calcRentVsBuy();calcGoal();calcNetWorth();calcDebt();calcWhatIf();renderChallenge();}
 $("currency").addEventListener("change",e=>{sym=e.target.value;updateAll();});
 
 // ===== THEME =====

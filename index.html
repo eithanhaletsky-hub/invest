@@ -28,7 +28,6 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opa
                    repeating-radial-gradient(circle at 80% 70%,transparent 0 22px,var(--mint) 22px 23px)}
 .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 22px}
 
-/* NAV */
 nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
   padding:12px 22px;background:var(--nav-bg);backdrop-filter:blur(8px);border-bottom:1px solid rgba(244,196,48,.25)}
 .brand{font-family:'Secular One';font-size:1.4rem;color:var(--gold);display:flex;align-items:center;gap:8px;cursor:pointer}
@@ -39,26 +38,22 @@ nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-con
 .nav-ctrl select{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:6px 8px;cursor:pointer}
 .icon-btn{background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;width:38px;height:38px;font-size:1.1rem;cursor:pointer;transition:transform .15s}
 .icon-btn:hover{transform:translateY(-2px)}
-.icon-btn:focus-visible,.nav-ctrl select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
-/* HERO */
 header.hero{padding:56px 0 48px;text-align:center}
 .hero h1{font-size:clamp(3rem,11vw,7rem);color:var(--gold);text-shadow:0 4px 0 var(--gold-dark),0 8px 24px rgba(0,0,0,.4);letter-spacing:-1px}
 .hero .sub{font-size:clamp(1.05rem,3vw,1.4rem);max-width:560px;margin:18px auto 0;color:var(--muted)}
 
-/* STATS BAR */
 .stats-bar{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
 .stat-chip{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:10px 18px;text-align:center;min-width:120px}
 .stat-chip .sv{font-family:'Secular One';font-size:1.3rem;color:var(--gold)}
 .stat-chip .sl{font-size:.78rem;color:var(--muted)}
 
-/* GAME */
 .game{margin:42px auto 0;max-width:520px;background:var(--surface);border:2px solid var(--gold);border-radius:26px;
   padding:30px 26px;box-shadow:0 20px 50px rgba(0,0,0,.35);position:relative}
 .reset-btn{position:absolute;top:14px;left:14px;background:var(--box-bg);color:var(--muted);border:1px solid var(--border);border-radius:10px;padding:5px 10px;font-size:.78rem;cursor:pointer}
 .reset-btn:hover{color:var(--burn);border-color:var(--burn)}
 .ledger-label{font-size:.85rem;letter-spacing:2px;color:var(--mint);text-transform:uppercase}
-.net-worth{font-family:'Secular One';font-size:clamp(2.4rem,9vw,3.6rem);color:var(--gold);margin:2px 0 2px;direction:ltr}
+.net-worth{font-family:'Secular One';font-size:clamp(2.4rem,9vw,3.6rem);color:var(--gold);margin:2px 0;direction:ltr}
 .rank{font-weight:700;color:var(--text);font-size:1rem;margin-bottom:8px}
 .prog{height:9px;background:var(--track);border-radius:999px;overflow:hidden;margin:0 auto 6px;max-width:340px}
 .prog>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold-dark),var(--gold));border-radius:999px;transition:width .4s ease}
@@ -66,7 +61,6 @@ header.hero{padding:56px 0 48px;text-align:center}
 .per-click{font-size:.9rem;color:var(--muted)}
 .coin{width:160px;height:160px;margin:18px auto 8px;display:block;cursor:pointer;border:none;background:none;position:relative;transition:transform .08s ease;-webkit-tap-highlight-color:transparent}
 .coin:active{transform:scale(.92)}
-.coin:focus-visible{outline:3px solid var(--mint);outline-offset:6px;border-radius:50%}
 .coin .disc{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe27a,var(--gold) 55%,var(--gold-dark));
   border:6px solid var(--gold-dark);display:flex;align-items:center;justify-content:center;font-family:'Secular One';font-size:3.2rem;color:var(--gold-dark);
   box-shadow:0 10px 0 #8f6a12,0 16px 30px rgba(0,0,0,.5)}
@@ -75,20 +69,16 @@ header.hero{padding:56px 0 48px;text-align:center}
 .up-btn{font-family:'Heebo';font-weight:700;cursor:pointer;background:var(--mint);color:var(--ink);border:none;padding:10px 16px;border-radius:14px;font-size:.88rem;transition:transform .12s,opacity .2s}
 .up-btn:hover{transform:translateY(-2px)}
 .up-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
-.up-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 
 .float-coin{position:fixed;pointer-events:none;z-index:80;font-family:'Secular One';font-size:1.6rem;color:var(--gold);animation:floatUp 1s ease-out forwards;direction:ltr}
 @keyframes floatUp{0%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-90px) scale(1.4)}}
 
-/* SECTIONS */
 section{padding:60px 0;scroll-margin-top:80px}
 .eyebrow{font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--mint);margin-bottom:8px}
 .sec-title{font-size:clamp(2rem,6vw,3.2rem);margin-bottom:8px}
 .sec-title.green{color:var(--mint)}.sec-title.gold{color:var(--gold)}.sec-title.red{color:var(--burn)}.sec-title.purple{color:var(--purple)}.sec-title.blue{color:var(--blue)}
-
 .sec-lead{max-width:620px;color:var(--muted);margin-bottom:30px}
 
-/* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .card{background:var(--surface);border-radius:18px;padding:24px;border:1px solid var(--border);transition:transform .2s,border-color .2s}
 .card:hover{transform:translateY(-5px);border-color:var(--gold)}
@@ -96,21 +86,17 @@ section{padding:60px 0;scroll-margin-top:80px}
 .card h3{font-size:1.15rem;margin-bottom:6px;color:var(--text)}
 .card p{font-size:.92rem;color:var(--muted)}
 
-/* BURN BAND */
 .burn-band{background:linear-gradient(135deg,#3a1414,#5a1a1a)}
 .burn-band .sec-lead{color:#f3d4d4}
 .burn-band .card{background:rgba(0,0,0,.25);border-color:rgba(255,91,91,.25);color:#fff}
 .burn-band .card h3{color:#fff}.burn-band .card p{color:#f3d4d4}
 .burn-band .card:hover{border-color:var(--burn)}
-
-/* PURPLE BAND */
 .purple-band{background:linear-gradient(135deg,#1a1040,#2d1860)}
 .purple-band .sec-lead{color:#d4ccf3}
 .purple-band .card{background:rgba(0,0,0,.25);border-color:rgba(167,139,250,.25);color:#fff}
 .purple-band .card h3{color:#fff}.purple-band .card p{color:#d4ccf3}
 .purple-band .card:hover{border-color:var(--purple)}
 
-/* CALC */
 .calc{margin-top:30px;background:var(--surface);border:2px solid var(--gold);border-radius:22px;padding:26px 24px;box-shadow:0 16px 40px rgba(0,0,0,.3)}
 .burn-band .calc{border-color:var(--burn)}
 .purple-band .calc{border-color:var(--purple)}
@@ -151,39 +137,78 @@ section{padding:60px 0;scroll-margin-top:80px}
 .budget-bar>div{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:var(--ink)}
 .bseg-needs{background:var(--needs)}.bseg-wants{background:var(--gold)}.bseg-save{background:var(--mint)}
 
-/* SWITCHER */
 .switcher{display:inline-flex;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:5px;gap:4px;margin-bottom:26px}
 .switcher button{font-family:'Heebo';font-weight:700;cursor:pointer;border:none;background:none;color:var(--muted);padding:10px 22px;border-radius:999px;font-size:1rem;transition:all .2s}
 .switcher button.active.good{background:var(--mint);color:var(--ink)}
 .switcher button.active.bad{background:var(--burn);color:#fff}
-.switcher button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .panel{display:none}.panel.show{display:block;animation:fade .3s ease}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-/* TIPBOX */
 .tipbox{margin-top:30px;background:var(--surface);border:2px dashed var(--gold);border-radius:22px;padding:28px 24px;text-align:center}
 .tip-text{font-size:1.15rem;font-weight:500;min-height:3.2em;display:flex;align-items:center;justify-content:center;color:var(--text)}
 .tip-btn{margin-top:16px;font-family:'Heebo';font-weight:700;cursor:pointer;background:var(--gold);color:var(--ink);border:none;padding:11px 22px;border-radius:14px;font-size:1rem;transition:transform .12s}
 .tip-btn:hover{transform:translateY(-2px)}
-.tip-btn:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
 
-/* STOCK SIMULATOR */
+/* PHASES (variable deposits) */
+.phase-list{margin-top:16px}
+.phase-row{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap;background:var(--box-bg);padding:10px 14px;border-radius:12px;border:1px solid var(--border)}
+.phase-row input,.phase-row select{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:8px 10px;flex:1;min-width:80px;text-align:right}
+.phase-row .plbl{font-size:.82rem;color:var(--muted);min-width:60px}
+.phase-row button{font-family:'Heebo';cursor:pointer;background:var(--burn);color:#fff;border:none;border-radius:8px;padding:6px 10px;font-size:.85rem}
+.add-phase-btn{font-family:'Heebo';font-weight:700;cursor:pointer;background:var(--box-bg);color:var(--muted);border:1px dashed var(--border);border-radius:10px;padding:10px;width:100%;margin-top:8px;font-size:.9rem;transition:all .2s}
+.add-phase-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+/* STOCK CARDS */
+.stock-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:20px}
+.stock-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center;transition:transform .2s,border-color .2s;cursor:default}
+.stock-card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.stock-card .sname{font-weight:700;font-size:.9rem;margin-bottom:2px}
+.stock-card .sticker{font-size:.75rem;color:var(--muted)}
+.stock-card .sprice{font-family:'Secular One';font-size:1.3rem;margin:6px 0;direction:ltr}
+.stock-card .schange{font-weight:700;font-size:.95rem;padding:3px 10px;border-radius:999px;display:inline-block}
+.stock-card .schange.up{background:rgba(78,204,163,.15);color:var(--mint)}
+.stock-card .schange.down{background:rgba(255,91,91,.15);color:var(--burn)}
+.stock-card .sdetails{font-size:.75rem;color:var(--muted);margin-top:6px}
+.stock-card canvas{width:100%;height:40px;margin-top:6px}
+
+/* STOCK SIM */
 .stock-sim{margin-top:30px;background:var(--surface);border:2px solid var(--mint);border-radius:22px;padding:26px 24px;box-shadow:0 16px 40px rgba(0,0,0,.3)}
 .stock-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:16px}
 .stock-balance{font-family:'Secular One';font-size:1.6rem;color:var(--gold)}
 .stock-canvas{width:100%;height:200px;border-radius:12px;background:var(--box-bg);margin-bottom:16px}
 .stock-canvas canvas{width:100%;height:100%}
 .stock-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.stock-controls select{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:8px 12px;cursor:pointer}
-.stock-controls input{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:8px 12px;width:100px;text-align:right}
+.stock-controls select,.stock-controls input{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:8px 12px;cursor:pointer}
+.stock-controls input{width:100px;text-align:right}
 .stock-btn{font-family:'Heebo';font-weight:700;cursor:pointer;border:none;padding:8px 18px;border-radius:10px;font-size:.9rem;transition:transform .12s}
 .stock-btn:hover{transform:translateY(-2px)}
 .stock-btn.buy{background:var(--mint);color:var(--ink)}.stock-btn.sell{background:var(--burn);color:#fff}
-.portfolio{margin-top:16px}
 .portfolio-item{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--box-bg);border-radius:10px;margin-bottom:6px;border:1px solid var(--border)}
 .portfolio-item .pname{font-weight:700}.portfolio-item .pval{font-family:'Secular One';direction:ltr}
 .portfolio-item .pchange{font-size:.85rem;font-weight:700}
 .portfolio-item .pchange.up{color:var(--mint)}.portfolio-item .pchange.down{color:var(--burn)}
+
+/* EXPENSE */
+.expense-tracker{margin-top:30px;background:var(--surface);border:2px solid var(--blue);border-radius:22px;padding:26px 24px}
+.expense-form{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.expense-form input,.expense-form select{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;flex:1;min-width:120px}
+.expense-form button{font-family:'Heebo';font-weight:700;cursor:pointer;background:var(--blue);color:#fff;border:none;padding:10px 18px;border-radius:10px;white-space:nowrap}
+.expense-list{max-height:300px;overflow-y:auto}
+.expense-item{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--box-bg);border-radius:10px;margin-bottom:6px;border:1px solid var(--border)}
+.expense-item .ecat{font-size:.75rem;background:rgba(96,165,250,.2);color:var(--blue);padding:2px 8px;border-radius:999px}
+.expense-item .eamt{font-family:'Secular One';color:var(--burn);direction:ltr}
+.expense-item .edel{cursor:pointer;background:none;border:none;color:var(--muted);font-size:1rem;padding:4px}
+.expense-item .edel:hover{color:var(--burn)}
+.expense-bar-h{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.expense-bar-h .ebl{font-size:.82rem;color:var(--muted);min-width:60px;text-align:left}
+.expense-bar-h .ebb{flex:1;height:22px;background:var(--track);border-radius:6px;overflow:hidden}
+.expense-bar-h .ebf{height:100%;border-radius:6px;transition:width .3s}
+.expense-bar-h .ebv{font-size:.82rem;color:var(--text);font-weight:700;min-width:60px}
+
+/* DEBT */
+.debt-row{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.debt-row input{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:8px 10px;flex:1;min-width:90px;text-align:right}
+.debt-row button{font-family:'Heebo';cursor:pointer;background:var(--burn);color:#fff;border:none;border-radius:8px;padding:6px 10px;font-size:.85rem}
 
 /* QUIZ */
 .quiz-box{margin-top:30px;background:var(--surface);border:2px solid var(--purple);border-radius:22px;padding:26px 24px;box-shadow:0 16px 40px rgba(0,0,0,.3)}
@@ -200,39 +225,15 @@ section{padding:60px 0;scroll-margin-top:80px}
 .quiz-opt:disabled{cursor:default;transform:none}
 .quiz-explain{margin-top:14px;padding:12px 16px;background:var(--box-bg);border-radius:12px;font-size:.92rem;color:var(--muted);display:none}
 .quiz-next{margin-top:16px;display:none}
-.quiz-score{text-align:center;padding:20px}
-.quiz-score .big{font-family:'Secular One';font-size:3rem;color:var(--gold)}
-.quiz-score .grade{font-size:1.2rem;font-weight:700;margin-top:8px}
 
-/* SAVINGS CHALLENGE */
-.challenge{margin-top:30px;background:var(--surface);border:2px solid var(--gold);border-radius:22px;padding:26px 24px}
+/* CHALLENGE */
 .challenge-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px;margin-top:16px}
 .week-cell{background:var(--box-bg);border:1px solid var(--border);border-radius:10px;padding:8px 4px;text-align:center;cursor:pointer;transition:all .2s;font-size:.82rem}
 .week-cell .wn{font-size:.68rem;color:var(--muted)}.week-cell .wa{font-family:'Secular One';font-size:.88rem;color:var(--text)}
 .week-cell.done{background:rgba(78,204,163,.2);border-color:var(--mint)}.week-cell.done .wa{color:var(--mint)}
 .week-cell:hover{border-color:var(--gold);transform:scale(1.05)}
-.challenge-summary{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px}
-
-/* EXPENSE TRACKER */
-.expense-tracker{margin-top:30px;background:var(--surface);border:2px solid var(--blue);border-radius:22px;padding:26px 24px}
-.expense-form{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.expense-form input,.expense-form select{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;flex:1;min-width:120px}
-.expense-form button{font-family:'Heebo';font-weight:700;cursor:pointer;background:var(--blue);color:#fff;border:none;padding:10px 18px;border-radius:10px;white-space:nowrap}
-.expense-list{max-height:300px;overflow-y:auto}
-.expense-item{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--box-bg);border-radius:10px;margin-bottom:6px;border:1px solid var(--border)}
-.expense-item .ecat{font-size:.75rem;background:rgba(96,165,250,.2);color:var(--blue);padding:2px 8px;border-radius:999px}
-.expense-item .eamt{font-family:'Secular One';color:var(--burn);direction:ltr}
-.expense-item .edel{cursor:pointer;background:none;border:none;color:var(--muted);font-size:1rem;padding:4px}
-.expense-item .edel:hover{color:var(--burn)}
-.expense-chart-wrap{margin-top:16px}
-.expense-bar-h{display:flex;align-items:center;gap:8px;margin-bottom:6px}
-.expense-bar-h .ebl{font-size:.82rem;color:var(--muted);min-width:60px;text-align:left}
-.expense-bar-h .ebb{flex:1;height:22px;background:var(--track);border-radius:6px;overflow:hidden}
-.expense-bar-h .ebf{height:100%;border-radius:6px;transition:width .3s}
-.expense-bar-h .ebv{font-size:.82rem;color:var(--text);font-weight:700;min-width:60px}
 
 /* GLOSSARY */
-.glossary{margin-top:30px}
 .glossary-search{font-family:'Heebo';font-weight:500;width:100%;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:14px;padding:12px 18px;font-size:1rem;margin-bottom:16px}
 .glossary-search:focus{outline:none;border-color:var(--gold)}
 .glossary-search::placeholder{color:var(--muted)}
@@ -246,7 +247,7 @@ section{padding:60px 0;scroll-margin-top:80px}
 .gterm-body p{font-size:.92rem;color:var(--muted)}
 
 /* MILESTONES */
-.milestones{display:flex;flex-direction:column;gap:0;position:relative;margin-top:30px;padding-right:30px}
+.milestones{display:flex;flex-direction:column;position:relative;margin-top:30px;padding-right:30px}
 .milestones::before{content:"";position:absolute;right:12px;top:0;bottom:0;width:3px;background:var(--track);border-radius:999px}
 .milestone{position:relative;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;transition:border-color .2s}
 .milestone:hover{border-color:var(--gold)}
@@ -261,30 +262,27 @@ section{padding:60px 0;scroll-margin-top:80px}
 .comp-table tr:last-child td{border-bottom:none}
 .comp-table .check{color:var(--mint);font-weight:700}.comp-table .cross{color:var(--burn);font-weight:700}
 
-/* DEBT CALC */
-.debt-list{margin-top:16px}
-.debt-row{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
-.debt-row input{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:8px 10px;flex:1;min-width:90px;text-align:right}
-.debt-row button{font-family:'Heebo';cursor:pointer;background:var(--burn);color:#fff;border:none;border-radius:8px;padding:6px 10px;font-size:.85rem}
-.add-debt-btn{font-family:'Heebo';font-weight:700;cursor:pointer;background:var(--box-bg);color:var(--muted);border:1px dashed var(--border);border-radius:10px;padding:10px;width:100%;margin-top:8px;font-size:.9rem;transition:all .2s}
-.add-debt-btn:hover{border-color:var(--gold);color:var(--gold)}
-
-/* TICKER */
-.ticker-wrap{overflow:hidden;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:8px 0;margin-top:30px}
-.ticker{display:flex;animation:scroll 30s linear infinite;gap:40px;white-space:nowrap}
-@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
-.ticker-item{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem}
-.ticker-item .tn{color:var(--text)}.ticker-item .tp{color:var(--mint)}.ticker-item .tm{color:var(--burn)}
-
-/* NET WORTH TRACKER */
-.nw-form{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+/* NET WORTH */
 .nw-section-title{font-weight:700;font-size:.95rem;color:var(--gold);margin-top:10px}
-.nw-row{display:flex;gap:8px;align-items:center}
+.nw-row{display:flex;gap:8px;align-items:center;margin-top:6px}
 .nw-row input{font-family:'Heebo';font-weight:700;background:var(--input-bg);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:8px 10px;flex:1;text-align:right}
 .nw-total{margin-top:18px;text-align:center;padding:16px;background:var(--box-bg);border-radius:14px}
 .nw-total .ntl{font-size:.85rem;color:var(--muted)}.nw-total .ntv{font-family:'Secular One';font-size:2rem;color:var(--gold)}
 
-/* FOOTER */
+/* TICKER */
+.ticker-wrap{overflow:hidden;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:8px 0}
+.ticker{display:flex;animation:scroll 40s linear infinite;gap:40px;white-space:nowrap}
+@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+.ticker-item{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem}
+.ticker-item .tn{color:var(--text)}.ticker-item .tp{color:var(--mint)}.ticker-item .tm{color:var(--burn)}
+
+/* FEAR & GREED */
+.fg-meter{margin-top:20px;text-align:center}
+.fg-bar{height:24px;border-radius:12px;background:linear-gradient(to left,var(--mint),var(--gold),var(--burn));position:relative;max-width:400px;margin:0 auto}
+.fg-needle{position:absolute;top:-6px;width:4px;height:36px;background:var(--text);border-radius:2px;transition:left .5s}
+.fg-labels{display:flex;justify-content:space-between;max-width:400px;margin:6px auto 0;font-size:.78rem;color:var(--muted)}
+.fg-value{font-family:'Secular One';font-size:2rem;margin-bottom:8px}
+
 footer{padding:50px 0 60px;text-align:center;border-top:1px solid rgba(244,196,48,.2);margin-top:30px}
 .disclaimer{max-width:560px;margin:0 auto;font-size:.86rem;color:var(--muted);background:var(--surface);padding:18px 22px;border-radius:16px;border:1px dashed var(--border)}
 .disclaimer b{color:var(--gold)}
@@ -294,29 +292,17 @@ footer{padding:50px 0 60px;text-align:center;border-top:1px solid rgba(244,196,4
 .top-btn.show{opacity:1;pointer-events:auto}
 .top-btn:hover{transform:translateY(-3px)}
 
-/* CONFETTI */
 .confetti{position:fixed;top:-14px;width:10px;height:14px;z-index:200;pointer-events:none;border-radius:2px;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(106vh) rotate(620deg)}}
 
-/* REVEAL */
 body.js .reveal{opacity:0;transform:translateY(26px)}
 body.js .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}body.js .reveal{opacity:1!important;transform:none!important}}
-
-/* TABS */
-.tab-group{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:20px}
-.tab-group button{font-family:'Heebo';font-weight:700;cursor:pointer;border:none;background:var(--box-bg);color:var(--muted);padding:10px 18px;border-radius:12px;font-size:.88rem;transition:all .2s;border:1px solid var(--border)}
-.tab-group button.active{background:var(--gold);color:var(--ink);border-color:var(--gold)}
-.tab-group button:hover:not(.active){border-color:var(--gold)}
-.tab-panel{display:none}.tab-panel.show{display:block;animation:fade .3s ease}
-
-/* RESPONSIVE */
 @media(max-width:600px){
-  .nav-links{display:none}
-  .calc-grid{grid-template-columns:1fr}
-  .stock-controls{flex-direction:column}
-  .expense-form{flex-direction:column}
-  .debt-row{flex-direction:column}
+  .nav-links{display:none}.calc-grid{grid-template-columns:1fr}
+  .stock-controls{flex-direction:column}.expense-form{flex-direction:column}
+  .debt-row{flex-direction:column}.phase-row{flex-direction:column}
+  .stock-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -325,56 +311,39 @@ body.js .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transfor
 <nav>
   <div class="brand" onclick="window.scrollTo({top:0,behavior:'smooth'})">💰 כסף</div>
   <div class="nav-links">
-    <a href="#make">לעשות</a>
-    <a href="#spend">לבזבז</a>
-    <a href="#budget">תקציב</a>
-    <a href="#stock">סימולטור</a>
-    <a href="#tracker">הוצאות</a>
-    <a href="#debt">חובות</a>
-    <a href="#calc-more">מחשבונים</a>
-    <a href="#invest">להשקיע</a>
-    <a href="#quiz">חידון</a>
-    <a href="#networth">הון עצמי</a>
-    <a href="#glossary-sec">מילון</a>
-    <a href="#goal">מיליון</a>
+    <a href="#make">לעשות</a><a href="#spend">לבזבז</a><a href="#budget">תקציב</a>
+    <a href="#markets">שווקים</a><a href="#stock">סימולטור</a><a href="#tracker">הוצאות</a>
+    <a href="#debt">חובות</a><a href="#calc-more">מחשבונים</a><a href="#invest">השקעות</a>
+    <a href="#quiz">חידון</a><a href="#networth">הון</a><a href="#glossary-sec">מילון</a><a href="#goal">מיליון</a>
   </div>
   <div class="nav-ctrl">
-    <select id="currency" aria-label="בחירת מטבע">
-      <option value="₪">₪ שקל</option>
-      <option value="$">$ דולר</option>
-      <option value="€">€ יורו</option>
-    </select>
-    <button class="icon-btn" id="theme" aria-label="החלפת מצב תצוגה">🌙</button>
+    <select id="currency" aria-label="בחירת מטבע"><option value="₪">₪ שקל</option><option value="$">$ דולר</option><option value="€">€ יורו</option></select>
+    <button class="icon-btn" id="theme" aria-label="מצב תצוגה">🌙</button>
   </div>
 </nav>
 
-<!-- FAKE TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker" id="ticker"></div>
-</div>
+<div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
 
 <div class="wrap">
   <header class="hero">
     <h1>כסף.<br>הרבה כסף.</h1>
-    <p class="sub">המדריך הכי לא רציני שתקראו על איך לעשות אותו, לשמור עליו, להשקיע אותו, ולא להפסיד אותו בטיפ חם מבן דוד.</p>
-
-    <div class="stats-bar" id="statsBar">
+    <p class="sub">המדריך הכי לא רציני שתקראו על איך לעשות כסף, לשמור עליו, להשקיע אותו, ולא להפסיד אותו בגלל סטורי של מישהו באינסטגרם.</p>
+    <div class="stats-bar">
       <div class="stat-chip"><div class="sv" id="statCalcs">0</div><div class="sl">חישובים</div></div>
-      <div class="stat-chip"><div class="sv" id="statClicks">0</div><div class="sl">לחיצות על מטבע</div></div>
+      <div class="stat-chip"><div class="sv" id="statClicks">0</div><div class="sl">לחיצות</div></div>
       <div class="stat-chip"><div class="sv" id="statQuiz">0/0</div><div class="sl">תשובות נכונות</div></div>
       <div class="stat-chip"><div class="sv" id="statTime">00:00</div><div class="sl">זמן באתר</div></div>
     </div>
-
     <div class="game">
       <button class="reset-btn" id="reset">איפוס ↺</button>
       <div class="ledger-label">ההון שלך</div>
       <div class="net-worth" id="worth">₪0</div>
       <div class="rank" id="rank">🪙 מתחיל</div>
-      <div class="prog" aria-hidden="true"><i id="progFill"></i></div>
+      <div class="prog"><i id="progFill"></i></div>
       <div class="prog-txt" id="progTxt">לדרגה הבאה: ₪100</div>
       <div class="per-click" id="perClick">+₪1 לכל לחיצה</div>
-      <button class="coin" id="coin" aria-label="לחצו כדי להרוויח כסף"><span class="disc" id="coinFace">₪</span></button>
-      <div class="hint">לחצו על המטבע. ככה עושים כסף, לא?</div>
+      <button class="coin" id="coin"><span class="disc" id="coinFace">₪</span></button>
+      <div class="hint">לחצו על המטבע. בדיוק ככה עושים כסף — ויקרא, 2024</div>
       <div class="upgrades">
         <button class="up-btn" id="up1">יד זריזה (₪50)</button>
         <button class="up-btn" id="up2">ריבית דריבית (₪300)</button>
@@ -385,1027 +354,937 @@ body.js .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transfor
   </header>
 </div>
 
-<!-- ===== SECTION: MAKE MONEY ===== -->
-<div class="wrap">
-  <section id="make">
-    <div class="eyebrow reveal">חלק ראשון</div>
-    <h2 class="sec-title gold reveal">איך לעשות כסף</h2>
-    <p class="sec-lead reveal">אין קסם, יש מנופים. שילוב של זמן, מיומנות ועקביות.</p>
+<!-- MAKE MONEY -->
+<div class="wrap"><section id="make">
+  <div class="eyebrow reveal">חלק ראשון</div>
+  <h2 class="sec-title gold reveal">איך לעשות כסף</h2>
+  <p class="sec-lead reveal">אין קסם, יש מנופים. שילוב של זמן, מיומנות ועקביות. וחוסר שינה, כנראה.</p>
+  <div class="cards">
+    <div class="card reveal"><div class="ic">🛠️</div><h3>תמכרו מיומנות מבוקשת</h3><p>ככל שפחות אנשים יודעים לעשות מה שאתם עושים, כך שווה יותר השעה שלכם. רופא שיניים מרוויח יותר ממוכר לימונדה — לא בגלל שהוא עובד יותר קשה.</p></div>
+    <div class="card reveal"><div class="ic">🔁</div><h3>בנו הכנסה פסיבית</h3><p>נכס שמייצר כסף גם כשאתם ישנים. הבעיה? לבנות אותו זה ההפך מפסיבי.</p></div>
+    <div class="card reveal"><div class="ic">📈</div><h3>תנו לזמן לעבוד</h3><p>ריבית דריבית. סכום קטן + הרבה שנים מנצח סכום גדול + פאניקה. אלברט איינשטיין קרא לזה "הפלא השמיני".</p></div>
+    <div class="card reveal"><div class="ic">🧠</div><h3>תשקיעו בעצמכם</h3><p>הכישורים שלכם הם הנכס שאף רגולטור לא יכול להקפיא. הקורס הכי משתלם הוא לרוב על עצמכם.</p></div>
+    <div class="card reveal"><div class="ic">🤝</div><h3>נטוורקינג</h3><p>50% מההזדמנויות מגיעות ממכרים. תצאו מהבית. כן, גם אתם, אינטרוברטים.</p></div>
+    <div class="card reveal"><div class="ic">💡</div><h3>פתרו בעיה אמיתית</h3><p>כל עסק מצליח מתחיל מבעיה שמישהו מוכן לשלם כדי לפתור. לא מ"רעיון מטורף שהיה לי ב-3 בלילה".</p></div>
+  </div>
+
+  <!-- COMPOUND INTEREST WITH VARIABLE DEPOSITS -->
+  <div class="calc reveal">
+    <div class="calc-title">🧮 מחשבון ריבית דריבית — עם הפקדות משתנות</div>
+    <p class="calc-desc">החיים לא ליניאריים, וגם ההפקדות שלכם לא. הוסיפו שלבים — למשל, הפקדה נמוכה ב-5 שנים הראשונות ואז יותר אחרי העלאה בשכר.</p>
+    <div class="calc-grid">
+      <div class="field"><label for="c-initial">סכום התחלתי</label><input id="c-initial" type="number" inputmode="numeric" value="10000" min="0"></div>
+      <div class="field"><label for="c-rate">תשואה שנתית (%)</label><input id="c-rate" type="number" inputmode="decimal" value="7" min="0" step="0.1"></div>
+    </div>
+    <div style="margin-top:16px;font-weight:700;font-size:.95rem;color:var(--mint)">שלבי הפקדה</div>
+    <div class="phase-list" id="phaseList">
+      <div class="phase-row">
+        <span class="plbl">שנים 1-5:</span>
+        <input type="number" value="1000" min="0" placeholder="הפקדה חודשית" class="phase-amt">
+        <input type="number" value="5" min="1" max="60" placeholder="כמה שנים" class="phase-dur">
+        <span class="plbl">שנים</span>
+        <button onclick="this.closest('.phase-row').remove();calcCompound()">✕</button>
+      </div>
+      <div class="phase-row">
+        <span class="plbl">שנים 6-15:</span>
+        <input type="number" value="2000" min="0" placeholder="הפקדה חודשית" class="phase-amt">
+        <input type="number" value="10" min="1" max="60" placeholder="כמה שנים" class="phase-dur">
+        <span class="plbl">שנים</span>
+        <button onclick="this.closest('.phase-row').remove();calcCompound()">✕</button>
+      </div>
+      <div class="phase-row">
+        <span class="plbl">שנים 16-25:</span>
+        <input type="number" value="3500" min="0" placeholder="הפקדה חודשית" class="phase-amt">
+        <input type="number" value="10" min="1" max="60" placeholder="כמה שנים" class="phase-dur">
+        <span class="plbl">שנים</span>
+        <button onclick="this.closest('.phase-row').remove();calcCompound()">✕</button>
+      </div>
+    </div>
+    <button class="add-phase-btn" id="addPhase">+ הוסיפו שלב הפקדה נוסף</button>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">סכום סופי</div><div class="val gold" id="c-final">₪0</div></div>
+      <div class="out-box"><div class="lbl">סך הפקדות</div><div class="val paper" id="c-contrib">₪0</div></div>
+      <div class="out-box"><div class="lbl">רווח מהריבית</div><div class="val mint" id="c-gain">₪0</div></div>
+      <div class="out-box"><div class="lbl">מכפלת הכסף</div><div class="val purple" id="c-mult">×0</div></div>
+    </div>
+    <div class="bars" id="c-bars"></div>
+    <div class="legend"><span><i class="swatch sw-base"></i> הפקדות</span><span><i class="swatch sw-gain"></i> רווח</span></div>
+    <div class="bar-axis"><span>היום</span><span id="c-axis-end"></span></div>
+    <div class="verdict" id="c-verdict"></div>
+    <p class="calc-note">הדמיה בריבית קבועה. בשוק אמיתי התשואה מקפצת כמו ילד שאכל שוקולד.</p>
+  </div>
+</section></div>
+
+<!-- SPEND -->
+<div class="burn-band"><div class="wrap"><section id="spend">
+  <div class="eyebrow reveal" style="color:#ffb3b3">חלק שני</div>
+  <h2 class="sec-title red reveal">איך לבזבז כסף 🔥</h2>
+  <p class="sec-lead reveal">לבזבז זה קל ומהנה. כל מה שצריך זה אצבע, חיבור לאינטרנט, ו"מגיע לי".</p>
+  <div class="cards">
+    <div class="card reveal"><div class="ic">☕</div><h3>הקפה של 27</h3><p>כל בוקר. כל יום. "בלי הקפה אני לא בן אדם". אוקיי, אבל בן אדם עם ₪9,855 פחות בשנה.</p></div>
+    <div class="card reveal"><div class="ic">📺</div><h3>מנויים ששכחתם מהם</h3><p>שלוש פלטפורמות סטרימינג, אחת שאתם צופים בה. השאר זה תרומה חודשית לסיליקון ואלי.</p></div>
+    <div class="card reveal"><div class="ic">🏷️</div><h3>"זה היה בהנחה"</h3><p>חסכתם 40% על משהו שלא הייתם קונים. מזל טוב, בזבזתם 60%. מתמטיקה אין ברירה.</p></div>
+    <div class="card reveal"><div class="ic">🛒</div><h3>קנייה ב‑02:00</h3><p>הסל מתמלא בפרופורציה הפוכה לשעה. בבוקר תתפלאו מה הזמנתם. מי צריך מפזר ריח בצורת דינוזאור?</p></div>
+    <div class="card reveal"><div class="ic">🚗</div><h3>רכב חדש כל 3 שנים</h3><p>הפיחות הכי גדול הוא ברגע שיצאתם מהסוכנות. ריח רכב חדש עולה עשרות אלפים.</p></div>
+    <div class="card reveal"><div class="ic">🎮</div><h3>מיקרו-טרנזקציות</h3><p>"זה רק 20 שקל." ×30 בחודש = "לאן נעלם הכסף?"</p></div>
+  </div>
+  <div class="calc reveal">
+    <div class="calc-title">🔥 כמה ההרגל הזה באמת עולה?</div>
+    <p class="calc-desc">הכניסו הוצאה קטנה וקבועה, ותתחרטו. כלומר — ותראו כמה היא עולה.</p>
+    <div class="calc-grid">
+      <div class="field"><label for="s-amount">עלות ההרגל</label><input id="s-amount" type="number" inputmode="decimal" value="27" min="0"></div>
+      <div class="field"><label for="s-freq">כל כמה זמן?</label><select id="s-freq"><option value="daily">כל יום</option><option value="weekly">כל שבוע</option><option value="monthly">כל חודש</option></select></div>
+      <div class="field"><label for="s-years">לאורך כמה שנים</label><input id="s-years" type="number" inputmode="numeric" value="10" min="1" max="60"></div>
+    </div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">עלות לשנה</div><div class="val burn" id="s-year">₪0</div></div>
+      <div class="out-box"><div class="lbl" id="s-total-lbl">סך הכול</div><div class="val burn" id="s-total">₪0</div></div>
+      <div class="out-box"><div class="lbl">אילו השקעת (7%)</div><div class="val mint" id="s-invested">₪0</div></div>
+    </div>
+    <div class="verdict" id="s-verdict"></div>
+  </div>
+</section></div></div>
+
+<!-- BUDGET -->
+<div class="wrap"><section id="budget">
+  <div class="eyebrow reveal">חלק שלישי</div>
+  <h2 class="sec-title gold reveal">תקציב חכם: כלל 50/30/20</h2>
+  <p class="sec-lead reveal">שיטה פשוטה לחלק הכנסה חודשית. לא כלא — מפה. אתם מחליטים לאן הכסף הולך, במקום לתהות לאן נעלם.</p>
+  <div class="calc reveal">
+    <div class="calc-title">📊 מחשבון תקציב</div>
+    <div class="calc-grid"><div class="field"><label for="b-income">הכנסה חודשית נטו</label><input id="b-income" type="number" inputmode="numeric" value="12000" min="0"></div></div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">צרכים · 50%</div><div class="val paper" id="b-needs">₪0</div></div>
+      <div class="out-box"><div class="lbl">רצונות · 30%</div><div class="val gold" id="b-wants">₪0</div></div>
+      <div class="out-box"><div class="lbl">חיסכון · 20%</div><div class="val mint" id="b-save">₪0</div></div>
+    </div>
+    <div class="budget-bar"><div class="bseg-needs" style="width:50%">50%</div><div class="bseg-wants" style="width:30%">30%</div><div class="bseg-save" style="width:20%">20%</div></div>
+    <p class="calc-note">צרכים = שכר דירה, חשבונות, אוכל. רצונות = בילויים וקניות. חיסכון = השקעה וקרן חירום. "סושי בליווי" — רצון, לא צורך.</p>
+  </div>
+</section></div>
+
+<!-- MARKETS - REAL STOCKS -->
+<div class="wrap"><section id="markets">
+  <div class="eyebrow reveal">שוק ההון</div>
+  <h2 class="sec-title green reveal">📊 מניות ומדדים — בזמן אמת*ש</h2>
+  <p class="sec-lead reveal">*ש = שקרי לגמרי. מדמה תנודות שוק ריאליסטיות — לא נתונים אמיתיים. אבל המספרים מתנהגים כמו שוק אמיתי.</p>
+
+  <!-- Fear & Greed -->
+  <div class="calc reveal">
+    <div class="calc-title">😱🤑 מד פחד וחמדנות</div>
+    <p class="calc-desc">בדיוק כמו CNN Fear & Greed — אבל בשקלים ובלי פרסומות. מבוסס על תנודות הסימולציה.</p>
+    <div class="fg-meter">
+      <div class="fg-value" id="fgValue">50</div>
+      <div id="fgLabel" style="font-weight:700;margin-bottom:10px">ניטרלי</div>
+      <div class="fg-bar"><div class="fg-needle" id="fgNeedle" style="left:50%"></div></div>
+      <div class="fg-labels"><span>פחד קיצוני</span><span>פחד</span><span>ניטרלי</span><span>חמדנות</span><span>חמדנות קיצונית</span></div>
+    </div>
+  </div>
+
+  <div class="stock-grid" id="stockGrid"></div>
+</section></div>
+
+<!-- STOCK SIMULATOR -->
+<div class="wrap"><section id="stock">
+  <div class="eyebrow reveal">תרגול</div>
+  <h2 class="sec-title green reveal">💹 סימולטור בורסה</h2>
+  <p class="sec-lead reveal">₪100,000 וירטואליים. אפס סיכון. קנו, מכרו, ותגלו שלתזמן את השוק זה כמו לתפוס סבון במקלחת.</p>
+  <div class="stock-sim reveal">
+    <div class="stock-header">
+      <div><div style="font-size:.85rem;color:var(--muted)">יתרה</div><div class="stock-balance" id="stockBal">₪100,000</div></div>
+      <div><div style="font-size:.85rem;color:var(--muted)">שווי תיק</div><div class="stock-balance" id="stockPortVal">₪0</div></div>
+      <div><div style="font-size:.85rem;color:var(--muted)">רווח/הפסד כולל</div><div class="stock-balance" id="stockPnL" style="color:var(--muted)">₪0</div></div>
+    </div>
+    <div class="stock-canvas"><canvas id="stockChart"></canvas></div>
+    <div class="stock-controls">
+      <select id="stockPick"></select>
+      <input id="stockQty" type="number" value="10" min="1" placeholder="כמות">
+      <button class="stock-btn buy" id="stockBuy">קנה</button>
+      <button class="stock-btn sell" id="stockSell">מכור</button>
+      <button class="stock-btn" style="background:var(--box-bg);color:var(--muted);border:1px solid var(--border)" id="stockFF">⏩ דלג יום</button>
+    </div>
+    <div id="portfolio"></div>
+    <div class="verdict" id="stockVerdict" style="margin-top:12px">התחילו לסחור כדי לראות את הביצועים שלכם</div>
+  </div>
+</section></div>
+
+<!-- EXPENSE TRACKER -->
+<div class="wrap"><section id="tracker">
+  <div class="eyebrow reveal">כלי</div>
+  <h2 class="sec-title blue reveal">📝 מעקב הוצאות</h2>
+  <p class="sec-lead reveal">רשמו את ההוצאות וגלו לאן הכסף נעלם. ספוילר: זה לאוכל.</p>
+  <div class="expense-tracker reveal">
+    <div class="calc-title" style="color:var(--blue)">הוסיפו הוצאה</div>
+    <div class="expense-form">
+      <input id="expName" type="text" placeholder="תיאור">
+      <input id="expAmt" type="number" inputmode="decimal" placeholder="סכום" min="0">
+      <select id="expCat"><option value="אוכל">🍕 אוכל</option><option value="תחבורה">🚌 תחבורה</option><option value="בילויים">🎬 בילויים</option><option value="קניות">🛍️ קניות</option><option value="חשבונות">📱 חשבונות</option><option value="אחר">📦 אחר</option></select>
+      <button id="expAdd">+ הוסף</button>
+    </div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">סה"כ</div><div class="val burn" id="expTotal">₪0</div></div>
+      <div class="out-box"><div class="lbl">הוצאות</div><div class="val paper" id="expCount">0</div></div>
+      <div class="out-box"><div class="lbl">ממוצע</div><div class="val blue" id="expAvg">₪0</div></div>
+    </div>
+    <div id="expChartWrap" style="margin-top:16px"></div>
+    <div class="expense-list" id="expList"></div>
+    <button class="add-phase-btn" id="expClear" style="margin-top:14px;border-color:var(--burn);color:var(--burn)">🗑️ נקה הכול</button>
+  </div>
+</section></div>
+
+<!-- DEBT -->
+<div class="wrap"><section id="debt">
+  <div class="eyebrow reveal">חשוב</div>
+  <h2 class="sec-title red reveal">💳 מחשבון סילוק חובות</h2>
+  <p class="sec-lead reveal">חוב בריבית גבוהה הוא "השקעה" שלילית מובטחת. סילוק שלו = תשואה בטוחה. בן דוד לא יציע לכם כזו.</p>
+  <div class="calc reveal" style="border-color:var(--burn)">
+    <div class="calc-title" style="color:var(--burn)">החובות שלי</div>
+    <div id="debtList">
+      <div class="debt-row"><input type="text" value="כרטיס אשראי"><input type="number" value="15000" min="0" placeholder="יתרה"><input type="number" value="18" min="0" step="0.1" placeholder="ריבית %"><input type="number" value="500" min="0" placeholder="תשלום חודשי"><button onclick="this.closest('.debt-row').remove();calcDebt()">✕</button></div>
+      <div class="debt-row"><input type="text" value="הלוואה אישית"><input type="number" value="30000" min="0"><input type="number" value="8" min="0" step="0.1"><input type="number" value="800" min="0"><button onclick="this.closest('.debt-row').remove();calcDebt()">✕</button></div>
+    </div>
+    <button class="add-phase-btn" id="addDebtBtn">+ הוסיפו חוב</button>
+    <div class="field" style="margin-top:16px;max-width:250px"><label for="debtExtra">תוספת חודשית לסילוק מהיר</label><input id="debtExtra" type="number" inputmode="numeric" value="500" min="0"></div>
+    <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
+      <button class="up-btn active" data-debt-method="avalanche" style="background:var(--burn);color:#fff">🏔️ מפולת (ריבית גבוהה קודם)</button>
+      <button class="up-btn" data-debt-method="snowball" style="background:var(--box-bg);color:var(--muted);border:1px solid var(--border)">⛄ כדור שלג (יתרה קטנה קודם)</button>
+    </div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">סך חובות</div><div class="val burn" id="debtTotal">₪0</div></div>
+      <div class="out-box"><div class="lbl">זמן עד סילוק</div><div class="val gold" id="debtTime">0</div></div>
+      <div class="out-box"><div class="lbl">סך ריבית</div><div class="val burn" id="debtInterest">₪0</div></div>
+    </div>
+    <div class="verdict" id="debtVerdict" style="background:rgba(255,91,91,.14);border-color:rgba(255,91,91,.4)"></div>
+  </div>
+</section></div>
+
+<!-- MORE CALCS -->
+<div class="wrap"><section id="calc-more">
+  <div class="eyebrow reveal">ארגז הכלים</div>
+  <h2 class="sec-title gold reveal">עוד מחשבונים</h2>
+  <p class="sec-lead reveal">כי מי לא אוהב לשחק עם מספרים ולהיבהל מהתוצאות.</p>
+
+  <div class="calc reveal">
+    <div class="calc-title">🏠 מחשבון משכנתה</div>
+    <p class="calc-desc">חישוב שפיצר — כי הבנק תמיד ירוויח, אבל לפחות תדעו כמה.</p>
+    <div class="calc-grid">
+      <div class="field"><label for="m-amount">סכום ההלוואה</label><input id="m-amount" type="number" value="800000" min="0"></div>
+      <div class="field"><label for="m-rate">ריבית שנתית (%)</label><input id="m-rate" type="number" value="5" min="0" step="0.1"></div>
+      <div class="field"><label for="m-years">תקופה (שנים)</label><input id="m-years" type="number" value="25" min="1" max="40"></div>
+    </div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">תשלום חודשי</div><div class="val gold" id="m-pay">₪0</div></div>
+      <div class="out-box"><div class="lbl">סך החזר</div><div class="val paper" id="m-total">₪0</div></div>
+      <div class="out-box"><div class="lbl">מזה ריבית</div><div class="val burn" id="m-interest">₪0</div></div>
+    </div>
+    <div class="verdict" id="m-verdict"></div>
+  </div>
+
+  <div class="calc reveal">
+    <div class="calc-title">📉 מחשבון אינפלציה</div>
+    <p class="calc-desc">הכסף שלכם לא הולך לשום מקום. הוא פשוט שווה פחות.</p>
+    <div class="calc-grid">
+      <div class="field"><label for="i-amount">סכום היום</label><input id="i-amount" type="number" value="100000" min="0"></div>
+      <div class="field"><label for="i-rate">אינפלציה שנתית (%)</label><input id="i-rate" type="number" value="3" min="0" step="0.1"></div>
+      <div class="field"><label for="i-years">בעוד כמה שנים</label><input id="i-years" type="number" value="20" min="1" max="60"></div>
+    </div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">יעלה אז</div><div class="val burn" id="i-future">₪0</div></div>
+      <div class="out-box"><div class="lbl">כוח קנייה יישחק ל</div><div class="val paper" id="i-power">₪0</div></div>
+    </div>
+    <div class="verdict" id="i-verdict"></div>
+  </div>
+
+  <div class="calc reveal">
+    <div class="calc-title">🏖️ פרישה מוקדמת (FIRE)</div>
+    <div class="calc-grid"><div class="field"><label for="f-expense">הוצאה חודשית רצויה</label><input id="f-expense" type="number" value="10000" min="0"></div></div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">הון נדרש (כלל 4%)</div><div class="val gold" id="f-nest">₪0</div></div>
+      <div class="out-box"><div class="lbl">הוצאה שנתית</div><div class="val paper" id="f-annual">₪0</div></div>
+    </div>
+    <div class="verdict" id="f-verdict"></div>
+  </div>
+
+  <div class="calc reveal">
+    <div class="calc-title">⏰ מחשבון שכר שעתי</div>
+    <p class="calc-desc">כמה באמת שווה שעה מהחיים שלכם? עם נסיעות זה עוד יותר מדכא.</p>
+    <div class="calc-grid">
+      <div class="field"><label for="h-salary">משכורת חודשית נטו</label><input id="h-salary" type="number" value="12000" min="0"></div>
+      <div class="field"><label for="h-hours">שעות/שבוע</label><input id="h-hours" type="number" value="42" min="1" max="80"></div>
+      <div class="field"><label for="h-commute">נסיעה יומית (דקות)</label><input id="h-commute" type="number" value="60" min="0"></div>
+    </div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">שכר לשעה</div><div class="val gold" id="h-rate">₪0</div></div>
+      <div class="out-box"><div class="lbl">כולל נסיעה</div><div class="val paper" id="h-real">₪0</div></div>
+      <div class="out-box"><div class="lbl">קפה 27₪ =</div><div class="val burn" id="h-coffee">0</div></div>
+    </div>
+    <div class="verdict" id="h-verdict"></div>
+  </div>
+
+  <div class="calc reveal">
+    <div class="calc-title">🧾 מחשבון מס הכנסה (ישראל)</div>
+    <p class="calc-desc">המדינה רוצה חלק. תגלו כמה.</p>
+    <div class="calc-grid"><div class="field"><label for="t-income">הכנסה שנתית ברוטו</label><input id="t-income" type="number" value="200000" min="0"></div></div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">מס שנתי</div><div class="val burn" id="t-tax">₪0</div></div>
+      <div class="out-box"><div class="lbl">מס חודשי</div><div class="val burn" id="t-monthly">₪0</div></div>
+      <div class="out-box"><div class="lbl">שיעור אפקטיבי</div><div class="val paper" id="t-effective">0%</div></div>
+      <div class="out-box"><div class="lbl">נטו חודשי</div><div class="val mint" id="t-net">₪0</div></div>
+    </div>
+    <div class="verdict" id="t-verdict"></div>
+  </div>
+
+  <div class="calc reveal">
+    <div class="calc-title">🏠 שכירות מול קנייה</div>
+    <p class="calc-desc">הדילמה הנצחית. אין תשובה נכונה אחת — אבל יש מספרים.</p>
+    <div class="calc-grid">
+      <div class="field"><label for="rv-rent">שכ"ד חודשי</label><input id="rv-rent" type="number" value="5000" min="0"></div>
+      <div class="field"><label for="rv-price">מחיר דירה</label><input id="rv-price" type="number" value="1800000" min="0"></div>
+      <div class="field"><label for="rv-down">הון עצמי (%)</label><input id="rv-down" type="number" value="25" min="0" max="100"></div>
+      <div class="field"><label for="rv-rate">ריבית משכנתה (%)</label><input id="rv-rate" type="number" value="5" min="0" step="0.1"></div>
+      <div class="field"><label for="rv-appr">עליית ערך (%)</label><input id="rv-appr" type="number" value="3" min="0" step="0.1"></div>
+      <div class="field"><label for="rv-years">שנים</label><input id="rv-years" type="number" value="20" min="1" max="40"></div>
+    </div>
+    <div class="calc-out">
+      <div class="out-box"><div class="lbl">עלות שכירות כוללת</div><div class="val burn" id="rv-rentTotal">₪0</div></div>
+      <div class="out-box"><div class="lbl">משכנתה חודשית</div><div class="val paper" id="rv-mortPay">₪0</div></div>
+      <div class="out-box"><div class="lbl">שווי הדירה אז</div><div class="val mint" id="rv-futureVal">₪0</div></div>
+    </div>
+    <div class="verdict" id="rv-verdict"></div>
+  </div>
+</section></div>
+
+<!-- INVEST -->
+<div class="wrap"><section id="invest">
+  <div class="eyebrow reveal">חלק רביעי</div>
+  <h2 class="sec-title green reveal">להשקיע / לא להשקיע</h2>
+  <p class="sec-lead reveal">אותו כסף, שתי דרכים. בצד אחד — סבלנות ושיטה. בצד שני — טלגרם וחלומות.</p>
+  <div class="switcher reveal">
+    <button id="tabGood" class="active good">✅ איך כן</button>
+    <button id="tabBad" class="bad">❌ איך לא</button>
+  </div>
+  <div id="panelGood" class="panel show">
     <div class="cards">
-      <div class="card reveal"><div class="ic">🛠️</div><h3>תמכרו מיומנות מבוקשת</h3><p>ככל שפחות אנשים יודעים לעשות את מה שאתם עושים, כך שווה יותר השעה שלכם.</p></div>
-      <div class="card reveal"><div class="ic">🔁</div><h3>בנו הכנסה פסיבית</h3><p>נכס שמייצר כסף גם כשאתם ישנים: תוכן, מוצר דיגיטלי, השכרה.</p></div>
-      <div class="card reveal"><div class="ic">📈</div><h3>תנו לזמן לעבוד</h3><p>ריבית דריבית. סכום קטן + הרבה שנים מנצח סכום גדול + פאניקה.</p></div>
-      <div class="card reveal"><div class="ic">🧠</div><h3>תשקיעו בעצמכם</h3><p>הכישורים שלכם הם הנכס שאי אפשר לקחת מכם.</p></div>
-      <div class="card reveal"><div class="ic">🤝</div><h3>נטוורקינג</h3><p>50% מההזדמנויות מגיעות ממכרים. תצאו מהבית, תכירו אנשים.</p></div>
-      <div class="card reveal"><div class="ic">💡</div><h3>פתרו בעיה אמיתית</h3><p>כל עסק מצליח מתחיל מבעיה שמישהו מוכן לשלם כדי לפתור.</p></div>
+      <div class="card"><div class="ic">🥚</div><h3>פיזור</h3><p>לא כל הביצים בסל אחד. קרן מחקה מדד רחב = מאות חברות בקליק אחד.</p></div>
+      <div class="card"><div class="ic">⏳</div><h3>אופק ארוך</h3><p>שוק יורד ועולה. מי שלא נבהל ונשאר — נהנה מהממוצע, לא מהדרמה.</p></div>
+      <div class="card"><div class="ic">💸</div><h3>עלויות נמוכות</h3><p>1% דמי ניהול נשמע זניח? לאורך 30 שנה הוא אוכל שליש מהתשואה. שליש.</p></div>
+      <div class="card"><div class="ic">📚</div><h3>תבינו מה קניתם</h3><p>אם אי אפשר להסביר את ההשקעה בשני משפטים — אתם לא מבינים אותה מספיק.</p></div>
     </div>
-    <div class="calc reveal">
-      <div class="calc-title">🧮 מחשבון ריבית דריבית</div>
-      <p class="calc-desc">הכניסו את הנתונים שלכם וגלו לכמה הכסף יכול לגדול לאורך זמן.</p>
-      <div class="calc-grid">
-        <div class="field"><label for="c-initial">סכום התחלתי</label><input id="c-initial" type="number" inputmode="numeric" value="10000" min="0"></div>
-        <div class="field"><label for="c-monthly">הפקדה חודשית</label><input id="c-monthly" type="number" inputmode="numeric" value="1000" min="0"></div>
-        <div class="field"><label for="c-rate">תשואה שנתית (%)</label><input id="c-rate" type="number" inputmode="decimal" value="7" min="0" step="0.1"></div>
-        <div class="field"><label for="c-years">מספר שנים</label><input id="c-years" type="number" inputmode="numeric" value="20" min="1" max="60"></div>
-      </div>
-      <div class="calc-out">
-        <div class="out-box"><div class="lbl">סכום סופי</div><div class="val gold" id="c-final">₪0</div></div>
-        <div class="out-box"><div class="lbl">סך הפקדות</div><div class="val paper" id="c-contrib">₪0</div></div>
-        <div class="out-box"><div class="lbl">רווח מהריבית</div><div class="val mint" id="c-gain">₪0</div></div>
-        <div class="out-box"><div class="lbl">מכפלת הכסף</div><div class="val purple" id="c-mult">×0</div></div>
-      </div>
-      <div class="bars" id="c-bars" aria-hidden="true"></div>
-      <div class="legend"><span><i class="swatch sw-base"></i> הפקדות</span><span><i class="swatch sw-gain"></i> רווח</span></div>
-      <div class="bar-axis"><span>היום</span><span id="c-axis-end">בעוד 20 שנה</span></div>
-      <p class="calc-note">הדמיה בריבית קבועה. בשוק אמיתי התשואה משתנה.</p>
-    </div>
-  </section>
-</div>
-
-<!-- ===== SECTION: SPEND ===== -->
-<div class="burn-band">
-  <div class="wrap">
-    <section id="spend">
-      <div class="eyebrow reveal" style="color:#ffb3b3">חלק שני</div>
-      <h2 class="sec-title red reveal">איך לבזבז כסף 🔥</h2>
-      <p class="sec-lead reveal">לבזבז זה קל ומהנה. הנה הדרכים הקלאסיות שכולנו מכירים.</p>
-      <div class="cards">
-        <div class="card reveal"><div class="ic">☕</div><h3>הקפה של 27</h3><p>כל בוקר. כל יום. תכפילו ב‑365 ותגלו שקניתם מכונת קפה משובחת… כל חודש.</p></div>
-        <div class="card reveal"><div class="ic">📺</div><h3>מנויים ששכחתם מהם</h3><p>שלוש פלטפורמות סטרימינג, אחת שאתם צופים בה.</p></div>
-        <div class="card reveal"><div class="ic">🏷️</div><h3>"זה היה בהנחה"</h3><p>חסכתם 40% על משהו שלא הייתם קונים. הוצאתם 60%.</p></div>
-        <div class="card reveal"><div class="ic">🛒</div><h3>קנייה ב‑02:00</h3><p>הסל מתמלא בפרופורציה הפוכה לשעה.</p></div>
-        <div class="card reveal"><div class="ic">🚗</div><h3>רכב חדש כל 3 שנים</h3><p>הפיחות הכי גדול הוא ברגע שיצאתם מהסוכנות. רכב בן שנתיים חוסך עשרות אלפים.</p></div>
-        <div class="card reveal"><div class="ic">🎮</div><h3>מיקרו-טרנזקציות</h3><p>סקין ב‑20 שקל פה, באנדל ב‑50 שם. בסוף חודש אתם מופתעים.</p></div>
-      </div>
-      <div class="calc reveal">
-        <div class="calc-title">🔥 כמה ההרגל הזה באמת עולה?</div>
-        <p class="calc-desc">הכניסו הוצאה קטנה וקבועה, ותראו כמה היא עולה — וכמה הייתה שווה אילו הושקעה.</p>
-        <div class="calc-grid">
-          <div class="field"><label for="s-amount">עלות ההרגל</label><input id="s-amount" type="number" inputmode="decimal" value="27" min="0"></div>
-          <div class="field"><label for="s-freq">כל כמה זמן?</label>
-            <select id="s-freq"><option value="daily">כל יום</option><option value="weekly">כל שבוע</option><option value="monthly">כל חודש</option></select>
-          </div>
-          <div class="field"><label for="s-years">לאורך כמה שנים</label><input id="s-years" type="number" inputmode="numeric" value="10" min="1" max="60"></div>
-        </div>
-        <div class="calc-out">
-          <div class="out-box"><div class="lbl">עלות לשנה</div><div class="val burn" id="s-year">₪0</div></div>
-          <div class="out-box"><div class="lbl" id="s-total-lbl">סך הכול</div><div class="val burn" id="s-total">₪0</div></div>
-          <div class="out-box"><div class="lbl">אילו השקעת (7%)</div><div class="val mint" id="s-invested">₪0</div></div>
-        </div>
-        <div class="verdict" id="s-verdict"></div>
-      </div>
-    </section>
   </div>
-</div>
-
-<!-- ===== SECTION: BUDGET ===== -->
-<div class="wrap">
-  <section id="budget">
-    <div class="eyebrow reveal">חלק שלישי</div>
-    <h2 class="sec-title gold reveal">תקציב חכם: כלל 50/30/20</h2>
-    <p class="sec-lead reveal">שיטה פשוטה לחלק הכנסה חודשית: 50% צרכים, 30% רצונות, 20% חיסכון.</p>
-    <div class="calc reveal">
-      <div class="calc-title">📊 מחשבון תקציב</div>
-      <div class="calc-grid">
-        <div class="field"><label for="b-income">הכנסה חודשית נטו</label><input id="b-income" type="number" inputmode="numeric" value="12000" min="0"></div>
-      </div>
-      <div class="calc-out">
-        <div class="out-box"><div class="lbl">צרכים · 50%</div><div class="val paper" id="b-needs">₪0</div></div>
-        <div class="out-box"><div class="lbl">רצונות · 30%</div><div class="val gold" id="b-wants">₪0</div></div>
-        <div class="out-box"><div class="lbl">חיסכון · 20%</div><div class="val mint" id="b-save">₪0</div></div>
-      </div>
-      <div class="budget-bar" aria-hidden="true">
-        <div class="bseg-needs" style="width:50%">50%</div><div class="bseg-wants" style="width:30%">30%</div><div class="bseg-save" style="width:20%">20%</div>
-      </div>
-      <p class="calc-note">צרכים = שכר דירה, חשבונות, אוכל. רצונות = בילויים וקניות. חיסכון = השקעה וקרן חירום.</p>
+  <div id="panelBad" class="panel">
+    <div class="cards">
+      <div class="card"><div class="ic">🔥</div><h3>"טיפ חם" מבן דוד</h3><p>הוא שמע ממישהו שראה בטלגרם. אתם נכנסים אחרון, יוצאים עם פחות כסף ויותר בושה.</p></div>
+      <div class="card"><div class="ic">🚀</div><h3>אול־אין על מטבע מם</h3><p>תרשים שעולה אנכית זה לא "הזדמנות". זה האנשים שנכנסו לפניכם מחכים שתקנו כדי שהם ימכרו.</p></div>
+      <div class="card"><div class="ic">😱</div><h3>למכור בפאניקה</h3><p>השוק נפל 20%, אתם מוכרים הכל, ואז הוא עולה 40% בלעדיכם. קלאסי.</p></div>
+      <div class="card"><div class="ic">🎰</div><h3>להשקיע = להמר</h3><p>אם הריגוש הוא הסיבה — זה קזינו עם גרפים ואפליקציה יפה.</p></div>
+      <div class="card"><div class="ic">📊</div><h3>"אני עוקב אחרי הגרפים"</h3><p>ניתוח טכני על תרשים של 5 דקות. כמו לנסות לנבא את מזג האוויר לפי העננים שאתה רואה עכשיו מהחלון.</p></div>
+      <div class="card"><div class="ic">🤫</div><h3>"יש לי מידע פנים"</h3><p>אם באמת היה לך מידע פנים, לא היית מספר לאנשים בפורום.</p></div>
     </div>
-  </section>
-</div>
-
-<!-- ===== SECTION: STOCK SIMULATOR ===== -->
-<div class="wrap">
-  <section id="stock">
-    <div class="eyebrow reveal">חדש!</div>
-    <h2 class="sec-title green reveal">📊 סימולטור בורסה</h2>
-    <p class="sec-lead reveal">תרגלו קנייה ומכירה של מניות בכסף וירטואלי. בלי סיכון, עם הרבה למידה.</p>
-    <div class="stock-sim reveal">
-      <div class="stock-header">
-        <div>
-          <div style="font-size:.85rem;color:var(--muted)">יתרה זמינה</div>
-          <div class="stock-balance" id="stockBal">₪100,000</div>
-        </div>
-        <div>
-          <div style="font-size:.85rem;color:var(--muted)">שווי תיק</div>
-          <div class="stock-balance" id="stockPortVal">₪0</div>
-        </div>
-      </div>
-      <div class="stock-canvas"><canvas id="stockChart"></canvas></div>
-      <div class="stock-controls">
-        <select id="stockPick">
-          <option value="tase">ת"א 125</option>
-          <option value="sp500">S&P 500</option>
-          <option value="nasdaq">NASDAQ</option>
-          <option value="gold">זהב</option>
-          <option value="btc">ביטקוין</option>
-          <option value="bond">אג"ח ממשלתי</option>
-        </select>
-        <input id="stockQty" type="number" value="10" min="1" placeholder="כמות">
-        <button class="stock-btn buy" id="stockBuy">קנה</button>
-        <button class="stock-btn sell" id="stockSell">מכור</button>
-        <button class="stock-btn" style="background:var(--box-bg);color:var(--muted);border:1px solid var(--border)" id="stockFF">⏩ דלג יום</button>
-      </div>
-      <div class="portfolio" id="portfolio"></div>
-      <div class="verdict" id="stockVerdict" style="margin-top:12px">התחילו לסחור כדי לראות את הביצועים שלכם</div>
-    </div>
-  </section>
-</div>
-
-<!-- ===== SECTION: EXPENSE TRACKER ===== -->
-<div class="wrap">
-  <section id="tracker">
-    <div class="eyebrow reveal">כלי חדש</div>
-    <h2 class="sec-title blue reveal">📝 מעקב הוצאות</h2>
-    <p class="sec-lead reveal">רשמו את ההוצאות שלכם ותראו לאן הכסף הולך. הנתונים נשמרים בדפדפן.</p>
-    <div class="expense-tracker reveal">
-      <div class="calc-title" style="color:var(--blue)">הוסיפו הוצאה</div>
-      <div class="expense-form">
-        <input id="expName" type="text" placeholder="תיאור (למשל: פיצה)">
-        <input id="expAmt" type="number" inputmode="decimal" placeholder="סכום" min="0">
-        <select id="expCat">
-          <option value="אוכל">🍕 אוכל</option>
-          <option value="תחבורה">🚌 תחבורה</option>
-          <option value="בילויים">🎬 בילויים</option>
-          <option value="קניות">🛍️ קניות</option>
-          <option value="חשבונות">📱 חשבונות</option>
-          <option value="אחר">📦 אחר</option>
-        </select>
-        <button id="expAdd">+ הוסף</button>
-      </div>
-      <div class="calc-out" id="expSummary">
-        <div class="out-box"><div class="lbl">סה"כ החודש</div><div class="val burn" id="expTotal">₪0</div></div>
-        <div class="out-box"><div class="lbl">מספר הוצאות</div><div class="val paper" id="expCount">0</div></div>
-        <div class="out-box"><div class="lbl">ממוצע להוצאה</div><div class="val blue" id="expAvg">₪0</div></div>
-      </div>
-      <div class="expense-chart-wrap" id="expChartWrap"></div>
-      <div class="expense-list" id="expList"></div>
-      <button class="add-debt-btn" id="expClear" style="margin-top:14px;border-color:var(--burn);color:var(--burn)">🗑️ נקה הכול</button>
-    </div>
-  </section>
-</div>
-
-<!-- ===== SECTION: DEBT PAYOFF ===== -->
-<div class="wrap">
-  <section id="debt">
-    <div class="eyebrow reveal">כלי חשוב</div>
-    <h2 class="sec-title red reveal">💳 מחשבון סילוק חובות</h2>
-    <p class="sec-lead reveal">הכניסו את החובות שלכם ותראו כמה זמן ייקח לסלק אותם — ואיזו שיטה עדיפה.</p>
-    <div class="calc reveal" style="border-color:var(--burn)">
-      <div class="calc-title" style="color:var(--burn)">החובות שלי</div>
-      <div class="debt-list" id="debtList">
-        <div class="debt-row">
-          <input type="text" placeholder="שם (למשל: אשראי)" value="כרטיס אשראי">
-          <input type="number" placeholder="יתרה" value="15000" min="0">
-          <input type="number" placeholder="ריבית %" value="18" min="0" step="0.1">
-          <input type="number" placeholder="תשלום חודשי" value="500" min="0">
-          <button onclick="this.closest('.debt-row').remove();calcDebt()">✕</button>
-        </div>
-        <div class="debt-row">
-          <input type="text" placeholder="שם" value="הלוואה אישית">
-          <input type="number" placeholder="יתרה" value="30000" min="0">
-          <input type="number" placeholder="ריבית %" value="8" min="0" step="0.1">
-          <input type="number" placeholder="תשלום חודשי" value="800" min="0">
-          <button onclick="this.closest('.debt-row').remove();calcDebt()">✕</button>
-        </div>
-      </div>
-      <button class="add-debt-btn" id="addDebtBtn">+ הוסיפו חוב</button>
-      <div class="field" style="margin-top:16px;max-width:250px">
-        <label for="debtExtra">תוספת חודשית לסילוק מהיר</label>
-        <input id="debtExtra" type="number" inputmode="numeric" value="500" min="0">
-      </div>
-      <div class="tab-group" style="margin-top:16px">
-        <button class="active" data-debt-method="avalanche">🏔️ מפולת (ריבית גבוהה קודם)</button>
-        <button data-debt-method="snowball">⛄ כדור שלג (יתרה קטנה קודם)</button>
-      </div>
-      <div class="calc-out">
-        <div class="out-box"><div class="lbl">סך חובות</div><div class="val burn" id="debtTotal">₪0</div></div>
-        <div class="out-box"><div class="lbl">זמן עד סילוק</div><div class="val gold" id="debtTime">0 חודשים</div></div>
-        <div class="out-box"><div class="lbl">סך ריבית שתשלמו</div><div class="val burn" id="debtInterest">₪0</div></div>
-      </div>
-      <div class="verdict" id="debtVerdict" style="background:rgba(255,91,91,.14);border-color:rgba(255,91,91,.4)"></div>
-    </div>
-  </section>
-</div>
-
-<!-- ===== SECTION: MORE CALCS ===== -->
-<div class="wrap">
-  <section id="calc-more">
-    <div class="eyebrow reveal">ארגז הכלים</div>
-    <h2 class="sec-title gold reveal">עוד מחשבונים</h2>
-    <p class="sec-lead reveal">משכנתה, אינפלציה, פרישה, שכר שעתי ומיסים.</p>
-
-    <div class="calc reveal">
-      <div class="calc-title">🏠 מחשבון משכנתה / הלוואה</div>
-      <div class="calc-grid">
-        <div class="field"><label for="m-amount">סכום ההלוואה</label><input id="m-amount" type="number" inputmode="numeric" value="800000" min="0"></div>
-        <div class="field"><label for="m-rate">ריבית שנתית (%)</label><input id="m-rate" type="number" inputmode="decimal" value="5" min="0" step="0.1"></div>
-        <div class="field"><label for="m-years">תקופה (שנים)</label><input id="m-years" type="number" inputmode="numeric" value="25" min="1" max="40"></div>
-      </div>
-      <div class="calc-out">
-        <div class="out-box"><div class="lbl">תשלום חודשי</div><div class="val gold" id="m-pay">₪0</div></div>
-        <div class="out-box"><div class="lbl">סך החזר כולל</div><div class="val paper" id="m-total">₪0</div></div>
-        <div class="out-box"><div class="lbl">מזה ריבית</div><div class="val burn" id="m-interest">₪0</div></div>
-      </div>
-      <div class="verdict" id="m-verdict"></div>
-    </div>
-
-    <div class="calc reveal">
-      <div class="calc-title">📉 מחשבון אינפלציה</div>
-      <div class="calc-grid">
-        <div class="field"><label for="i-amount">סכום היום</label><input id="i-amount" type="number" inputmode="numeric" value="100000" min="0"></div>
-        <div class="field"><label for="i-rate">אינפלציה שנתית (%)</label><input id="i-rate" type="number" inputmode="decimal" value="3" min="0" step="0.1"></div>
-        <div class="field"><label for="i-years">בעוד כמה שנים</label><input id="i-years" type="number" inputmode="numeric" value="20" min="1" max="60"></div>
-      </div>
-      <div class="calc-out">
-        <div class="out-box"><div class="lbl">מה שעולה היום יעלה אז</div><div class="val burn" id="i-future">₪0</div></div>
-        <div class="out-box"><div class="lbl">כוח הקנייה יישחק ל</div><div class="val paper" id="i-power">₪0</div></div>
-      </div>
-      <div class="verdict" id="i-verdict"></div>
-    </div>
-
-    <div class="calc reveal">
-      <div class="calc-title">🏖️ מחשבון פרישה מוקדמת (FIRE)</div>
-      <div class="calc-grid">
-        <div class="field"><label for="f-expense">הוצאה חודשית רצויה</label><input id="f-expense" type="number" inputmode="numeric" value="10000" min="0"></div>
-      </div>
-      <div class="calc-out">
-        <div class="out-box"><div class="lbl">הון נדרש (כלל 4%)</div><div class="val gold" id="f-nest">₪0</div></div>
-        <div class="out-box"><div class="lbl">הוצאה שנתית</div><div class="val paper" id="f-annual">₪0</div></div>
-      </div>
-      <div class="verdict" id="f-verdict"></div>
-    </div>
-
-    <div class="calc reveal">
-      <div class="calc-title">⏰ מחשבון שכר שעתי</div>
-      <p class="calc-desc">כמה שווה שעה מהזמן שלכם?</p>
-      <div class="calc-grid">
-        <div class="field"><label for="h-salary">משכורת חודשית נטו</label><input id="h-salary" type="number" inputmode="numeric" value="12000" min="0"></div>
-        <div class="field"><label for="h-hours">שעות עבודה בשבוע</label><input id="h-hours" type="number" inputmode="numeric" value="42" min="1" max="80"></div>
-        <div class="field"><label for="h-commute">זמן נסיעה יומי (דקות)</label><input id="h-commute" type="number" inputmode="numeric" value="60" min="0"></div>
-      </div>
-      <div class="calc-out">
-        <div class="out-box"><div class="lbl">שכר לשעה (רשמי)</div><div class="val gold" id="h-rate">₪0</div></div>
-        <div class="out-box"><div class="lbl">שכר לשעה (כולל נסיעה)</div><div class="val paper" id="h-real">₪0</div></div>
-        <div class="out-box"><div class="lbl">הקפה של 27₪ = דקות עבודה</div><div class="val burn" id="h-coffee">0</div></div>
-      </div>
-      <div class="verdict" id="h-verdict"></div>
-    </div>
-
-    <div class="calc reveal">
-      <div class="calc-title">🧾 מחשבון מס הכנסה (ישראל 2024)</div>
-      <p class="calc-desc">חישוב מס הכנסה לפי מדרגות מס ישראליות (פשוט, ללא נקודות זיכוי).</p>
-      <div class="calc-grid">
-        <div class="field"><label for="t-income">הכנסה שנתית ברוטו</label><input id="t-income" type="number" inputmode="numeric" value="200000" min="0"></div>
-      </div>
-      <div class="calc-out">
-        <div class="out-box"><div class="lbl">מס שנתי</div><div class="val burn" id="t-tax">₪0</div></div>
-        <div class="out-box"><div class="lbl">מס חודשי</div><div class="val burn" id="t-monthly">₪0</div></div>
-        <div class="out-box"><div class="lbl">שיעור מס אפקטיבי</div><div class="val paper" id="t-effective">0%</div></div>
-        <div class="out-box"><div class="lbl">נטו חודשי (לפני ביטוח לאומי)</div><div class="val mint" id="t-net">₪0</div></div>
-      </div>
-      <div class="verdict" id="t-verdict"></div>
-    </div>
-
-    <div class="calc reveal">
-      <div class="calc-title">🏠 שכירות מול קנייה</div>
-      <p class="calc-desc">מה עדיף — לשלם שכירות או לקנות דירה? (פישוט)</p>
-      <div class="calc-grid">
-        <div class="field"><label for="rv-rent">שכ"ד חודשי</label><input id="rv-rent" type="number" inputmode="numeric" value="5000" min="0"></div>
-        <div class="field"><label for="rv-price">מחיר דירה</label><input id="rv-price" type="number" inputmode="numeric" value="1800000" min="0"></div>
-        <div class="field"><label for="rv-down">הון עצמי (%)</label><input id="rv-down" type="number" inputmode="numeric" value="25" min="0" max="100"></div>
-        <div class="field"><label for="rv-rate">ריבית משכנתה (%)</label><input id="rv-rate" type="number" inputmode="decimal" value="5" min="0" step="0.1"></div>
-        <div class="field"><label for="rv-appr">עליית ערך שנתית (%)</label><input id="rv-appr" type="number" inputmode="decimal" value="3" min="0" step="0.1"></div>
-        <div class="field"><label for="rv-years">תקופה (שנים)</label><input id="rv-years" type="number" inputmode="numeric" value="20" min="1" max="40"></div>
-      </div>
-      <div class="calc-out">
-        <div class="out-box"><div class="lbl">עלות שכירות כוללת</div><div class="val burn" id="rv-rentTotal">₪0</div></div>
-        <div class="out-box"><div class="lbl">תשלום משכנתה חודשי</div><div class="val paper" id="rv-mortPay">₪0</div></div>
-        <div class="out-box"><div class="lbl">שווי הדירה אז</div><div class="val mint" id="rv-futureVal">₪0</div></div>
-      </div>
-      <div class="verdict" id="rv-verdict"></div>
-    </div>
-  </section>
-</div>
-
-<!-- ===== SECTION: INVEST ===== -->
-<div class="wrap">
-  <section id="invest">
-    <div class="eyebrow reveal">חלק רביעי</div>
-    <h2 class="sec-title green reveal">להשקיע / לא להשקיע</h2>
-    <p class="sec-lead reveal">אותו כסף, שתי דרכים. תלחצו והשוו.</p>
-    <div class="switcher reveal" role="tablist">
-      <button id="tabGood" class="active good" role="tab" aria-selected="true">✅ איך כן</button>
-      <button id="tabBad" class="bad" role="tab" aria-selected="false">❌ איך לא</button>
-    </div>
-    <div id="panelGood" class="panel show" role="tabpanel">
-      <div class="cards">
-        <div class="card"><div class="ic">🥚</div><h3>פיזור</h3><p>לא כל הביצים בסל אחד. קרן מחקה מדד רחב מפזרת אתכם על מאות חברות.</p></div>
-        <div class="card"><div class="ic">⏳</div><h3>אופק ארוך</h3><p>שוק יורד ועולה. מי שלא נבהל ונשאר — נהנה מהממוצע.</p></div>
-        <div class="card"><div class="ic">💸</div><h3>עלויות נמוכות</h3><p>דמי ניהול גבוהים אוכלים תשואה בשקט. כל אחוז משנה דרמטית.</p></div>
-        <div class="card"><div class="ic">📚</div><h3>תבינו מה קניתם</h3><p>אם אי אפשר להסביר את ההשקעה במשפט אחד — כנראה לא מבינים אותה.</p></div>
-      </div>
-    </div>
-    <div id="panelBad" class="panel" role="tabpanel">
-      <div class="cards">
-        <div class="card"><div class="ic">🔥</div><h3>"טיפ חם" מבן דוד</h3><p>מישהו שמע ממישהו. אתם נכנסים אחרון, יוצאים מפסידים.</p></div>
-        <div class="card"><div class="ic">🚀</div><h3>אול־אין על מטבע מם</h3><p>תרשים שעולה אנכית זה לא "הזדמנות", זה סוף המסיבה.</p></div>
-        <div class="card"><div class="ic">😱</div><h3>למכור בפאניקה</h3><p>השוק נופל, אתם מוכרים בתחתית, ואז הוא עולה בלעדיכם.</p></div>
-        <div class="card"><div class="ic">🎰</div><h3>להשקיע = להמר</h3><p>אם הריגוש הוא הסיבה — זה קזינו עם גרפים.</p></div>
-      </div>
-    </div>
-
-    <!-- Comparison Table -->
-    <h3 style="margin-top:30px;font-size:1.2rem;color:var(--gold)" class="reveal">📋 השוואה: אפיקי השקעה</h3>
-    <table class="comp-table reveal">
-      <thead><tr><th>אפיק</th><th>סיכון</th><th>נזילות</th><th>תשואה צפויה</th><th>מתאים ל...</th></tr></thead>
-      <tbody>
-        <tr><td>פק"מ / עו"ש</td><td class="check">נמוך</td><td class="check">גבוהה</td><td>1-3%</td><td>קרן חירום</td></tr>
-        <tr><td>אג"ח ממשלתי</td><td class="check">נמוך-בינוני</td><td>בינונית</td><td>3-5%</td><td>אופק בינוני</td></tr>
-        <tr><td>קרן מחקה מדד</td><td>בינוני</td><td class="check">גבוהה</td><td>7-10%</td><td>השקעה לטווח ארוך</td></tr>
-        <tr><td>מניה בודדת</td><td class="cross">גבוה</td><td class="check">גבוהה</td><td>?</td><td>מי שמבין</td></tr>
-        <tr><td>נדל"ן</td><td>בינוני</td><td class="cross">נמוכה</td><td>4-8%</td><td>אופק ארוך + הון</td></tr>
-        <tr><td>קריפטו</td><td class="cross">גבוה מאוד</td><td class="check">גבוהה</td><td>???</td><td>כסף שלא חבל עליו</td></tr>
-      </tbody>
-    </table>
-  </section>
-</div>
-
-<!-- ===== SECTION: QUIZ ===== -->
-<div class="purple-band">
-  <div class="wrap">
-    <section id="quiz">
-      <div class="eyebrow reveal" style="color:#d4b6ff">בואו נבחן</div>
-      <h2 class="sec-title purple reveal">🧠 חידון פיננסי</h2>
-      <p class="sec-lead reveal">15 שאלות על כסף, השקעות וכלכלה. כמה תענו נכון?</p>
-      <div class="quiz-box reveal" id="quizBox">
-        <div class="quiz-progress" id="quizProgress"></div>
-        <div class="quiz-q" id="quizQ"></div>
-        <div class="quiz-opts" id="quizOpts"></div>
-        <div class="quiz-explain" id="quizExplain"></div>
-        <button class="up-btn quiz-next" id="quizNext" style="background:var(--purple)">שאלה הבאה ←</button>
-      </div>
-    </section>
   </div>
-</div>
+  <h3 style="margin-top:30px;font-size:1.2rem;color:var(--gold)" class="reveal">📋 השוואה: אפיקי השקעה</h3>
+  <table class="comp-table reveal">
+    <thead><tr><th>אפיק</th><th>סיכון</th><th>נזילות</th><th>תשואה</th><th>מתאים ל...</th></tr></thead>
+    <tbody>
+      <tr><td>פק"מ / עו"ש</td><td class="check">נמוך</td><td class="check">גבוהה</td><td>1-3%</td><td>קרן חירום</td></tr>
+      <tr><td>אג"ח ממשלתי</td><td class="check">נמוך-בינוני</td><td>בינונית</td><td>3-5%</td><td>אופק בינוני</td></tr>
+      <tr><td>קרן מחקה מדד</td><td>בינוני</td><td class="check">גבוהה</td><td>7-10%</td><td>טווח ארוך</td></tr>
+      <tr><td>מניה בודדת</td><td class="cross">גבוה</td><td class="check">גבוהה</td><td>?</td><td>מי שמבין (באמת)</td></tr>
+      <tr><td>נדל"ן</td><td>בינוני</td><td class="cross">נמוכה</td><td>4-8%</td><td>הון + אופק ארוך</td></tr>
+      <tr><td>קריפטו</td><td class="cross">גבוה מאוד</td><td class="check">גבוהה</td><td>🎲</td><td>כסף שלא חבל עליו</td></tr>
+    </tbody>
+  </table>
+</section></div>
 
-<!-- ===== SECTION: SAVINGS CHALLENGE ===== -->
-<div class="wrap">
-  <section id="challenge-sec">
-    <div class="eyebrow reveal">אתגר</div>
-    <h2 class="sec-title gold reveal">🏆 אתגר חיסכון 52 שבועות</h2>
-    <p class="sec-lead reveal">בשבוע 1 חוסכים ₪10, בשבוע 2 חוסכים ₪20, וכן הלאה. עד סוף השנה — תחסכו ₪13,780!</p>
-    <div class="calc reveal">
-      <div class="calc-title">סמנו את השבועות שהשלמתם</div>
-      <div class="field" style="max-width:200px;margin-bottom:10px">
-        <label for="challengeBase">סכום בסיס לשבוע</label>
-        <input id="challengeBase" type="number" value="10" min="1">
-      </div>
-      <div class="challenge-grid" id="challengeGrid"></div>
-      <div class="challenge-summary">
-        <div class="stat-chip"><div class="sv" id="chSaved">₪0</div><div class="sl">נחסך</div></div>
-        <div class="stat-chip"><div class="sv" id="chLeft">₪0</div><div class="sl">נשאר</div></div>
-        <div class="stat-chip"><div class="sv" id="chWeeks">0/52</div><div class="sl">שבועות</div></div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ===== SECTION: NET WORTH ===== -->
-<div class="wrap">
-  <section id="networth">
-    <div class="eyebrow reveal">תמונת מצב</div>
-    <h2 class="sec-title gold reveal">💰 מחשבון הון עצמי</h2>
-    <p class="sec-lead reveal">חשבו כמה יש לכם (נכסים) פחות כמה אתם חייבים (התחייבויות) = ההון העצמי שלכם.</p>
-    <div class="calc reveal">
-      <div class="calc-title">הנכסים וההתחייבויות שלי</div>
-      <div class="nw-form">
-        <div class="nw-section-title" style="color:var(--mint)">📈 נכסים (מה שיש)</div>
-        <div class="nw-row"><input type="text" value="עו״ש ופק״מ" readonly style="flex:.6"><input type="number" id="nwCash" value="50000" min="0"></div>
-        <div class="nw-row"><input type="text" value="השקעות (קרנות, מניות)" readonly style="flex:.6"><input type="number" id="nwInvest" value="100000" min="0"></div>
-        <div class="nw-row"><input type="text" value="קרן פנסיה / פיצויים" readonly style="flex:.6"><input type="number" id="nwPension" value="80000" min="0"></div>
-        <div class="nw-row"><input type="text" value="נדל״ן (שווי)" readonly style="flex:.6"><input type="number" id="nwRealestate" value="0" min="0"></div>
-        <div class="nw-row"><input type="text" value="רכב (שווי)" readonly style="flex:.6"><input type="number" id="nwCar" value="40000" min="0"></div>
-        <div class="nw-row"><input type="text" value="אחר" readonly style="flex:.6"><input type="number" id="nwOther" value="0" min="0"></div>
-
-        <div class="nw-section-title" style="color:var(--burn)">📉 התחייבויות (מה שחייבים)</div>
-        <div class="nw-row"><input type="text" value="משכנתה" readonly style="flex:.6"><input type="number" id="nwMort" value="0" min="0"></div>
-        <div class="nw-row"><input type="text" value="הלוואות" readonly style="flex:.6"><input type="number" id="nwLoans" value="15000" min="0"></div>
-        <div class="nw-row"><input type="text" value="חוב אשראי" readonly style="flex:.6"><input type="number" id="nwCredit" value="3000" min="0"></div>
-        <div class="nw-row"><input type="text" value="אחר" readonly style="flex:.6"><input type="number" id="nwOtherDebt" value="0" min="0"></div>
-      </div>
-      <div class="nw-total">
-        <div class="ntl">ההון העצמי שלכם</div>
-        <div class="ntv" id="nwTotal">₪0</div>
-      </div>
-      <div class="verdict" id="nwVerdict"></div>
-    </div>
-  </section>
-</div>
-
-<!-- ===== SECTION: MILESTONES ===== -->
-<div class="wrap">
-  <section id="milestones-sec">
-    <div class="eyebrow reveal">ציוני דרך</div>
-    <h2 class="sec-title gold reveal">🗺️ ציוני דרך כלכליים לפי גיל</h2>
-    <p class="sec-lead reveal">לא חוקים — אלא כיוון. כל אחד ואחת בקצב שלהם.</p>
-    <div class="milestones reveal">
-      <div class="milestone"><div class="mage">גיל 18</div><div class="mdesc">לפתוח חשבון בנק ראשון, להבין מה זה חשבון עו"ש, ולהתחיל לעקוב אחרי ההוצאות.</div></div>
-      <div class="milestone"><div class="mage">גיל 21</div><div class="mdesc">לפתוח קרן השתלמות (אם אפשר), להתחיל לחסוך אפילו סכום קטן בחודש.</div></div>
-      <div class="milestone"><div class="mage">גיל 25</div><div class="mdesc">קרן חירום של 3 חודשי הוצאות, לפחות. להתחיל להשקיע גם אם מעט. לוודא שיש פנסיה.</div></div>
-      <div class="milestone"><div class="mage">גיל 30</div><div class="mdesc">קרן חירום של 6 חודשים. חיסכון שווה ערך לשנת משכורת. אפס חובות ריבית גבוהה.</div></div>
-      <div class="milestone"><div class="mage">גיל 35</div><div class="mdesc">חיסכון של פי 2 מהמשכורת השנתית. לחשוב על רכישת נכס אם מתאים.</div></div>
-      <div class="milestone"><div class="mage">גיל 40</div><div class="mdesc">פי 3 מהמשכורת חסוך. לבדוק מסלולי פנסיה, להתחיל לחשוב לטווח ארוך.</div></div>
-      <div class="milestone"><div class="mage">גיל 50</div><div class="mdesc">פי 6 מהמשכורת. לתכנן פרישה. לוודא שביטוחים מותאמים.</div></div>
-      <div class="milestone"><div class="mage">גיל 60</div><div class="mdesc">פי 8 מהמשכורת. להתחיל להעביר את ההשקעות לאפיקים סולידיים יותר.</div></div>
-    </div>
-  </section>
-</div>
-
-<!-- ===== SECTION: GLOSSARY ===== -->
-<div class="wrap">
-  <section id="glossary-sec">
-    <div class="eyebrow reveal">מילון</div>
-    <h2 class="sec-title gold reveal">📖 מילון מושגים כלכליים</h2>
-    <p class="sec-lead reveal">כל המילים הגדולות שזורקים עליכם — מוסברות בפשטות.</p>
-    <input type="text" class="glossary-search reveal" id="glossarySearch" placeholder="🔍 חפשו מושג...">
-    <div class="glossary reveal" id="glossaryList"></div>
-  </section>
-</div>
-
-<!-- ===== SECTION: GOAL ===== -->
-<div class="wrap">
-  <section id="goal">
-    <div class="eyebrow reveal">השורה התחתונה</div>
-    <h2 class="sec-title gold reveal">🎯 הדרך למיליון</h2>
-    <p class="sec-lead reveal">קבעו יעד וגלו תוך כמה זמן תגיעו לשם.</p>
-    <div class="calc reveal">
-      <div class="calc-title">⏱️ מתי אגיע ליעד?</div>
-      <div class="calc-grid">
-        <div class="field"><label for="g-current">חיסכון נוכחי</label><input id="g-current" type="number" inputmode="numeric" value="0" min="0"></div>
-        <div class="field"><label for="g-monthly">הפקדה חודשית</label><input id="g-monthly" type="number" inputmode="numeric" value="2000" min="0"></div>
-        <div class="field"><label for="g-rate">תשואה שנתית (%)</label><input id="g-rate" type="number" inputmode="decimal" value="7" min="0" step="0.1"></div>
-        <div class="field"><label for="g-target">היעד</label><input id="g-target" type="number" inputmode="numeric" value="1000000" min="1"></div>
-      </div>
-      <div class="verdict" id="g-verdict"></div>
-    </div>
-
-    <div class="tipbox reveal">
-      <div class="tip-text" id="tipText">לחצו לקבלת טיפ כספי אקראי 👇</div>
-      <button class="tip-btn" id="tipBtn">💡 תנו לי טיפ</button>
-    </div>
-  </section>
-</div>
-
-<footer>
-  <div class="wrap">
-    <p class="disclaimer reveal">
-      <b>הבהרה חשובה ומאוד לא רצינית:</b> האתר הזה נועד לכיף ולמחשבה, והוא לא ייעוץ פיננסי.
-      המחשבונים הם להמחשה בלבד. לפני החלטות אמיתיות עם כסף אמיתי — דברו עם בעל רישיון. 😉
-    </p>
+<!-- QUIZ -->
+<div class="purple-band"><div class="wrap"><section id="quiz">
+  <div class="eyebrow reveal" style="color:#d4b6ff">בואו נבחן</div>
+  <h2 class="sec-title purple reveal">🧠 חידון פיננסי</h2>
+  <p class="sec-lead reveal">15 שאלות. ללא סיוע קהל, ללא 50:50, ללא בן דוד.</p>
+  <div class="quiz-box reveal" id="quizBox">
+    <div class="quiz-progress" id="quizProgress"></div>
+    <div class="quiz-q" id="quizQ"></div>
+    <div class="quiz-opts" id="quizOpts"></div>
+    <div class="quiz-explain" id="quizExplain"></div>
+    <button class="up-btn quiz-next" id="quizNext" style="background:var(--purple)">שאלה הבאה ←</button>
   </div>
-</footer>
+</section></div></div>
+
+<!-- SAVINGS CHALLENGE -->
+<div class="wrap"><section id="challenge-sec">
+  <div class="eyebrow reveal">אתגר</div>
+  <h2 class="sec-title gold reveal">🏆 אתגר חיסכון 52 שבועות</h2>
+  <p class="sec-lead reveal">בשבוע 1 חוסכים ₪10, בשבוע 2 חוסכים ₪20... בשבוע 52 מתלבטים אם זה היה רעיון טוב. (כן, היה.)</p>
+  <div class="calc reveal">
+    <div class="calc-title">סמנו את השבועות שהשלמתם</div>
+    <div class="field" style="max-width:200px;margin-bottom:10px"><label for="challengeBase">סכום בסיס</label><input id="challengeBase" type="number" value="10" min="1"></div>
+    <div class="challenge-grid" id="challengeGrid"></div>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+      <div class="stat-chip"><div class="sv" id="chSaved">₪0</div><div class="sl">נחסך</div></div>
+      <div class="stat-chip"><div class="sv" id="chLeft">₪0</div><div class="sl">נשאר</div></div>
+      <div class="stat-chip"><div class="sv" id="chWeeks">0/52</div><div class="sl">שבועות</div></div>
+    </div>
+  </div>
+</section></div>
+
+<!-- NET WORTH -->
+<div class="wrap"><section id="networth">
+  <div class="eyebrow reveal">תמונת מצב</div>
+  <h2 class="sec-title gold reveal">💰 מחשבון הון עצמי</h2>
+  <p class="sec-lead reveal">נכסים פחות התחייבויות. המספר הכי חשוב שרוב האנשים לא יודעים מה שלהם.</p>
+  <div class="calc reveal">
+    <div class="calc-title">הנכסים וההתחייבויות שלי</div>
+    <div class="nw-section-title" style="color:var(--mint)">📈 נכסים</div>
+    <div class="nw-row"><input type="text" value="עו״ש ופק״מ" readonly style="flex:.6"><input type="number" id="nwCash" value="50000" min="0"></div>
+    <div class="nw-row"><input type="text" value="השקעות" readonly style="flex:.6"><input type="number" id="nwInvest" value="100000" min="0"></div>
+    <div class="nw-row"><input type="text" value="פנסיה / פיצויים" readonly style="flex:.6"><input type="number" id="nwPension" value="80000" min="0"></div>
+    <div class="nw-row"><input type="text" value="נדל״ן" readonly style="flex:.6"><input type="number" id="nwRealestate" value="0" min="0"></div>
+    <div class="nw-row"><input type="text" value="רכב" readonly style="flex:.6"><input type="number" id="nwCar" value="40000" min="0"></div>
+    <div class="nw-row"><input type="text" value="אחר" readonly style="flex:.6"><input type="number" id="nwOther" value="0" min="0"></div>
+    <div class="nw-section-title" style="color:var(--burn)">📉 התחייבויות</div>
+    <div class="nw-row"><input type="text" value="משכנתה" readonly style="flex:.6"><input type="number" id="nwMort" value="0" min="0"></div>
+    <div class="nw-row"><input type="text" value="הלוואות" readonly style="flex:.6"><input type="number" id="nwLoans" value="15000" min="0"></div>
+    <div class="nw-row"><input type="text" value="חוב אשראי" readonly style="flex:.6"><input type="number" id="nwCredit" value="3000" min="0"></div>
+    <div class="nw-row"><input type="text" value="אחר" readonly style="flex:.6"><input type="number" id="nwOtherDebt" value="0" min="0"></div>
+    <div class="nw-total"><div class="ntl">ההון העצמי שלכם</div><div class="ntv" id="nwTotal">₪0</div></div>
+    <div class="verdict" id="nwVerdict"></div>
+  </div>
+</section></div>
+
+<!-- MILESTONES -->
+<div class="wrap"><section id="milestones-sec">
+  <div class="eyebrow reveal">ציוני דרך</div>
+  <h2 class="sec-title gold reveal">🗺️ ציוני דרך כלכליים לפי גיל</h2>
+  <p class="sec-lead reveal">לא חוקים — כיוון. אם אתם מאחורים — לא נורא. גם וורן באפט קנה את המנייה הראשונה שלו בגיל 11 ואתם לא וורן באפט.</p>
+  <div class="milestones reveal">
+    <div class="milestone"><div class="mage">גיל 18</div><div class="mdesc">לפתוח חשבון בנק ראשון. להבין שאוברדרפט זה לא "כסף חינם" אלא הלוואה בריבית מטורפת.</div></div>
+    <div class="milestone"><div class="mage">גיל 21</div><div class="mdesc">קרן השתלמות אם אפשר. להתחיל לחסוך אפילו ₪200 בחודש. כן, זה משנה.</div></div>
+    <div class="milestone"><div class="mage">גיל 25</div><div class="mdesc">קרן חירום של 3 חודשי הוצאות. להתחיל להשקיע. לוודא שיש פנסיה ולא לגעת בה.</div></div>
+    <div class="milestone"><div class="mage">גיל 30</div><div class="mdesc">6 חודשי חירום. חיסכון בגובה שנת משכורת. אפס חובות ריבית גבוהה.</div></div>
+    <div class="milestone"><div class="mage">גיל 35</div><div class="mdesc">פי 2 מהמשכורת השנתית. לחשוב על נכס.</div></div>
+    <div class="milestone"><div class="mage">גיל 40</div><div class="mdesc">פי 3 חסוך. לבדוק מסלולי פנסיה.</div></div>
+    <div class="milestone"><div class="mage">גיל 50</div><div class="mdesc">פי 6. לתכנן פרישה. לוודא ביטוחים.</div></div>
+    <div class="milestone"><div class="mage">גיל 60</div><div class="mdesc">פי 8+. להתחיל לעבור לאפיקים סולידיים. ליהנות מהפירות.</div></div>
+  </div>
+</section></div>
+
+<!-- GLOSSARY -->
+<div class="wrap"><section id="glossary-sec">
+  <div class="eyebrow reveal">מילון</div>
+  <h2 class="sec-title gold reveal">📖 מילון מושגים כלכליים</h2>
+  <p class="sec-lead reveal">כל המילים הגדולות שזורקים עליכם בפגישות בבנק — מוסברות בעברית פשוטה.</p>
+  <input type="text" class="glossary-search reveal" id="glossarySearch" placeholder="🔍 חפשו מושג...">
+  <div class="glossary reveal" id="glossaryList"></div>
+</section></div>
+
+<!-- GOAL -->
+<div class="wrap"><section id="goal">
+  <div class="eyebrow reveal">השורה התחתונה</div>
+  <h2 class="sec-title gold reveal">🎯 הדרך למיליון</h2>
+  <p class="sec-lead reveal">קבעו יעד וגלו תוך כמה זמן תגיעו. ספוילר: זמן + עקביות > תזמון + מזל.</p>
+  <div class="calc reveal">
+    <div class="calc-title">⏱️ מתי אגיע ליעד?</div>
+    <div class="calc-grid">
+      <div class="field"><label for="g-current">חיסכון נוכחי</label><input id="g-current" type="number" value="0" min="0"></div>
+      <div class="field"><label for="g-monthly">הפקדה חודשית</label><input id="g-monthly" type="number" value="2000" min="0"></div>
+      <div class="field"><label for="g-rate">תשואה שנתית (%)</label><input id="g-rate" type="number" value="7" min="0" step="0.1"></div>
+      <div class="field"><label for="g-target">היעד</label><input id="g-target" type="number" value="1000000" min="1"></div>
+    </div>
+    <div class="verdict" id="g-verdict"></div>
+  </div>
+  <div class="tipbox reveal">
+    <div class="tip-text" id="tipText">לחצו לקבלת טיפ כספי אקראי 👇</div>
+    <button class="tip-btn" id="tipBtn">💡 תנו לי טיפ</button>
+  </div>
+</section></div>
+
+<footer><div class="wrap">
+  <p class="disclaimer reveal"><b>הבהרה חשובה:</b> האתר הזה נועד ללמידה ולכיף. המחשבונים הם להמחשה בלבד. המניות הן סימולציה ולא משקפות מחירים אמיתיים. לפני החלטות אמיתיות — דברו עם בעל רישיון. המלצת בן דוד לא נחשבת. 😉</p>
+</div></footer>
 
 <button class="top-btn" id="topBtn" aria-label="חזרה למעלה">↑</button>
 
 <script>
 (function(){
 document.body.classList.add("js");
-let sym="₪", calcCount=0, clickCount=0, quizCorrect=0, quizTotal=0;
+let sym="₪",calcCount=0,clickCount=0,quizCorrect=0,quizTotal=0;
 const fmt=n=>sym+Math.round(n).toLocaleString("en-US");
 const num=(el,def)=>{const v=parseFloat(el.value);return isNaN(v)||v<0?def:v;};
-function growthByYear(initial,monthly,annualRate,years){const r=annualRate/100/12;let bal=initial,out=[];
-  for(let y=1;y<=years;y++){for(let m=0;m<12;m++)bal=bal*(1+r)+monthly;out.push(bal);}return out;}
-function bumpCalc(){calcCount++;document.getElementById("statCalcs").textContent=calcCount;}
+const $=id=>document.getElementById(id);
+function bumpCalc(){calcCount++;$("statCalcs").textContent=calcCount;}
 
-// ===== STATS TIMER =====
 let startTime=Date.now();
-setInterval(()=>{const s=Math.floor((Date.now()-startTime)/1000),m=Math.floor(s/60),ss=s%60;
-  document.getElementById("statTime").textContent=String(m).padStart(2,"0")+":"+String(ss).padStart(2,"0");},1000);
+setInterval(()=>{const s=Math.floor((Date.now()-startTime)/1000);$("statTime").textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");},1000);
+
+// ===== STOCKS DATA =====
+const allStocks=[
+  {id:"apple",name:"Apple",ticker:"AAPL",price:195.2,vol:0.018,sector:"טכנולוגיה"},
+  {id:"msft",name:"Microsoft",ticker:"MSFT",price:430.5,vol:0.016,sector:"טכנולוגיה"},
+  {id:"google",name:"Alphabet",ticker:"GOOG",price:175.8,vol:0.019,sector:"טכנולוגיה"},
+  {id:"amazon",name:"Amazon",ticker:"AMZN",price:188.4,vol:0.021,sector:"צריכה"},
+  {id:"tesla",name:"Tesla",ticker:"TSLA",price:248.9,vol:0.038,sector:"רכב"},
+  {id:"nvidia",name:"NVIDIA",ticker:"NVDA",price:875.3,vol:0.032,sector:"צ'יפים"},
+  {id:"meta",name:"Meta",ticker:"META",price:505.2,vol:0.024,sector:"טכנולוגיה"},
+  {id:"sp500",name:"S&P 500",ticker:"SPX",price:5820,vol:0.011,sector:"מדד"},
+  {id:"tase",name:'ת"א 125',ticker:"TA125",price:2145,vol:0.012,sector:"מדד"},
+  {id:"nasdaq",name:"NASDAQ",ticker:"QQQ",price:18450,vol:0.015,sector:"מדד"},
+  {id:"gold",name:"זהב",ticker:"GOLD",price:2680,vol:0.008,sector:"סחורה"},
+  {id:"btc",name:"ביטקוין",ticker:"BTC",price:97500,vol:0.035,sector:"קריפטו"},
+  {id:"bond",name:'אג"ח ממשלתי',ticker:"GOV",price:110,vol:0.003,sector:"אג\"ח"},
+  {id:"oil",name:"נפט ברנט",ticker:"BRENT",price:74.8,vol:0.022,sector:"סחורה"},
+  {id:"eur",name:"EUR/ILS",ticker:"EURILS",price:3.92,vol:0.005,sector:"מט\"ח"},
+  {id:"usd",name:"USD/ILS",ticker:"USDILS",price:3.62,vol:0.004,sector:"מט\"ח"}
+];
+let priceHistory={},dayCount=0;
+allStocks.forEach(s=>{priceHistory[s.id]=[s.price];});
+
+function simDay(){
+  dayCount++;
+  let totalChange=0;
+  allStocks.forEach(s=>{
+    const trend=(Math.random()-0.48)*s.vol*2;
+    s.price=Math.max(s.price*(1+trend),0.01);
+    priceHistory[s.id].push(s.price);
+    if(priceHistory[s.id].length>300)priceHistory[s.id].shift();
+    totalChange+=trend;
+  });
+  updateFearGreed(totalChange/allStocks.length);
+  renderStockCards();
+  updateStockSim();
+}
+
+// ===== FEAR & GREED =====
+let fgSmooth=50;
+function updateFearGreed(avgChange){
+  const signal=Math.max(0,Math.min(100,50+avgChange*3000+((Math.random()-0.5)*8)));
+  fgSmooth=fgSmooth*0.85+signal*0.15;
+  const v=Math.round(fgSmooth);
+  $("fgValue").textContent=v;
+  $("fgNeedle").style.left=v+"%";
+  const labels=["פחד קיצוני 😱","פחד 😟","ניטרלי 😐","חמדנות 😏","חמדנות קיצונית 🤑"];
+  const colors=["var(--burn)","#ff9955","var(--text)","#a5d6a7","var(--mint)"];
+  const idx=v<20?0:v<40?1:v<60?2:v<80?3:4;
+  $("fgLabel").textContent=labels[idx];$("fgValue").style.color=colors[idx];
+}
+
+// ===== STOCK CARDS =====
+function renderStockCards(){
+  const grid=$("stockGrid");
+  grid.innerHTML=allStocks.map(s=>{
+    const hist=priceHistory[s.id],prev=hist.length>1?hist[hist.length-2]:hist[0];
+    const dayChange=((s.price-prev)/prev*100);
+    const firstPrice=hist[0],totalChange=((s.price-firstPrice)/firstPrice*100);
+    const cls=dayChange>=0?"up":"down",arrow=dayChange>=0?"▲":"▼";
+    return `<div class="stock-card">
+      <div class="sname">${s.name}</div><div class="sticker">${s.ticker} · ${s.sector}</div>
+      <div class="sprice">${s.price>=100?'$'+s.price.toFixed(0):s.price.toFixed(2)}</div>
+      <div class="schange ${cls}">${arrow} ${Math.abs(dayChange).toFixed(2)}%</div>
+      <div class="sdetails">מתחילת הסימולציה: <span style="color:${totalChange>=0?'var(--mint)':'var(--burn)'}">${totalChange>=0?'+':''}${totalChange.toFixed(1)}%</span></div>
+      <canvas id="mc_${s.id}" width="160" height="40"></canvas>
+    </div>`;
+  }).join("");
+  allStocks.forEach(s=>{
+    const c=document.getElementById("mc_"+s.id);if(!c)return;
+    const ctx=c.getContext("2d"),h=priceHistory[s.id],W=c.width,H=c.height;
+    if(h.length<2)return;
+    const last30=h.slice(-30),min=Math.min(...last30)*.99,max=Math.max(...last30)*1.01,range=max-min||1;
+    ctx.clearRect(0,0,W,H);ctx.beginPath();
+    ctx.strokeStyle=last30[last30.length-1]>=last30[0]?"#4ECCA3":"#FF5B5B";ctx.lineWidth=1.5;
+    last30.forEach((p,i)=>{const x=i/(last30.length-1)*W,y=H-(p-min)/range*H;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});
+    ctx.stroke();
+  });
+}
 
 // ===== TICKER =====
 (function(){
-  const items=[
-    {n:"ת״א 125",v:2145,c:1.2},{n:"S&P 500",v:5820,c:0.7},{n:"NASDAQ",v:18450,c:1.1},
-    {n:"זהב",v:2680,c:-0.3},{n:"ביטקוין",v:97500,c:2.4},{n:"EUR/ILS",v:3.92,c:-0.1},
-    {n:"USD/ILS",v:3.62,c:0.05},{n:"נפט ברנט",v:74.8,c:-0.8},{n:"כסף",v:31.2,c:0.5}
-  ];
-  const t=document.getElementById("ticker");
-  let html="";
-  for(let r=0;r<3;r++) items.forEach(i=>{
-    const cls=i.c>=0?"tp":"tm",arrow=i.c>=0?"▲":"▼";
-    html+=`<span class="ticker-item"><span class="tn">${i.n}</span><span class="${cls}">${arrow} ${Math.abs(i.c)}%</span></span>`;
+  const t=$("ticker");let html="";
+  for(let r=0;r<3;r++)allStocks.forEach(s=>{
+    html+=`<span class="ticker-item"><span class="tn">${s.name}</span><span id="tk_${s.id}_${r}" class="tp">—</span></span>`;
   });
   t.innerHTML=html;
 })();
+function updateTicker(){
+  allStocks.forEach(s=>{
+    const h=priceHistory[s.id],prev=h.length>1?h[h.length-2]:h[0],change=((s.price-prev)/prev*100);
+    const cls=change>=0?"tp":"tm",arrow=change>=0?"▲":"▼";
+    for(let r=0;r<3;r++){const el=document.getElementById(`tk_${s.id}_${r}`);if(el){el.className="ticker-item "+cls;el.textContent=`${arrow} ${Math.abs(change).toFixed(2)}%`;}}
+  });
+}
 
-// ===== CLICKER GAME =====
-const ranks=[{min:0,n:"🪙 מתחיל"},{min:100,n:"💵 חוסך"},{min:1000,n:"📈 משקיע"},
-  {min:5000,n:"🏢 יזם"},{min:10000,n:"💼 מקצוען"},{min:50000,n:"🏦 בעל הון"},
-  {min:100000,n:"💎 טייקון"},{min:500000,n:"🏰 אוליגרך"},{min:1000000,n:"🎩 מיליונר"}];
+// ===== CLICKER =====
+const ranks=[{min:0,n:"🪙 מתחיל"},{min:100,n:"💵 חוסך"},{min:1000,n:"📈 משקיע"},{min:5000,n:"🏢 יזם"},{min:10000,n:"💼 מקצוען"},{min:50000,n:"🏦 בעל הון"},{min:100000,n:"💎 טייקון"},{min:500000,n:"🏰 אוליגרך"},{min:1000000,n:"🎩 מיליונר"}];
 let worth=0,perClick=1,auto=0,bought=[false,false,false,false],milDone=false;
-const worthEl=$("worth"),perClickEl=$("perClick"),coin=$("coin"),coinFace=$("coinFace"),
-      rankEl=$("rank"),progFill=$("progFill"),progTxt=$("progTxt"),resetBtn=$("reset");
 const ups=[$("up1"),$("up2"),$("up3"),$("up4")];
 const upCosts=[50,300,1000,5000],upNames=["יד זריזה","ריבית דריבית","מגדל בורסה","אוטומציה"];
-function $(id){return document.getElementById(id)}
-
 function renderGame(){
-  worthEl.textContent=fmt(worth);coinFace.textContent=sym;
-  let cur=ranks[0],next=null;
-  for(let i=0;i<ranks.length;i++){if(worth>=ranks[i].min){cur=ranks[i];next=ranks[i+1]||null;}}
-  rankEl.textContent=cur.n;
-  if(next){const span=next.min-cur.min,p=Math.min((worth-cur.min)/span*100,100);
-    progFill.style.width=p.toFixed(1)+"%";progTxt.textContent="לדרגה הבאה ("+next.n+"): עוד "+fmt(next.min-worth);}
-  else{progFill.style.width="100%";progTxt.textContent="הגעת לדרגה הגבוהה ביותר! 👑";}
-  let t="+"+fmt(perClick)+" לכל לחיצה";if(auto>0)t+=" · +"+fmt(auto)+"/שנייה";perClickEl.textContent=t;
+  $("worth").textContent=fmt(worth);$("coinFace").textContent=sym;
+  let cur=ranks[0],next=null;for(let i=0;i<ranks.length;i++){if(worth>=ranks[i].min){cur=ranks[i];next=ranks[i+1]||null;}}
+  $("rank").textContent=cur.n;
+  if(next){const p=Math.min((worth-cur.min)/(next.min-cur.min)*100,100);$("progFill").style.width=p.toFixed(1)+"%";$("progTxt").textContent="לדרגה הבאה ("+next.n+"): "+fmt(next.min-worth);}
+  else{$("progFill").style.width="100%";$("progTxt").textContent="👑 שיא!";}
+  let t="+"+fmt(perClick)+"/לחיצה";if(auto>0)t+=" · +"+fmt(auto)+"/שנייה";$("perClick").textContent=t;
   for(let i=0;i<4;i++){ups[i].disabled=bought[i]||worth<upCosts[i];if(bought[i])ups[i].textContent="✓ "+upNames[i];}
   if(worth>=1000000&&!milDone){milDone=true;confetti();}
   $("statClicks").textContent=clickCount;
 }
-function floatCoin(x,y){const f=document.createElement("div");f.className="float-coin";f.textContent="+"+fmt(perClick);
-  f.style.left=(x-12)+"px";f.style.top=(y-20)+"px";document.body.appendChild(f);setTimeout(()=>f.remove(),1000);}
-coin.addEventListener("click",e=>{worth+=perClick;clickCount++;const r=coin.getBoundingClientRect();
-  floatCoin(e.clientX||(r.left+r.width/2),e.clientY||(r.top+r.height/2));renderGame();});
+function floatCoin(x,y){const f=document.createElement("div");f.className="float-coin";f.textContent="+"+fmt(perClick);f.style.left=(x-12)+"px";f.style.top=(y-20)+"px";document.body.appendChild(f);setTimeout(()=>f.remove(),1000);}
+$("coin").addEventListener("click",e=>{worth+=perClick;clickCount++;const r=$("coin").getBoundingClientRect();floatCoin(e.clientX||(r.left+r.width/2),e.clientY||(r.top+r.height/2));renderGame();});
 ups[0].addEventListener("click",()=>{if(worth>=50&&!bought[0]){worth-=50;perClick+=4;bought[0]=true;renderGame();}});
 ups[1].addEventListener("click",()=>{if(worth>=300&&!bought[1]){worth-=300;auto+=5;bought[1]=true;renderGame();}});
 ups[2].addEventListener("click",()=>{if(worth>=1000&&!bought[2]){worth-=1000;perClick+=20;bought[2]=true;renderGame();}});
 ups[3].addEventListener("click",()=>{if(worth>=5000&&!bought[3]){worth-=5000;auto+=50;bought[3]=true;renderGame();}});
-resetBtn.addEventListener("click",()=>{worth=0;perClick=1;auto=0;bought=[false,false,false,false];milDone=false;
-  for(let i=0;i<4;i++)ups[i].textContent=upNames[i]+" ("+sym+upCosts[i].toLocaleString()+")";renderGame();});
+$("reset").addEventListener("click",()=>{worth=0;perClick=1;auto=0;bought=[false,false,false,false];milDone=false;for(let i=0;i<4;i++)ups[i].textContent=upNames[i]+" ("+sym+upCosts[i].toLocaleString()+")";renderGame();});
 setInterval(()=>{if(auto>0){worth+=auto;renderGame();}},1000);
+function confetti(){if(window.matchMedia("(prefers-reduced-motion:reduce)").matches)return;const cols=["#F4C430","#4ECCA3","#FF5B5B","#ffe27a","#fff","#A78BFA"];for(let i=0;i<100;i++){const c=document.createElement("div");c.className="confetti";c.style.left=Math.random()*100+"vw";c.style.background=cols[i%cols.length];c.style.animationDuration=(2+Math.random()*2.5)+"s";c.style.animationDelay=(Math.random()*.6)+"s";document.body.appendChild(c);setTimeout(()=>c.remove(),5000);}}
 
-function confetti(){
-  if(window.matchMedia("(prefers-reduced-motion:reduce)").matches)return;
-  const cols=["#F4C430","#4ECCA3","#FF5B5B","#ffe27a","#fff","#A78BFA"];
-  for(let i=0;i<100;i++){const c=document.createElement("div");c.className="confetti";
-    c.style.left=Math.random()*100+"vw";c.style.background=cols[i%cols.length];
-    c.style.animationDuration=(2+Math.random()*2.5)+"s";c.style.animationDelay=(Math.random()*.6)+"s";
-    c.style.transform="rotate("+Math.random()*360+"deg)";document.body.appendChild(c);
-    setTimeout(()=>c.remove(),5000);}
+// ===== COMPOUND WITH PHASES =====
+function getPhases(){
+  const rows=document.querySelectorAll(".phase-row");
+  return Array.from(rows).map(r=>{const inputs=r.querySelectorAll("input");return{monthly:parseFloat(inputs[0].value)||0,years:Math.max(1,Math.round(parseFloat(inputs[1].value)||1))};});
 }
-
-// ===== COMPOUND INTEREST =====
-const cI=$("c-initial"),cM=$("c-monthly"),cR=$("c-rate"),cY=$("c-years"),cFinal=$("c-final"),
-      cContrib=$("c-contrib"),cGain=$("c-gain"),cMult=$("c-mult"),cBars=$("c-bars"),cAxisEnd=$("c-axis-end");
 function calcCompound(){
   bumpCalc();
-  const initial=num(cI,0),monthly=num(cM,0),rate=num(cR,0);let years=Math.min(Math.max(Math.round(num(cY,1)),1),60);
-  const series=growthByYear(initial,monthly,rate,years),final=series[series.length-1],contrib=initial+monthly*12*years;
-  cFinal.textContent=fmt(final);cContrib.textContent=fmt(contrib);cGain.textContent=fmt(Math.max(final-contrib,0));
-  cMult.textContent=contrib>0?"×"+((final/contrib).toFixed(1)):"—";
-  cAxisEnd.textContent="בעוד "+years+" שנה";
-  const step=Math.ceil(series.length/24),idx=series.map((_,i)=>i).filter(i=>i%step===0||i===series.length-1),
-        max=Math.max(...idx.map(i=>series[i]),1);
-  cBars.innerHTML=idx.map(i=>{const bal=series[i],base=Math.min(initial+monthly*12*(i+1),bal),gain=Math.max(bal-base,0),
-    bh=bal/max*100,gh=gain/bal*100||0;
-    return '<div class="bar" style="height:'+bh.toFixed(1)+'%" title="'+fmt(bal)+'"><div class="seg-gain" style="height:'+gh.toFixed(1)+'%"></div><div class="seg-base" style="flex:1"></div></div>';}).join("");
+  const initial=num($("c-initial"),0),rate=num($("c-rate"),0),phases=getPhases();
+  const r=rate/100/12;let bal=initial,totalContrib=initial,series=[];
+  let phaseLabel=0;
+  phases.forEach(ph=>{
+    for(let y=0;y<ph.years;y++){for(let m=0;m<12;m++){bal=bal*(1+r)+ph.monthly;totalContrib+=ph.monthly;}series.push(bal);}
+  });
+  if(series.length===0){$("c-final").textContent=fmt(initial);$("c-contrib").textContent=fmt(initial);$("c-gain").textContent=fmt(0);$("c-mult").textContent="×1";return;}
+  const final=series[series.length-1],gain=Math.max(final-totalContrib,0),totalYears=series.length;
+  $("c-final").textContent=fmt(final);$("c-contrib").textContent=fmt(totalContrib);$("c-gain").textContent=fmt(gain);
+  $("c-mult").textContent=totalContrib>0?"×"+(final/totalContrib).toFixed(1):"—";
+  $("c-axis-end").textContent="בעוד "+totalYears+" שנה";
+  $("c-verdict").textContent="הפקדתם "+fmt(totalContrib)+" לאורך "+totalYears+" שנים. הריבית הוסיפה "+fmt(gain)+" — "+((gain/totalContrib)*100).toFixed(0)+"% מעל מה ששמתם. ככה עובד ריבית דריבית.";
+  const step=Math.ceil(series.length/24),idx=series.map((_,i)=>i).filter(i=>i%step===0||i===series.length-1),max=Math.max(...idx.map(i=>series[i]),1);
+  let cumContrib=initial;
+  $("c-bars").innerHTML=idx.map(i=>{
+    let c=initial;phases.forEach(ph=>{const yearsInPhase=Math.min(ph.years,i+1);c+=ph.monthly*12*yearsInPhase;});
+    const bal=series[i],base=Math.min(c,bal),g=Math.max(bal-base,0),bh=bal/max*100,gh=g/bal*100||0;
+    return '<div class="bar" style="height:'+bh.toFixed(1)+'%"><div class="seg-gain" style="height:'+gh.toFixed(1)+'%"></div><div class="seg-base" style="flex:1"></div></div>';
+  }).join("");
 }
-[cI,cM,cR,cY].forEach(el=>el.addEventListener("input",calcCompound));
+function updatePhaseLabels(){
+  let y=1;document.querySelectorAll(".phase-row").forEach(r=>{
+    const dur=Math.max(1,Math.round(parseFloat(r.querySelectorAll("input")[1].value)||1));
+    r.querySelector(".plbl").textContent="שנים "+y+"-"+(y+dur-1)+":";y+=dur;
+  });
+}
+$("addPhase").addEventListener("click",()=>{
+  const row=document.createElement("div");row.className="phase-row";
+  row.innerHTML='<span class="plbl">שנים:</span><input type="number" value="1000" min="0" class="phase-amt" placeholder="הפקדה חודשית"><input type="number" value="5" min="1" max="60" class="phase-dur" placeholder="שנים"><span class="plbl">שנים</span><button onclick="this.closest(\'.phase-row\').remove();updatePhaseLabels();calcCompound()">✕</button>';
+  $("phaseList").appendChild(row);
+  row.querySelectorAll("input").forEach(inp=>inp.addEventListener("input",()=>{updatePhaseLabels();calcCompound();}));
+  updatePhaseLabels();calcCompound();
+});
+document.querySelectorAll(".phase-amt,.phase-dur").forEach(el=>el.addEventListener("input",()=>{updatePhaseLabels();calcCompound();}));
+[$("c-initial"),$("c-rate")].forEach(el=>el.addEventListener("input",calcCompound));
 
 // ===== SPEND =====
-const sA=$("s-amount"),sF=$("s-freq"),sY=$("s-years"),sYear=$("s-year"),sTotal=$("s-total"),
-      sTotalLbl=$("s-total-lbl"),sInv=$("s-invested"),sVerdict=$("s-verdict");
 function calcSpend(){
-  bumpCalc();
-  const amount=num(sA,0);let years=Math.min(Math.max(Math.round(num(sY,1)),1),60);const freq=sF.value;
+  bumpCalc();const amount=num($("s-amount"),0),years=Math.min(Math.max(Math.round(num($("s-years"),1)),1),60),freq=$("s-freq").value;
   let perMonth=freq==="daily"?amount*30.44:freq==="weekly"?amount*4.348:amount;
-  const perYear=perMonth*12,total=perYear*years,inv=growthByYear(0,perMonth,7,years).pop();
-  sYear.textContent=fmt(perYear);sTotalLbl.textContent="סך הכול ב‑"+years+" שנים";sTotal.textContent=fmt(total);sInv.textContent=fmt(inv);
-  sVerdict.textContent="ההרגל הזה יעלה לך "+fmt(total)+" ב‑"+years+" שנים. אילו הושקע, יכול היה להפוך ל‑"+fmt(inv)+".";
+  const perYear=perMonth*12,total=perYear*years;
+  const r=0.07/12;let inv=0;for(let m=0;m<years*12;m++)inv=inv*(1+r)+perMonth;
+  $("s-year").textContent=fmt(perYear);$("s-total-lbl").textContent="סך הכול ב‑"+years+" שנים";$("s-total").textContent=fmt(total);$("s-invested").textContent=fmt(inv);
+  $("s-verdict").textContent="ההרגל הזה יעלה "+fmt(total)+" ב‑"+years+" שנים. אילו הושקע ב-7% — "+fmt(inv)+". ההפרש של "+fmt(inv-total)+" זה כסף שהריבית הייתה נותנת לכם בחינם. ובכן, כמעט בחינם.";
 }
-[sA,sF,sY].forEach(el=>el.addEventListener("input",calcSpend));
+[$("s-amount"),$("s-freq"),$("s-years")].forEach(el=>el.addEventListener("input",calcSpend));
 
 // ===== BUDGET =====
-const bInc=$("b-income"),bN=$("b-needs"),bW=$("b-wants"),bS=$("b-save");
-function calcBudget(){bumpCalc();const inc=num(bInc,0);bN.textContent=fmt(inc*.5);bW.textContent=fmt(inc*.3);bS.textContent=fmt(inc*.2);}
-bInc.addEventListener("input",calcBudget);
+function calcBudget(){bumpCalc();const inc=num($("b-income"),0);$("b-needs").textContent=fmt(inc*.5);$("b-wants").textContent=fmt(inc*.3);$("b-save").textContent=fmt(inc*.2);}
+$("b-income").addEventListener("input",calcBudget);
 
 // ===== MORTGAGE =====
-const mA=$("m-amount"),mR=$("m-rate"),mY=$("m-years"),mPay=$("m-pay"),mTotal=$("m-total"),mInt=$("m-interest"),mVerdict=$("m-verdict");
 function calcMortgage(){
-  bumpCalc();
-  const P=num(mA,0),rate=num(mR,0);let years=Math.min(Math.max(Math.round(num(mY,1)),1),40);
+  bumpCalc();const P=num($("m-amount"),0),rate=num($("m-rate"),0),years=Math.min(Math.max(Math.round(num($("m-years"),1)),1),40);
   const r=rate/100/12,n=years*12,pay=r===0?P/n:P*r/(1-Math.pow(1+r,-n)),total=pay*n,interest=total-P;
-  mPay.textContent=fmt(pay);mTotal.textContent=fmt(total);mInt.textContent=fmt(Math.max(interest,0));
-  mVerdict.textContent="על הלוואה של "+fmt(P)+" תשלמו "+fmt(total)+" — מתוכם "+fmt(Math.max(interest,0))+" ריבית.";
+  $("m-pay").textContent=fmt(pay);$("m-total").textContent=fmt(total);$("m-interest").textContent=fmt(Math.max(interest,0));
+  $("m-verdict").textContent="על "+fmt(P)+" תחזירו "+fmt(total)+". מתוכם "+fmt(Math.max(interest,0))+" ריבית. הבנקאי יגיד לכם שזה 'ריבית נוחה'. נוחה לו.";
 }
-[mA,mR,mY].forEach(el=>el.addEventListener("input",calcMortgage));
+[$("m-amount"),$("m-rate"),$("m-years")].forEach(el=>el.addEventListener("input",calcMortgage));
 
 // ===== INFLATION =====
-const iA=$("i-amount"),iR=$("i-rate"),iY=$("i-years"),iFut=$("i-future"),iPow=$("i-power"),iVerdict=$("i-verdict");
 function calcInflation(){
-  bumpCalc();
-  const amount=num(iA,0),infl=num(iR,0);let years=Math.min(Math.max(Math.round(num(iY,1)),1),60);
-  const factor=Math.pow(1+infl/100,years),future=amount*factor,power=amount/factor;
-  iFut.textContent=fmt(future);iPow.textContent=fmt(power);
-  iVerdict.textContent="באינפלציה של "+infl+"%, "+fmt(amount)+" של היום יהיו שווים "+fmt(power)+" בעוד "+years+" שנים.";
+  bumpCalc();const amount=num($("i-amount"),0),infl=num($("i-rate"),0),years=Math.min(Math.max(Math.round(num($("i-years"),1)),1),60);
+  const factor=Math.pow(1+infl/100,years),power=amount/factor;
+  $("i-future").textContent=fmt(amount*factor);$("i-power").textContent=fmt(power);
+  $("i-verdict").textContent=fmt(amount)+" של היום ישוו "+fmt(power)+" בעוד "+years+" שנים. כסף שיושב בעו\"ש לא 'בטוח' — הוא מתכווץ בשקט.";
 }
-[iA,iR,iY].forEach(el=>el.addEventListener("input",calcInflation));
+[$("i-amount"),$("i-rate"),$("i-years")].forEach(el=>el.addEventListener("input",calcInflation));
 
 // ===== FIRE =====
-const fE=$("f-expense"),fNest=$("f-nest"),fAnn=$("f-annual"),fVerdict=$("f-verdict");
-function calcFire(){
-  bumpCalc();const monthly=num(fE,0),annual=monthly*12,nest=annual*25;
-  fNest.textContent=fmt(nest);fAnn.textContent=fmt(annual);
-  fVerdict.textContent="כדי לחיות מ‑"+fmt(monthly)+" בחודש בלי לעבוד, תצטרכו "+fmt(nest)+" מושקעים.";
-}
-fE.addEventListener("input",calcFire);
+function calcFire(){bumpCalc();const m=num($("f-expense"),0),a=m*12,n=a*25;$("f-nest").textContent=fmt(n);$("f-annual").textContent=fmt(a);
+  $("f-verdict").textContent="כדי לחיות מ‑"+fmt(m)+" בחודש בלי לעבוד — צריך "+fmt(n)+" מושקעים. נשמע הרבה? תחזרו למחשבון הריבית דריבית.";}
+$("f-expense").addEventListener("input",calcFire);
 
-// ===== HOURLY WAGE =====
-const hSal=$("h-salary"),hHr=$("h-hours"),hCom=$("h-commute"),hRate=$("h-rate"),hReal=$("h-real"),hCoffee=$("h-coffee"),hVerdict=$("h-verdict");
+// ===== HOURLY =====
 function calcHourly(){
-  bumpCalc();
-  const sal=num(hSal,0),hrs=num(hHr,1),commute=num(hCom,0);
-  const weeklyHrs=hrs,monthlyHrs=weeklyHrs*4.33,rate=sal/monthlyHrs;
-  const commuteHrsMonth=(commute/60)*22,realHrs=monthlyHrs+commuteHrsMonth,realRate=sal/realHrs;
-  const coffeeMin=realRate>0?Math.round(27/realRate*60):0;
-  hRate.textContent=fmt(rate);hReal.textContent=fmt(realRate);hCoffee.textContent=coffeeMin+" דקות";
-  hVerdict.textContent="השעה שלכם שווה "+fmt(realRate)+" (כולל נסיעות). קפה ב‑27₪ עולה לכם "+coffeeMin+" דקות עבודה.";
+  bumpCalc();const sal=num($("h-salary"),0),hrs=num($("h-hours"),1),com=num($("h-commute"),0);
+  const mhrs=hrs*4.33,rate=sal/mhrs,realHrs=mhrs+(com/60)*22,realRate=sal/realHrs,coffee=realRate>0?Math.round(27/realRate*60):0;
+  $("h-rate").textContent=fmt(rate);$("h-real").textContent=fmt(realRate);$("h-coffee").textContent=coffee+" דקות";
+  $("h-verdict").textContent="השעה שלכם שווה "+fmt(realRate)+" (כולל נסיעות). קפה ב-27₪ = "+coffee+" דקות עבודה. עכשיו תחליטו אם הקפוצ'ינו שווה את זה.";
 }
-[hSal,hHr,hCom].forEach(el=>el.addEventListener("input",calcHourly));
+[$("h-salary"),$("h-hours"),$("h-commute")].forEach(el=>el.addEventListener("input",calcHourly));
 
-// ===== TAX CALCULATOR =====
-const tInc=$("t-income"),tTax=$("t-tax"),tMon=$("t-monthly"),tEff=$("t-effective"),tNet=$("t-net"),tVerdict=$("t-verdict");
-const taxBrackets=[
-  {limit:84120,rate:0.10},{limit:120720,rate:0.14},{limit:193800,rate:0.20},
-  {limit:269280,rate:0.31},{limit:560280,rate:0.35},{limit:721560,rate:0.47},{limit:Infinity,rate:0.50}
-];
+// ===== TAX =====
+const taxBrackets=[{limit:84120,rate:.10},{limit:120720,rate:.14},{limit:193800,rate:.20},{limit:269280,rate:.31},{limit:560280,rate:.35},{limit:721560,rate:.47},{limit:Infinity,rate:.50}];
 function calcTax(){
-  bumpCalc();
-  const income=num(tInc,0);let tax=0,prev=0;
+  bumpCalc();const income=num($("t-income"),0);let tax=0,prev=0;
   for(const b of taxBrackets){const chunk=Math.min(income,b.limit)-prev;if(chunk<=0)break;tax+=chunk*b.rate;prev=b.limit;}
   const eff=income>0?(tax/income*100):0;
-  tTax.textContent=fmt(tax);tMon.textContent=fmt(tax/12);tEff.textContent=eff.toFixed(1)+"%";tNet.textContent=fmt((income-tax)/12);
-  tVerdict.textContent="על הכנסה שנתית של "+fmt(income)+" תשלמו "+fmt(tax)+" מס ("+eff.toFixed(1)+"% אפקטיבי). נטו חודשי: "+fmt((income-tax)/12)+".";
+  $("t-tax").textContent=fmt(tax);$("t-monthly").textContent=fmt(tax/12);$("t-effective").textContent=eff.toFixed(1)+"%";$("t-net").textContent=fmt((income-tax)/12);
+  $("t-verdict").textContent="מס אפקטיבי: "+eff.toFixed(1)+"%. זה אומר שעל כל ₪100 שאתם מרוויחים, ₪"+eff.toFixed(0)+" הולכים למדינה. תודו שזה פחות ממה שחשבתם. או יותר. תלוי במצב הרוח.";
 }
-tInc.addEventListener("input",calcTax);
+$("t-income").addEventListener("input",calcTax);
 
 // ===== RENT VS BUY =====
-const rvRent=$("rv-rent"),rvPrice=$("rv-price"),rvDown=$("rv-down"),rvRate=$("rv-rate"),rvAppr=$("rv-appr"),rvYears=$("rv-years");
-const rvRentTotal=$("rv-rentTotal"),rvMortPay=$("rv-mortPay"),rvFutureVal=$("rv-futureVal"),rvVerdict=$("rv-verdict");
 function calcRentVsBuy(){
-  bumpCalc();
-  const rent=num(rvRent,0),price=num(rvPrice,0),down=num(rvDown,25)/100,rate=num(rvRate,5),appr=num(rvAppr,3);
-  let years=Math.min(Math.max(Math.round(num(rvYears,1)),1),40);
+  bumpCalc();const rent=num($("rv-rent"),0),price=num($("rv-price"),0),down=num($("rv-down"),25)/100,rate=num($("rv-rate"),5),appr=num($("rv-appr"),3),years=Math.min(Math.max(Math.round(num($("rv-years"),1)),1),40);
   const loan=price*(1-down),r=rate/100/12,n=years*12,pay=r===0?loan/n:loan*r/(1-Math.pow(1+r,-n));
-  const rentTotal=rent*12*years,futureVal=price*Math.pow(1+appr/100,years),totalMort=pay*n,downPay=price*down;
-  const buyCost=totalMort+downPay;
-  rvRentTotal.textContent=fmt(rentTotal);rvMortPay.textContent=fmt(pay);rvFutureVal.textContent=fmt(futureVal);
-  const equity=futureVal-loan;
-  rvVerdict.textContent=buyCost<rentTotal?
-    "קנייה עדיפה: תשלמו "+fmt(buyCost)+" (כולל "+fmt(downPay)+" הון עצמי) ותיהנו מדירה ששווה "+fmt(futureVal)+".":
-    "שכירות זולה יותר על הנייר ("+fmt(rentTotal)+" מול "+fmt(buyCost)+"), אבל בקנייה נשאר לכם נכס ששווה "+fmt(futureVal)+".";
+  const rentTotal=rent*12*years,futureVal=price*Math.pow(1+appr/100,years),downPay=price*down,buyCost=pay*n+downPay;
+  $("rv-rentTotal").textContent=fmt(rentTotal);$("rv-mortPay").textContent=fmt(pay);$("rv-futureVal").textContent=fmt(futureVal);
+  $("rv-verdict").textContent=buyCost<rentTotal?"בהינתן הנתונים האלה, קנייה עדיפה כלכלית. אבל אל תשכחו: ארנונה, ועד בית, ותיקונים בשלוש בלילה.":"שכירות זולה יותר על הנייר ("+fmt(rentTotal)+" מול "+fmt(buyCost)+"). אבל בקנייה יש לכם נכס ששווה "+fmt(futureVal)+". ובשכירות יש לכם... שקט מבעל דירה. אולי.";
 }
-[rvRent,rvPrice,rvDown,rvRate,rvAppr,rvYears].forEach(el=>el.addEventListener("input",calcRentVsBuy));
+[$("rv-rent"),$("rv-price"),$("rv-down"),$("rv-rate"),$("rv-appr"),$("rv-years")].forEach(el=>el.addEventListener("input",calcRentVsBuy));
 
 // ===== GOAL =====
-const gC=$("g-current"),gM=$("g-monthly"),gR=$("g-rate"),gT=$("g-target"),gV=$("g-verdict");
 function calcGoal(){
-  bumpCalc();
-  const cur=num(gC,0),monthly=num(gM,0),rate=num(gR,0),target=Math.max(num(gT,1),1);
-  if(cur>=target){gV.textContent="כבר עברת את היעד של "+fmt(target)+". כל הכבוד! 🎉";return;}
-  const r=rate/100/12;let bal=cur,m=0;const maxM=80*12;
-  while(bal<target&&m<maxM){bal=bal*(1+r)+monthly;m++;}
-  if(bal<target){gV.textContent="בקצב הזה ייקח יותר מ‑80 שנה.";return;}
+  bumpCalc();const cur=num($("g-current"),0),monthly=num($("g-monthly"),0),rate=num($("g-rate"),0),target=Math.max(num($("g-target"),1),1);
+  if(cur>=target){$("g-verdict").textContent="כבר עברת את היעד! 🎉 תקבעו יעד חדש. שאפתנות זה לא חטא.";return;}
+  const r=rate/100/12;let bal=cur,m=0;while(bal<target&&m<960){bal=bal*(1+r)+monthly;m++;}
+  if(bal<target){$("g-verdict").textContent="בקצב הזה ייקח 80+ שנה. או שתגדילו הפקדה, או שתמצאו מכונת זמן.";return;}
   const y=Math.floor(m/12),mo=m%12,dep=cur+monthly*m,interest=Math.max(bal-dep,0);
-  let when=y>0?y+" שנים":"";if(mo>0)when+=(y>0?" ו‑":"")+mo+" חודשים";if(!when)when="פחות מחודש";
-  gV.textContent="תגיעו ל‑"+fmt(target)+" בעוד "+when+". מתוכם הפקדתם "+fmt(dep)+", והשאר ("+fmt(interest)+") רווח.";
+  let when=y>0?y+" שנים":"";if(mo>0)when+=(y>0?" ו-":"")+mo+" חודשים";
+  $("g-verdict").textContent="תגיעו ל-"+fmt(target)+" בעוד "+when+". מתוכם הפקדתם "+fmt(dep)+" והריבית נתנה לכם "+fmt(interest)+" במתנה.";
 }
-[gC,gM,gR,gT].forEach(el=>el.addEventListener("input",calcGoal));
+[$("g-current"),$("g-monthly"),$("g-rate"),$("g-target")].forEach(el=>el.addEventListener("input",calcGoal));
 
 // ===== INVEST TABS =====
-const tabGood=$("tabGood"),tabBad=$("tabBad"),pGood=$("panelGood"),pBad=$("panelBad");
-function showInvest(good){tabGood.classList.toggle("active",good);tabBad.classList.toggle("active",!good);
-  tabGood.setAttribute("aria-selected",good);tabBad.setAttribute("aria-selected",!good);
-  pGood.classList.toggle("show",good);pBad.classList.toggle("show",!good);}
-tabGood.addEventListener("click",()=>showInvest(true));tabBad.addEventListener("click",()=>showInvest(false));
+$("tabGood").addEventListener("click",()=>{$("tabGood").classList.add("active");$("tabBad").classList.remove("active");$("panelGood").classList.add("show");$("panelBad").classList.remove("show");});
+$("tabBad").addEventListener("click",()=>{$("tabBad").classList.add("active");$("tabGood").classList.remove("active");$("panelBad").classList.add("show");$("panelGood").classList.remove("show");});
 
 // ===== STOCK SIMULATOR =====
-const stockData={
-  tase:{name:"ת\"א 125",price:2145,vol:0.012},sp500:{name:"S&P 500",price:5820,vol:0.011},
-  nasdaq:{name:"NASDAQ",price:18450,vol:0.015},gold:{name:"זהב",price:2680,vol:0.008},
-  btc:{name:"ביטקוין",price:97500,vol:0.035},bond:{name:"אג\"ח ממשלתי",price:110,vol:0.003}
-};
-let stockBal=100000,portfolio={},priceHistory={},currentDay=0;
-Object.keys(stockData).forEach(k=>{priceHistory[k]=[stockData[k].price];});
-
-function updateStockUI(){
+let stockBal=100000,portfolio={};
+const stockSelect=$("stockPick");
+allStocks.forEach(s=>{const o=document.createElement("option");o.value=s.id;o.textContent=s.name+" ("+s.ticker+")";stockSelect.appendChild(o);});
+function updateStockSim(){
   $("stockBal").textContent=fmt(stockBal);
-  let portVal=0;
-  const portEl=$("portfolio");
-  let html="";
-  for(const [k,qty] of Object.entries(portfolio)){
-    if(qty<=0)continue;
-    const cur=stockData[k].price,cost=qty*cur;portVal+=cost;
-    const hist=priceHistory[k],prev=hist.length>1?hist[hist.length-2]:hist[0],change=((cur-prev)/prev*100);
-    const cls=change>=0?"up":"down",arrow=change>=0?"▲":"▼";
-    html+=`<div class="portfolio-item"><span class="pname">${stockData[k].name}</span><span>${qty} יח'</span><span class="pval">${fmt(cost)}</span><span class="pchange ${cls}">${arrow} ${Math.abs(change).toFixed(1)}%</span></div>`;
+  let portVal=0;const portEl=$("portfolio");let html="";
+  for(const[k,data]of Object.entries(portfolio)){
+    if(data.qty<=0)continue;
+    const s=allStocks.find(x=>x.id===k),curVal=s.price*data.qty;portVal+=curVal;
+    const pnl=curVal-data.cost,pnlPct=(pnl/data.cost*100);
+    const cls=pnl>=0?"up":"down",arrow=pnl>=0?"▲":"▼";
+    html+=`<div class="portfolio-item"><span class="pname">${s.name}</span><span>${data.qty} יח' · ${s.ticker}</span><span class="pval">${fmt(curVal)}</span><span class="pchange ${cls}">${arrow} ${Math.abs(pnlPct).toFixed(1)}% (${fmt(pnl)})</span></div>`;
   }
-  portEl.innerHTML=html||'<div style="text-align:center;color:var(--muted);padding:16px">התיק ריק — קנו משהו!</div>';
+  portEl.innerHTML=html||'<div style="text-align:center;color:var(--muted);padding:16px">התיק ריק — קנו משהו ותפסידו וירטואלית!</div>';
   $("stockPortVal").textContent=fmt(portVal);
-  const totalVal=stockBal+portVal;
-  const pnl=totalVal-100000;
-  $("stockVerdict").textContent=`שווי כולל: ${fmt(totalVal)} | רווח/הפסד: ${fmt(pnl)} (${(pnl/1000).toFixed(1)}%)`;
+  const totalVal=stockBal+portVal,pnl=totalVal-100000;
+  $("stockPnL").textContent=(pnl>=0?"+":"")+fmt(pnl)+" ("+(pnl/1000).toFixed(1)+"%)";
+  $("stockPnL").style.color=pnl>=0?"var(--mint)":"var(--burn)";
+  $("stockVerdict").textContent=`יום ${dayCount} | שווי כולל: ${fmt(totalVal)} | ${pnl>=0?"רווח":"הפסד"}: ${fmt(Math.abs(pnl))}`;
   $("stockVerdict").style.background=pnl>=0?"rgba(78,204,163,.12)":"rgba(255,91,91,.14)";
-  $("stockVerdict").style.borderColor=pnl>=0?"rgba(78,204,163,.4)":"rgba(255,91,91,.4)";
   drawStockChart();
 }
 function drawStockChart(){
-  const canvas=$("stockChart"),ctx=canvas.getContext("2d");
-  const dpr=window.devicePixelRatio||1;
-  canvas.width=canvas.offsetWidth*dpr;canvas.height=canvas.offsetHeight*dpr;
-  ctx.scale(dpr,dpr);const W=canvas.offsetWidth,H=canvas.offsetHeight;
-  ctx.clearRect(0,0,W,H);
-  const sel=$("stockPick").value,hist=priceHistory[sel];
-  if(hist.length<2)return;
-  const min=Math.min(...hist)*0.98,max=Math.max(...hist)*1.02,range=max-min||1;
+  const canvas=$("stockChart"),ctx=canvas.getContext("2d"),dpr=window.devicePixelRatio||1;
+  canvas.width=canvas.offsetWidth*dpr;canvas.height=canvas.offsetHeight*dpr;ctx.scale(dpr,dpr);
+  const W=canvas.offsetWidth,H=canvas.offsetHeight,sel=stockSelect.value,hist=priceHistory[sel];
+  if(hist.length<2)return;ctx.clearRect(0,0,W,H);
+  const min=Math.min(...hist)*.98,max=Math.max(...hist)*1.02,range=max-min||1;
   ctx.beginPath();ctx.strokeStyle=hist[hist.length-1]>=hist[0]?"#4ECCA3":"#FF5B5B";ctx.lineWidth=2;
-  for(let i=0;i<hist.length;i++){const x=i/(hist.length-1)*W,y=H-(hist[i]-min)/range*H;
-    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}
-  ctx.stroke();
-  const grad=ctx.createLinearGradient(0,0,0,H);
-  grad.addColorStop(0,hist[hist.length-1]>=hist[0]?"rgba(78,204,163,.2)":"rgba(255,91,91,.2)");
-  grad.addColorStop(1,"transparent");
+  for(let i=0;i<hist.length;i++){const x=i/(hist.length-1)*W,y=H-(hist[i]-min)/range*H;i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);}ctx.stroke();
+  const grad=ctx.createLinearGradient(0,0,0,H);grad.addColorStop(0,hist[hist.length-1]>=hist[0]?"rgba(78,204,163,.15)":"rgba(255,91,91,.15)");grad.addColorStop(1,"transparent");
   ctx.lineTo(W,H);ctx.lineTo(0,H);ctx.closePath();ctx.fillStyle=grad;ctx.fill();
   ctx.fillStyle=getComputedStyle(document.body).getPropertyValue("--muted");ctx.font="12px Heebo";
-  ctx.fillText(fmt(hist[hist.length-1]),8,16);ctx.fillText("יום "+currentDay,W-60,H-8);
-}
-function simDay(){
-  currentDay++;
-  for(const [k,d] of Object.entries(stockData)){
-    const change=1+(Math.random()-0.48)*d.vol*2;
-    d.price=Math.max(d.price*change,0.01);
-    priceHistory[k].push(d.price);
-    if(priceHistory[k].length>200)priceHistory[k].shift();
-  }
-  updateStockUI();
+  const s=allStocks.find(x=>x.id===sel);ctx.fillText((s.price>=100?s.price.toFixed(0):s.price.toFixed(2)),8,16);ctx.fillText("יום "+dayCount,W-60,H-8);
 }
 $("stockBuy").addEventListener("click",()=>{
-  const sel=$("stockPick").value,qty=Math.max(1,Math.round(num($("stockQty"),1)));
-  const cost=stockData[sel].price*qty;
-  if(cost>stockBal){$("stockVerdict").textContent="אין מספיק יתרה!";return;}
-  stockBal-=cost;portfolio[sel]=(portfolio[sel]||0)+qty;updateStockUI();
+  const sel=stockSelect.value,qty=Math.max(1,Math.round(num($("stockQty"),1))),s=allStocks.find(x=>x.id===sel),cost=s.price*qty;
+  if(cost>stockBal)return;stockBal-=cost;
+  if(!portfolio[sel])portfolio[sel]={qty:0,cost:0};portfolio[sel].qty+=qty;portfolio[sel].cost+=cost;updateStockSim();
 });
 $("stockSell").addEventListener("click",()=>{
-  const sel=$("stockPick").value,qty=Math.max(1,Math.round(num($("stockQty"),1)));
-  if(!portfolio[sel]||portfolio[sel]<qty){$("stockVerdict").textContent="אין מספיק יחידות למכירה!";return;}
-  stockBal+=stockData[sel].price*qty;portfolio[sel]-=qty;if(portfolio[sel]<=0)delete portfolio[sel];updateStockUI();
+  const sel=stockSelect.value,qty=Math.max(1,Math.round(num($("stockQty"),1)));
+  if(!portfolio[sel]||portfolio[sel].qty<qty)return;
+  const s=allStocks.find(x=>x.id===sel),revenue=s.price*qty;
+  const avgCost=portfolio[sel].cost/portfolio[sel].qty;portfolio[sel].cost-=avgCost*qty;
+  stockBal+=revenue;portfolio[sel].qty-=qty;if(portfolio[sel].qty<=0)delete portfolio[sel];updateStockSim();
 });
 $("stockFF").addEventListener("click",simDay);
-$("stockPick").addEventListener("change",drawStockChart);
-setInterval(simDay,3000);
+stockSelect.addEventListener("change",drawStockChart);
 
 // ===== EXPENSE TRACKER =====
 let expenses=JSON.parse(localStorage.getItem("expenses")||"[]");
 const catColors={"אוכל":"#F4C430","תחבורה":"#60A5FA","בילויים":"#A78BFA","קניות":"#FF5B5B","חשבונות":"#4ECCA3","אחר":"#9fb6a8"};
 function renderExpenses(){
-  const list=$("expList"),chartWrap=$("expChartWrap");
-  list.innerHTML="";
+  const list=$("expList"),cw=$("expChartWrap");list.innerHTML="";
   expenses.slice().reverse().forEach((e,ri)=>{
-    const i=expenses.length-1-ri;
-    const d=document.createElement("div");d.className="expense-item";
+    const i=expenses.length-1-ri,d=document.createElement("div");d.className="expense-item";
     d.innerHTML=`<span>${e.name}</span><span class="ecat">${e.cat}</span><span class="eamt">${fmt(e.amount)}</span><button class="edel" data-i="${i}">✕</button>`;
     list.appendChild(d);
   });
-  list.querySelectorAll(".edel").forEach(b=>b.addEventListener("click",()=>{expenses.splice(+b.dataset.i,1);saveExp();renderExpenses();}));
+  list.querySelectorAll(".edel").forEach(b=>b.addEventListener("click",()=>{expenses.splice(+b.dataset.i,1);localStorage.setItem("expenses",JSON.stringify(expenses));renderExpenses();}));
   const total=expenses.reduce((s,e)=>s+e.amount,0),count=expenses.length;
   $("expTotal").textContent=fmt(total);$("expCount").textContent=count;$("expAvg").textContent=count?fmt(total/count):"₪0";
-  const byCat={};expenses.forEach(e=>{byCat[e.cat]=(byCat[e.cat]||0)+e.amount;});
-  const maxCat=Math.max(...Object.values(byCat),1);
-  chartWrap.innerHTML=Object.entries(byCat).map(([cat,val])=>`<div class="expense-bar-h"><span class="ebl">${cat}</span><div class="ebb"><div class="ebf" style="width:${val/maxCat*100}%;background:${catColors[cat]||"#888"}"></div></div><span class="ebv">${fmt(val)}</span></div>`).join("");
+  const byCat={};expenses.forEach(e=>{byCat[e.cat]=(byCat[e.cat]||0)+e.amount;});const maxCat=Math.max(...Object.values(byCat),1);
+  cw.innerHTML=Object.entries(byCat).map(([cat,val])=>`<div class="expense-bar-h"><span class="ebl">${cat}</span><div class="ebb"><div class="ebf" style="width:${val/maxCat*100}%;background:${catColors[cat]||"#888"}"></div></div><span class="ebv">${fmt(val)}</span></div>`).join("");
 }
-function saveExp(){localStorage.setItem("expenses",JSON.stringify(expenses));}
-$("expAdd").addEventListener("click",()=>{
-  const name=$("expName").value.trim()||"הוצאה",amt=num($("expAmt"),0);
-  if(amt<=0)return;
-  expenses.push({name,amount:amt,cat:$("expCat").value,date:new Date().toISOString()});
-  saveExp();renderExpenses();$("expName").value="";$("expAmt").value="";
-});
-$("expClear").addEventListener("click",()=>{if(confirm("בטוח למחוק הכל?")){expenses=[];saveExp();renderExpenses();}});
+$("expAdd").addEventListener("click",()=>{const name=$("expName").value.trim()||"הוצאה",amt=num($("expAmt"),0);if(amt<=0)return;expenses.push({name,amount:amt,cat:$("expCat").value});localStorage.setItem("expenses",JSON.stringify(expenses));renderExpenses();$("expName").value="";$("expAmt").value="";});
+$("expClear").addEventListener("click",()=>{if(confirm("למחוק הכל?")){expenses=[];localStorage.setItem("expenses","[]");renderExpenses();}});
 renderExpenses();
 
-// ===== DEBT PAYOFF =====
-const debtList=$("debtList"),addDebtBtn=$("addDebtBtn"),debtExtra=$("debtExtra");
-addDebtBtn.addEventListener("click",()=>{
-  const row=document.createElement("div");row.className="debt-row";
-  row.innerHTML='<input type="text" placeholder="שם" value=""><input type="number" placeholder="יתרה" value="0" min="0"><input type="number" placeholder="ריבית %" value="10" min="0" step="0.1"><input type="number" placeholder="תשלום חודשי" value="300" min="0"><button onclick="this.closest(\'.debt-row\').remove();calcDebt()">✕</button>';
-  debtList.appendChild(row);
-});
+// ===== DEBT =====
 let debtMethod="avalanche";
 document.querySelectorAll("[data-debt-method]").forEach(b=>b.addEventListener("click",()=>{
-  document.querySelectorAll("[data-debt-method]").forEach(x=>x.classList.remove("active"));
-  b.classList.add("active");debtMethod=b.dataset.debtMethod;calcDebt();
+  document.querySelectorAll("[data-debt-method]").forEach(x=>{x.style.background="var(--box-bg)";x.style.color="var(--muted)";x.classList.remove("active");});
+  b.style.background="var(--burn)";b.style.color="#fff";b.classList.add("active");debtMethod=b.dataset.debtMethod;calcDebt();
 }));
-
+$("addDebtBtn").addEventListener("click",()=>{const row=document.createElement("div");row.className="debt-row";row.innerHTML='<input type="text" value=""><input type="number" value="0" min="0"><input type="number" value="10" min="0" step="0.1"><input type="number" value="300" min="0"><button onclick="this.closest(\'.debt-row\').remove();calcDebt()">✕</button>';$("debtList").appendChild(row);});
 function calcDebt(){
-  bumpCalc();
-  const rows=debtList.querySelectorAll(".debt-row");
-  let debts=[];
-  rows.forEach(r=>{
-    const inputs=r.querySelectorAll("input");
-    const name=inputs[0].value||"חוב",balance=parseFloat(inputs[1].value)||0,rate=parseFloat(inputs[2].value)||0,minPay=parseFloat(inputs[3].value)||0;
-    if(balance>0)debts.push({name,balance,rate,minPay});
-  });
-  const totalDebt=debts.reduce((s,d)=>s+d.balance,0);
-  $("debtTotal").textContent=fmt(totalDebt);
-  if(debts.length===0){$("debtTime").textContent="—";$("debtInterest").textContent="₪0";$("debtVerdict").textContent="";return;}
-  const extra=num(debtExtra,0);
-  let sim=debts.map(d=>({...d}));let months=0,totalInterest=0;const maxMonths=600;
-  while(sim.some(d=>d.balance>0)&&months<maxMonths){
-    months++;
-    if(debtMethod==="avalanche")sim.sort((a,b)=>b.rate-a.rate);else sim.sort((a,b)=>a.balance-b.balance);
-    let extraLeft=extra;
-    sim.forEach(d=>{if(d.balance<=0)return;const interest=d.balance*d.rate/100/12;totalInterest+=interest;d.balance+=interest;
-      const pay=Math.min(d.balance,d.minPay);d.balance-=pay;});
+  bumpCalc();const rows=document.querySelectorAll("#debtList .debt-row");
+  let debts=[];rows.forEach(r=>{const inp=r.querySelectorAll("input");const b=parseFloat(inp[1].value)||0;if(b>0)debts.push({name:inp[0].value,balance:b,rate:parseFloat(inp[2].value)||0,minPay:parseFloat(inp[3].value)||0});});
+  const totalDebt=debts.reduce((s,d)=>s+d.balance,0);$("debtTotal").textContent=fmt(totalDebt);
+  if(!debts.length){$("debtTime").textContent="—";$("debtInterest").textContent="₪0";$("debtVerdict").textContent="";return;}
+  const extra=num($("debtExtra"),0);let sim=debts.map(d=>({...d})),months=0,totalInt=0;
+  while(sim.some(d=>d.balance>0)&&months<600){
+    months++;if(debtMethod==="avalanche")sim.sort((a,b)=>b.rate-a.rate);else sim.sort((a,b)=>a.balance-b.balance);
+    let extraLeft=extra;sim.forEach(d=>{if(d.balance<=0)return;const int=d.balance*d.rate/100/12;totalInt+=int;d.balance+=int;const pay=Math.min(d.balance,d.minPay);d.balance-=pay;});
     for(let d of sim){if(d.balance<=0)continue;const pay=Math.min(d.balance,extraLeft);d.balance-=pay;extraLeft-=pay;if(extraLeft<=0)break;}
   }
-  const y=Math.floor(months/12),mo=months%12;
-  let when=y>0?y+" שנים":"";if(mo>0)when+=(y>0?" ו‑":"")+mo+" חודשים";
-  $("debtTime").textContent=months>=maxMonths?"50+ שנים":when;$("debtInterest").textContent=fmt(totalInterest);
-  const methodName=debtMethod==="avalanche"?"מפולת (ריבית גבוהה קודם)":"כדור שלג (יתרה קטנה קודם)";
-  $("debtVerdict").textContent=months>=maxMonths?
-    "בתשלומים הנוכחיים, החוב כמעט לא יסתיים. הגדילו את התשלום החודשי.":
-    `בשיטת ${methodName} עם תוספת של ${fmt(extra)} בחודש, תסיימו את החובות בעוד ${when} ותשלמו ${fmt(totalInterest)} ריבית.`;
+  const y=Math.floor(months/12),mo=months%12;let when=y>0?y+" שנים":"";if(mo>0)when+=(y>0?" ו-":"")+mo+" חודשים";
+  $("debtTime").textContent=months>=600?"50+ שנים":when;$("debtInterest").textContent=fmt(totalInt);
+  $("debtVerdict").textContent=months>=600?"בתשלומים הנוכחיים, זה יימשך לנצח. תגדילו את התשלום.":"עם תוספת של "+fmt(extra)+" בחודש בשיטת "+(debtMethod==="avalanche"?"מפולת":"כדור שלג")+", תסיימו בעוד "+when+". סך ריבית: "+fmt(totalInt)+". כל שקל שמוסיפים חוסך ריבית.";
 }
-debtExtra.addEventListener("input",calcDebt);
-window.calcDebt=calcDebt;
+$("debtExtra").addEventListener("input",calcDebt);window.calcDebt=calcDebt;
 
 // ===== QUIZ =====
 const questions=[
-  {q:"מה זה ריבית דריבית?",opts:["ריבית שמשלמים על ריבית","ריבית כפולה על הקרן","ריבית שמתקבלת פעמיים בשנה","סוג של הלוואה"],correct:0,explain:"ריבית דריבית = הריבית שמרוויחים גם על הרווחים הקודמים, לא רק על הקרן המקורית. זה הכוח הכי חזק בכלכלה."},
-  {q:"מהו כלל 50/30/20?",opts:["חלוקת השקעות","חלוקת תקציב: צרכים/רצונות/חיסכון","יחס חוב להכנסה","שיטת מיסוי"],correct:1,explain:"50% להוצאות חיוניות, 30% לרצונות, 20% לחיסכון והשקעה."},
-  {q:"כמה כסף צריך בקרן חירום?",opts:["חודש הוצאות","3-6 חודשי הוצאות","שנת הוצאות","לא צריך"],correct:1,explain:"ההמלצה הרווחת היא 3-6 חודשי הוצאות קבועות. מספיק לכסות תקופת מעבר."},
-  {q:"מהו מדד S&P 500?",opts:["500 חברות גדולות בארה\"ב","500 המניות הזולות בבורסה","מדד של 500 מטבעות","מדד אינפלציה אמריקאי"],correct:0,explain:"ה-S&P 500 עוקב אחרי 500 החברות הגדולות בבורסות האמריקאיות ונחשב מדד מרכזי."},
-  {q:"מה עדיף: לסלק חוב בריבית 18% או להשקיע בתשואה של 7%?",opts:["להשקיע — תשואה בטוחה","לסלק חוב — חיסכון מובטח","תלוי בגובה החוב","אין הבדל"],correct:1,explain:"סילוק חוב ב-18% = 'תשואה' מובטחת של 18%. עדיפה על השקעה ב-7% שלא מובטחת."},
-  {q:"מה זה ETF?",opts:["מנייה בודדת","קרן שנסחרת בבורסה ועוקבת אחרי מדד","חשבון חיסכון","ביטוח חיים"],correct:1,explain:"Exchange Traded Fund — קרן שעוקבת אחרי מדד ונסחרת כמו מנייה. דרך קלה ומפוזרת להשקיע."},
-  {q:"מהו כלל 4% בפרישה?",opts:["להוציא 4% מהחיסכון כל חודש","להוציא 4% מהחיסכון כל שנה","להשקיע 4% מהמשכורת","לשלם 4% מס"],correct:1,explain:"לפי כלל 4%, אפשר למשוך 4% מהתיק כל שנה בלי שהכסף ייגמר למשך ~30 שנה."},
-  {q:"מהי אינפלציה?",opts:["עליית שכר","ירידת מחירים","עלייה כללית ברמת המחירים","עליית ריבית"],correct:2,explain:"אינפלציה = ירידה בכוח הקנייה של הכסף. 100₪ היום קונים פחות מ-100₪ לפני 10 שנים."},
-  {q:"מה זה פיזור (דיברסיפיקציה)?",opts:["לקנות הרבה ממנייה אחת","לפזר השקעות על אפיקים שונים","למכור הכול ולהתחיל מחדש","להשקיע רק בזהב"],correct:1,explain:"לא שמים את כל הביצים בסל אחד. פיזור מקטין סיכון בלי להקטין בהכרח את התשואה."},
-  {q:"מהו שוק דובי (Bear Market)?",opts:["שוק שעולה מעל 20%","שוק שיורד מעל 20%","שוק שקט ומשעמם","שוק של מטבעות קריפטו"],correct:1,explain:"שוק דובי = ירידה של 20% או יותר ממחירי השיא. ההפך הוא שוק שורי (Bull Market)."},
-  {q:"מהו הפרש דמי ניהול של 1% לאורך 30 שנה על השקעה של ₪100,000?",opts:["₪30,000","₪50,000","₪100,000+","₪10,000"],correct:2,explain:"1% דמי ניהול נשמע מעט, אבל לאורך 30 שנה הוא יכול לאכול שליש מהתשואה שלכם. עולה מאות אלפי שקלים."},
-  {q:"כמה זמן לוקח לכסף להכפיל את עצמו ב-7% תשואה?",opts:["7 שנים","10 שנים","14 שנים","20 שנים"],correct:1,explain:"כלל 72: חלקו 72 בשיעור התשואה. 72÷7≈10 שנים. כלל אצבע שימושי."},
-  {q:"מהי משכנתה מסוג שפיצר?",opts:["תשלום חודשי קבוע","תשלום חודשי עולה","תשלום קרן בלבד","בלון"],correct:0,explain:"שפיצר = החזר חודשי קבוע לאורך כל התקופה. בהתחלה רוב התשלום הוא ריבית, ובהמשך — קרן."},
-  {q:"מהו ניכיון מס (Tax Deduction)?",opts:["מס שמשלמים בחו\"ל","הפחתת ההכנסה החייבת במס","החזר כסף מהמדינה","קנס על אי דיווח"],correct:1,explain:"ניכיון מפחית את ההכנסה שעליה משלמים מס. לדוגמה, תרומה מוכרת מקטינה את ההכנסה לצרכי מס."},
-  {q:"מה עדיף: 100₪ היום או 110₪ בעוד שנה (באינפלציה של 5%)?",opts:["110₪ בעוד שנה — יותר כסף","100₪ היום — שווים יותר","שווה בדיוק","תלוי במצב הרוח"],correct:0,explain:"110₪ בעוד שנה, בניכוי 5% אינפלציה, שווה ~104.8₪ בערכי היום. עדיין יותר מ-100₪ היום."}
+  {q:"מה זה ריבית דריבית?",opts:["ריבית על ריבית","ריבית כפולה","ריבית פעמיים בשנה","סוג הלוואה"],correct:0,explain:"ריבית דריבית = ריבית שמרוויחים גם על הרווחים הקודמים. הכוח הכי חזק בכלכלה — אם יש לכם סבלנות."},
+  {q:"מהו כלל 50/30/20?",opts:["חלוקת השקעות","צרכים/רצונות/חיסכון","יחס חוב להכנסה","שיטת מיסוי"],correct:1,explain:"50% צרכים, 30% רצונות, 20% חיסכון. פשוט, אבל רוב האנשים לא עושים את זה."},
+  {q:"כמה בקרן חירום?",opts:["חודש","3-6 חודשים","שנה","לא צריך"],correct:1,explain:"3-6 חודשי הוצאות. מספיק לנשום, לא מספיק לפאניקה."},
+  {q:"מהו S&P 500?",opts:["500 חברות גדולות בארה\"ב","500 מניות זולות","500 מטבעות","מדד אינפלציה"],correct:0,explain:"500 החברות הגדולות בארה\"ב. אם קניתם את המדד הזה לפני 30 שנה, היום הייתם מסתכלים על הגרף ומחייכים."},
+  {q:"חוב ב-18% או השקעה ב-7%?",opts:["להשקיע","לסלק חוב","תלוי","אין הבדל"],correct:1,explain:"סילוק חוב ב-18% = 'תשואה' מובטחת של 18%. אף השקעה לא מציעה כזו."},
+  {q:"מה זה ETF?",opts:["מנייה","קרן שעוקבת אחרי מדד","חשבון חיסכון","ביטוח חיים"],correct:1,explain:"Exchange Traded Fund. פיזור רחב, עמלות נמוכות, ומשעמם ברמות. בדיוק מה שצריך."},
+  {q:"כלל 4% בפרישה?",opts:["4% כל חודש","4% כל שנה","4% מהמשכורת","4% מס"],correct:1,explain:"4% מהתיק בשנה ≈ הכסף לא נגמר. בערך. בתיאוריה. אבל זו התיאוריה הכי טובה שיש."},
+  {q:"מהי אינפלציה?",opts:["עליית שכר","ירידת מחירים","עלייה ברמת המחירים","עליית ריבית"],correct:2,explain:"100₪ של היום = פחות מ-100₪ של אתמול. הכסף שלכם מתכווץ בשקט כמו סוודר במייבש."},
+  {q:"מהו פיזור?",opts:["לקנות הרבה ממנייה אחת","לפזר על אפיקים שונים","למכור הכל","רק זהב"],correct:1,explain:"לא כל הביצים בסל אחד. אלא אם כן אתם תרנגולת."},
+  {q:"שוק דובי?",opts:["עולה 20%+","יורד 20%+","שקט","קריפטו"],correct:1,explain:"Bear Market = ירידה של 20%+. ההפך = Bull Market. בשניהם אנשים עושים דברים מטופשים."},
+  {q:"1% דמי ניהול לאורך 30 שנה על ₪100,000?",opts:["₪30,000","₪50,000","₪100,000+","₪10,000"],correct:2,explain:"1% שנשמע 'כלום' אוכל שליש מהתשואה. דמי ניהול הם הגנב הכי מנומס שתפגשו."},
+  {q:"כמה זמן להכפלה ב-7%?",opts:["7 שנים","10 שנים","14 שנים","20 שנים"],correct:1,explain:"כלל 72: 72÷7≈10 שנים. כלל אצבע שימושי יותר מרוב הכללים שלימדו אתכם בבית ספר."},
+  {q:"מהי משכנתה שפיצר?",opts:["תשלום קבוע","תשלום עולה","קרן בלבד","בלון"],correct:0,explain:"תשלום חודשי קבוע. בהתחלה רוב הכסף הולך לריבית. הבנק אוהב את זה."},
+  {q:"ניכיון מס?",opts:["מס בחו\"ל","הפחתת הכנסה חייבת","החזר כסף","קנס"],correct:1,explain:"מפחית את ההכנסה שעליה משלמים מס. כל שקל שאפשר לנכות = חיסכון ישיר."},
+  {q:"100₪ היום או 110₪ בעוד שנה (אינפלציה 5%)?",opts:["110₪ בעוד שנה","100₪ היום","שווה","תלוי"],correct:0,explain:"110₪ בניכוי 5% = ~104.8₪ בערכי היום. עדיף מ-100₪. מתמטיקה לא שקרנית."}
 ];
 let qIdx=0,answered=false;
 function renderQuiz(){
-  if(qIdx>=questions.length){showQuizScore();return;}
-  answered=false;
-  const q=questions[qIdx];
-  $("quizQ").textContent=(qIdx+1)+". "+q.q;
+  if(qIdx>=questions.length){const pct=Math.round(quizCorrect/questions.length*100);const grade=pct>=90?"🏆 מומחה!":pct>=70?"🎯 טוב!":pct>=50?"📚 בדרך":
+"💪 יש מה ללמוד";$("quizBox").innerHTML=`<div style="text-align:center;padding:20px"><div style="font-family:'Secular One';font-size:3rem;color:var(--gold)">${quizCorrect}/${questions.length}</div><div style="font-size:1.2rem;font-weight:700;margin-top:8px">${grade} (${pct}%)</div><button class="up-btn" style="background:var(--purple);margin-top:16px" onclick="qIdx=0;quizCorrect=0;renderQuiz()">שחקו שוב</button></div>`;return;}
+  answered=false;const q=questions[qIdx];$("quizQ").textContent=(qIdx+1)+". "+q.q;
   $("quizExplain").style.display="none";$("quizNext").style.display="none";
-  let progHTML="";for(let i=0;i<questions.length;i++){let cls=i<qIdx?"done":i===qIdx?"current":"";progHTML+=`<div class="quiz-dot ${cls}"></div>`;}
-  $("quizProgress").innerHTML=progHTML;
+  $("quizProgress").innerHTML=Array.from({length:questions.length},(_,i)=>`<div class="quiz-dot ${i<qIdx?"done":i===qIdx?"current":""}"></div>`).join("");
   const optsEl=$("quizOpts");optsEl.innerHTML="";
-  q.opts.forEach((opt,i)=>{
-    const btn=document.createElement("button");btn.className="quiz-opt";btn.textContent=opt;
-    btn.addEventListener("click",()=>{
-      if(answered)return;answered=true;
-      optsEl.querySelectorAll(".quiz-opt").forEach((b,j)=>{b.disabled=true;if(j===q.correct)b.classList.add("correct");});
-      if(i===q.correct){btn.classList.add("correct");quizCorrect++;}else{btn.classList.add("wrong");}
-      quizTotal=qIdx+1;$("statQuiz").textContent=quizCorrect+"/"+quizTotal;
-      $("quizExplain").textContent=q.explain;$("quizExplain").style.display="block";
-      $("quizNext").style.display="inline-block";
-    });
-    optsEl.appendChild(btn);
-  });
+  q.opts.forEach((opt,i)=>{const btn=document.createElement("button");btn.className="quiz-opt";btn.textContent=opt;
+    btn.addEventListener("click",()=>{if(answered)return;answered=true;optsEl.querySelectorAll(".quiz-opt").forEach((b,j)=>{b.disabled=true;if(j===q.correct)b.classList.add("correct");});
+      if(i===q.correct){btn.classList.add("correct");quizCorrect++;}else btn.classList.add("wrong");
+      quizTotal=qIdx+1;$("statQuiz").textContent=quizCorrect+"/"+quizTotal;$("quizExplain").textContent=q.explain;$("quizExplain").style.display="block";$("quizNext").style.display="inline-block";});
+    optsEl.appendChild(btn);});
 }
-function showQuizScore(){
-  const pct=Math.round(quizCorrect/questions.length*100);
-  let grade=pct>=90?"🏆 מומחה פיננסי!":pct>=70?"🎯 יודע/ת טוב!":pct>=50?"📚 בדרך הנכונה":"💪 יש עוד מה ללמוד";
-  $("quizBox").innerHTML=`<div class="quiz-score"><div class="big">${quizCorrect}/${questions.length}</div><div class="grade">${grade} (${pct}%)</div><button class="up-btn" style="background:var(--purple);margin-top:16px" onclick="qIdx=0;quizCorrect=0;renderQuiz()">שחקו שוב</button></div>`;
-}
-$("quizNext").addEventListener("click",()=>{qIdx++;renderQuiz();});
-renderQuiz();
+$("quizNext").addEventListener("click",()=>{qIdx++;renderQuiz();});renderQuiz();
 
 // ===== SAVINGS CHALLENGE =====
 let challengeDone=JSON.parse(localStorage.getItem("challengeDone")||"[]");
 function renderChallenge(){
-  const base=num($("challengeBase"),10),grid=$("challengeGrid");
-  let html="",saved=0,totalPossible=0;
-  for(let w=1;w<=52;w++){
-    const amt=base*w;totalPossible+=amt;
-    const done=challengeDone.includes(w);if(done)saved+=amt;
-    html+=`<div class="week-cell ${done?"done":""}" data-week="${w}"><div class="wn">ש׳${w}</div><div class="wa">${sym}${amt}</div></div>`;
-  }
-  grid.innerHTML=html;
-  $("chSaved").textContent=fmt(saved);$("chLeft").textContent=fmt(totalPossible-saved);
-  $("chWeeks").textContent=challengeDone.length+"/52";
-  grid.querySelectorAll(".week-cell").forEach(cell=>cell.addEventListener("click",()=>{
-    const w=+cell.dataset.week;
-    if(challengeDone.includes(w))challengeDone=challengeDone.filter(x=>x!==w);else challengeDone.push(w);
-    localStorage.setItem("challengeDone",JSON.stringify(challengeDone));renderChallenge();
-  }));
+  const base=num($("challengeBase"),10),grid=$("challengeGrid");let saved=0,total=0;
+  grid.innerHTML=Array.from({length:52},(_,w)=>{const amt=base*(w+1);total+=amt;const done=challengeDone.includes(w+1);if(done)saved+=amt;
+    return`<div class="week-cell ${done?"done":""}" data-week="${w+1}"><div class="wn">ש׳${w+1}</div><div class="wa">${sym}${amt}</div></div>`;}).join("");
+  $("chSaved").textContent=fmt(saved);$("chLeft").textContent=fmt(total-saved);$("chWeeks").textContent=challengeDone.length+"/52";
+  grid.querySelectorAll(".week-cell").forEach(c=>c.addEventListener("click",()=>{const w=+c.dataset.week;challengeDone.includes(w)?challengeDone=challengeDone.filter(x=>x!==w):challengeDone.push(w);localStorage.setItem("challengeDone",JSON.stringify(challengeDone));renderChallenge();}));
 }
-$("challengeBase").addEventListener("input",renderChallenge);
-renderChallenge();
+$("challengeBase").addEventListener("input",renderChallenge);renderChallenge();
 
 // ===== NET WORTH =====
 const nwIds=["nwCash","nwInvest","nwPension","nwRealestate","nwCar","nwOther","nwMort","nwLoans","nwCredit","nwOtherDebt"];
 function calcNetWorth(){
-  bumpCalc();
-  const assets=num($(nwIds[0]),0)+num($(nwIds[1]),0)+num($(nwIds[2]),0)+num($(nwIds[3]),0)+num($(nwIds[4]),0)+num($(nwIds[5]),0);
-  const liab=num($(nwIds[6]),0)+num($(nwIds[7]),0)+num($(nwIds[8]),0)+num($(nwIds[9]),0);
-  const nw=assets-liab;
+  bumpCalc();const a=nwIds.slice(0,6).reduce((s,id)=>s+num($(id),0),0),l=nwIds.slice(6).reduce((s,id)=>s+num($(id),0),0),nw=a-l;
   $("nwTotal").textContent=fmt(nw);$("nwTotal").style.color=nw>=0?"var(--gold)":"var(--burn)";
-  $("nwVerdict").textContent=nw>=0?
-    `הנכסים שלכם (${fmt(assets)}) מינוס ההתחייבויות (${fmt(liab)}) = הון עצמי של ${fmt(nw)}. ${nw>500000?"מרשים!":"כיוון טוב!"}`:
-    `ההתחייבויות (${fmt(liab)}) גדולות מהנכסים (${fmt(assets)}). הון עצמי שלילי של ${fmt(nw)}. עדיפות: סילוק חובות.`;
+  $("nwVerdict").textContent=nw>=0?`נכסים: ${fmt(a)} — התחייבויות: ${fmt(l)} = ${fmt(nw)}. ${nw>500000?"מרשים! אבל אל תפסיקו.":"כיוון טוב. תמשיכו."}`:`ההון העצמי שלילי: ${fmt(nw)}. עדיפות ראשונה: סילוק חובות. שנייה: לא לקנות סקין חדש.`;
 }
 nwIds.forEach(id=>$(id).addEventListener("input",calcNetWorth));
 
 // ===== GLOSSARY =====
 const glossaryTerms=[
-  {term:"ריבית דריבית",def:"ריבית שמחושבת גם על הרווחים הקודמים, לא רק על הסכום המקורי. הכוח שגורם לכסף לגדול באופן מואץ."},
-  {term:"אינפלציה",def:"עלייה כללית ברמת המחירים לאורך זמן. גורמת לכסף לאבד מכוח הקנייה שלו."},
-  {term:"תיק השקעות",def:"אוסף ההשקעות של אדם — מניות, אג\"ח, קרנות, נדל\"ן וכו'. פיזור התיק מקטין סיכון."},
-  {term:"מדד מניות",def:"מספר אחד שמייצג ביצועים ממוצעים של קבוצת מניות. דוגמאות: ת\"א 125, S&P 500."},
-  {term:"ETF",def:"Exchange Traded Fund — קרן שנסחרת בבורסה כמו מנייה, בדרך כלל עוקבת אחרי מדד. עמלות נמוכות ופיזור רחב."},
-  {term:"דיבידנד",def:"חלוקת רווחים של חברה לבעלי המניות. כסף שמקבלים רק בגלל שמחזיקים במנייה."},
-  {term:"שוק שורי",def:"Bull Market — תקופה ממושכת של עליות בשוק ההון (20%+ מהשפל)."},
-  {term:"שוק דובי",def:"Bear Market — תקופה ממושכת של ירידות (20%+ מהשיא)."},
-  {term:"נזילות",def:"כמה קל להפוך נכס לכסף מזומן. עו\"ש = נזיל מאוד, נדל\"ן = פחות נזיל."},
-  {term:"קרן חירום",def:"כסף נזיל בצד ל-3-6 חודשי הוצאות. רשת ביטחון למקרה של פיטורים, מחלה או הפתעות."},
-  {term:"שפיצר",def:"שיטת החזר הלוואה בתשלום חודשי קבוע. בהתחלה רוב התשלום הולך לריבית, בהמשך לקרן."},
-  {term:"דמי ניהול",def:"אחוז שנתי שגוף מנהל (קרן, פנסיה) גובה מההשקעה. 1% נשמע מעט אבל אוכל עשרות אחוזים מהתשואה לאורך עשורים."},
-  {term:"מרווח (ספרד)",def:"ההפרש בין מחיר הקנייה למחיר המכירה של נכס. ככל שהמרווח קטן יותר, השוק נזיל יותר."},
-  {term:"P/E",def:"Price to Earnings — יחס מחיר המנייה לרווח למנייה. מדד בסיסי לבדוק אם מנייה 'יקרה' או 'זולה' יחסית."},
-  {term:"גיוון (דיברסיפיקציה)",def:"פיזור השקעות על נכסים, סקטורים ומדינות שונים כדי להקטין סיכון."},
-  {term:"תשואה",def:"הרווח (או ההפסד) על השקעה, בדרך כלל מבוטא באחוזים. תשואה שנתית ממוצעת ≠ תשואה מובטחת."},
-  {term:"ריבית פריים",def:"ריבית הבסיס שבנק ישראל קובע. משפיעה על ריביות משכנתאות, הלוואות ופיקדונות."},
-  {term:"קרן השתלמות",def:"חיסכון לטווח בינוני (6 שנים) עם הטבת מס משמעותית. אחד מאפיקי החיסכון הטובים בישראל."},
-  {term:"FIRE",def:"Financial Independence, Retire Early — תנועה שמטרתה לחסוך מספיק כדי לפרוש מוקדם. מבוססת על כלל 4%."},
-  {term:"כלל 72",def:"כלל אצבע: חלקו 72 בשיעור הריבית כדי לדעת כמה שנים ייקח לכסף להכפיל את עצמו. 72÷7=~10 שנים."},
-  {term:"אג\"ח (Bond)",def:"הלוואה שנותנים לממשלה או חברה. מקבלים ריבית קבועה ואת הקרן בסוף. פחות סיכון ממניות, פחות תשואה."},
-  {term:"רווח הון",def:"הרווח ממכירת נכס (מנייה, דירה) במחיר גבוה מזה שקניתם. בד\"כ חייב במס."},
-  {term:"אוברדרפט (מינוס)",def:"הלוואה אוטומטית מהבנק כשנכנסים למינוס בעו\"ש. ריבית גבוהה מאוד — מלכודת חוב נפוצה."},
-  {term:"מדד המחירים לצרכן",def:"מדד שעוקב אחרי עלות סל מוצרים ושירותים. משמש למדידת אינפלציה."},
-  {term:"פנסיה",def:"חיסכון לגיל פרישה. בישראל חובה על מעסיקים להפריש לפנסיה. כולל ביטוח נכות ושארים."}
+  {term:"ריבית דריבית",def:"ריבית שמחושבת גם על הרווחים הקודמים. הסיבה שוורן באפט עשיר יותר מכם — הוא התחיל מוקדם יותר."},
+  {term:"אינפלציה",def:"עלייה ברמת המחירים. הכסף שלכם לא הולך לשום מקום — הוא פשוט שווה פחות."},
+  {term:"ETF",def:"קרן שנסחרת בבורסה ועוקבת אחרי מדד. פיזור רחב, עמלות נמוכות, שיעמום מובטח."},
+  {term:"דיבידנד",def:"חלק מרווחי החברה שמחולק לבעלי המניות. כסף שמגיע רק כי אתם מחזיקים."},
+  {term:"שוק שורי",def:"תקופה של עליות ממושכות. כולם מרגישים גאונים. ואז..."},
+  {term:"שוק דובי",def:"ירידה של 20%+ מהשיא. כולם מפחדים. ודווקא אז שווה לקנות."},
+  {term:"נזילות",def:"כמה קל להפוך נכס לכסף. עו\"ש = מאוד נזיל. דירה = צריך סבלנות ועורך דין."},
+  {term:"קרן חירום",def:"3-6 חודשי הוצאות בצד. כי המקרר תמיד מתקלקל בדיוק כשלא מתאים."},
+  {term:"שפיצר",def:"החזר חודשי קבוע. בהתחלה רוב הכסף = ריבית. הבנק מחייך."},
+  {term:"דמי ניהול",def:"אחוז שגוף מנהל גובה מהכסף שלכם. 1% נשמע מעט. זה לא."},
+  {term:"P/E",def:"מחיר מנייה חלקי רווח למנייה. נמוך = 'זולה'. גבוה = 'יקרה'. בתיאוריה."},
+  {term:"תשואה",def:"הרווח (או ההפסד) באחוזים. 'תשואה ממוצעת' ≠ 'תשואה מובטחת'. שימו לב להבדל."},
+  {term:"ריבית פריים",def:"ריבית הבסיס של בנק ישראל. כשהיא עולה, המשכנתה שלכם עולה. כשהיא יורדת, הבנק שוכח לעדכן."},
+  {term:"קרן השתלמות",def:"חיסכון ל-6 שנים עם הטבת מס. אחד מהדברים הטובים שהמדינה נותנת. תנצלו."},
+  {term:"FIRE",def:"Financial Independence, Retire Early. חסכו מספיק כדי לפרוש צעירים. בתיאוריה קל, בפועל צריך לוותר על אבוקדו טוסט."},
+  {term:"כלל 72",def:"72 חלקי ריבית = שנים להכפלה. 72÷7=~10 שנים. יותר שימושי מרוב מה שלמדתם בחשבון."},
+  {term:'אג"ח',def:"הלוואה שנותנים לממשלה/חברה. מקבלים ריבית ואת הקרן בסוף. משעמם ובטוח. יחסית."},
+  {term:"אוברדרפט",def:"מינוס בחשבון. הלוואה אוטומטית בריבית מטורפת. מלכודת חוב קלאסית."},
+  {term:"פנסיה",def:"חיסכון לגיל פרישה. המעסיק מפריש. אתם מפרישים. ובגיל 67 תגלו אם זה מספיק."},
+  {term:"מדד המחירים לצרכן",def:"עוקב אחרי עלות סל מוצרים. כשהוא עולה = אינפלציה. כשהוא יורד = דפלציה. כשהוא קופץ = כותרות בחדשות."}
 ];
 function renderGlossary(filter=""){
-  const list=$("glossaryList");
-  const filtered=filter?glossaryTerms.filter(t=>t.term.includes(filter)||t.def.includes(filter)):glossaryTerms;
-  list.innerHTML=filtered.map(t=>`<div class="gterm"><div class="gterm-head"><span>${t.term}</span><span class="arrow">▼</span></div><div class="gterm-body"><p>${t.def}</p></div></div>`).join("");
-  list.querySelectorAll(".gterm-head").forEach(h=>h.addEventListener("click",()=>h.parentElement.classList.toggle("open")));
+  $("glossaryList").innerHTML=(filter?glossaryTerms.filter(t=>t.term.includes(filter)||t.def.includes(filter)):glossaryTerms).map(t=>
+    `<div class="gterm"><div class="gterm-head"><span>${t.term}</span><span class="arrow">▼</span></div><div class="gterm-body"><p>${t.def}</p></div></div>`).join("");
+  document.querySelectorAll(".gterm-head").forEach(h=>h.addEventListener("click",()=>h.parentElement.classList.toggle("open")));
 }
-$("glossarySearch").addEventListener("input",e=>renderGlossary(e.target.value));
-renderGlossary();
+$("glossarySearch").addEventListener("input",e=>renderGlossary(e.target.value));renderGlossary();
 
 // ===== TIPS =====
 const tips=[
-  "שלם קודם לעצמך: העבר סכום להשקעה אוטומטית ביום המשכורת.",
-  "קרן חירום של 3–6 חודשי הוצאות שווה יותר שקט נפשי מכל מניה חמה.",
-  "דמי ניהול של 1% נשמעים זניחים, אבל לאורך 30 שנה הם אוכלים שליש מהתשואה.",
-  "אם אתה לא מבין איך מוצר פיננסי מרוויח — כנראה שאתה המוצר.",
-  "חוב בריבית גבוהה (אוברדרפט, אשראי) הוא 'השקעה' שלילית. סגירה שלו = תשואה מובטחת.",
-  "תקציב הוא לא כלא, הוא מפה. אתה מחליט לאן הכסף הולך.",
-  "זמן בשוק מנצח תזמון השוק.",
-  "קנייה גדולה? תישן על זה לילה. הרבה 'חייב לקנות' מתאדה עד הבוקר.",
-  "העלאה בשכר היא הזדמנות להגדיל חיסכון, לא רק את רמת החיים.",
-  "פיזור זו ארוחת חינם נדירה בכלכלה: אותה תשואה צפויה בפחות סיכון.",
-  "כלל 72: חלקו 72 בריבית כדי לדעת תוך כמה שנים הכסף יכפיל את עצמו.",
-  "קרן השתלמות היא אחד מאפיקי החיסכון הטובים בישראל — בדקו אם זה רלוונטי עבורכם.",
-  "אם המטרה היא פרישה מוקדמת, שיעור החיסכון חשוב הרבה יותר מגובה ההכנסה.",
-  "לפני שקונים משהו, תשאלו: 'כמה שעות עבודה זה שווה לי?'",
-  "אוטומציה כלכלית: הוראות קבע לחיסכון מונעות את הפיתוי להוציא.",
-  "תמיד קראו את האותיות הקטנות. תמיד.",
-  "השקעה משעממת היא בדרך כלל השקעה טובה.",
-  "הסיכון הכי גדול הוא לא להשקיע בכלל ולתת לאינפלציה לאכול את הכסף."
+  "שלם קודם לעצמך: העבר כסף להשקעה ביום המשכורת, לפני שמספיקים להוציא. מה שלא רואים — לא מוציאים.",
+  "קרן חירום של 3-6 חודשי הוצאות. לא סקסי, אבל שווה יותר שקט נפשי מכל מנייה.",
+  "1% דמי ניהול לאורך 30 שנה = שליש מהתשואה. תבדקו מה אתם משלמים. עכשיו. ברצינות.",
+  "אם לא מבינים איך מוצר פיננסי מרוויח — כנראה שאתם המוצר.",
+  "חוב בריבית גבוהה = 'השקעה' שלילית. סגירה שלו = תשואה מובטחת של 18%. אף בן דוד לא מציע כזו.",
+  "זמן בשוק > תזמון השוק. מי שניסה 'לקנות בתחתית' בדרך כלל קנה בעלייה ומכר בירידה.",
+  "קנייה גדולה? תישנו על זה. הרבה 'חייב' מתאדה עד הבוקר.",
+  "העלאה בשכר = הזדמנות להגדיל חיסכון, לא רק את רמת החיים. ה'לייפסטייל אינפלציה' היא הגנב הכי שקט.",
+  "פיזור = ארוחת חינם נדירה בכלכלה. אותה תשואה, פחות סיכון.",
+  "72 חלקי ריבית = שנים להכפלה. 72÷7=10 שנים. עכשיו אתם יודעים יותר מתמטיקה מ-80% מהאנשים.",
+  "קרן השתלמות = אחד מאפיקי החיסכון הטובים בישראל. בדקו אם רלוונטי.",
+  "לפני שקונים: 'כמה שעות עבודה זה שווה לי?' משנה את הפרספקטיבה.",
+  "אוטומציה: הוראות קבע לחיסכון. אם צריך להחליט כל חודש — לא תחסכו.",
+  "השקעה משעממת = השקעה טובה. אם מרגש — כנראה מסוכן.",
+  "הסיכון הגדול ביותר: לא להשקיע בכלל. אינפלציה אוכלת כסף שיושב בעו\"ש.",
+  "אם מישהו מבטיח תשואה מובטחת של 20%+ — זה או שקר או פירמידה. או שניהם.",
+  "תמיד קראו את האותיות הקטנות. תמיד. גם אם הן ממש קטנות.",
+  "מס רווח הון = 25% בישראל. תכננו בהתאם. המדינה שותפה שלכם — בלי שהסכמתם."
 ];
 let lastTip=-1;
 $("tipBtn").addEventListener("click",()=>{let i;do{i=Math.floor(Math.random()*tips.length);}while(i===lastTip&&tips.length>1);lastTip=i;$("tipText").textContent=tips[i];});
 
 // ===== CURRENCY =====
-function updateAll(){renderGame();calcCompound();calcSpend();calcBudget();calcMortgage();calcInflation();calcFire();
-  calcHourly();calcTax();calcRentVsBuy();calcGoal();calcNetWorth();calcDebt();renderChallenge();}
+function updateAll(){renderGame();calcCompound();calcSpend();calcBudget();calcMortgage();calcInflation();calcFire();calcHourly();calcTax();calcRentVsBuy();calcGoal();calcNetWorth();calcDebt();renderChallenge();}
 $("currency").addEventListener("change",e=>{sym=e.target.value;updateAll();});
 
 // ===== THEME =====
-$("theme").addEventListener("click",()=>{const light=document.body.classList.toggle("light");$("theme").textContent=light?"☀️":"🌙";});
+$("theme").addEventListener("click",()=>{const l=document.body.classList.toggle("light");$("theme").textContent=l?"☀️":"🌙";});
 
-// ===== SCROLL TO TOP =====
-const topBtn=$("topBtn");
-window.addEventListener("scroll",()=>{topBtn.classList.toggle("show",window.scrollY>500);});
-topBtn.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+// ===== TOP BTN =====
+window.addEventListener("scroll",()=>{$("topBtn").classList.toggle("show",window.scrollY>500);});
+$("topBtn").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 
-// ===== REVEAL ON SCROLL =====
-const reduce=window.matchMedia("(prefers-reduced-motion:reduce)").matches,items=document.querySelectorAll(".reveal");
-if(reduce||!("IntersectionObserver"in window)){items.forEach(el=>el.classList.add("in"));}
-else{const io=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.15});
-  items.forEach(el=>io.observe(el));}
+// ===== REVEAL =====
+const items=document.querySelectorAll(".reveal");
+if(window.matchMedia("(prefers-reduced-motion:reduce)").matches||!("IntersectionObserver"in window)){items.forEach(el=>el.classList.add("in"));}
+else{const io=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.15});items.forEach(el=>io.observe(el));}
 
 // ===== INIT =====
-updateAll();
+updateAll();renderStockCards();
+setInterval(()=>{simDay();updateTicker();},3000);
 })();
 </script>
 </body>
